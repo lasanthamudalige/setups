@@ -34,7 +34,7 @@
         - brave browser
         - visual studio Code
         - spotify
-        - -bitwarden
+        - bitwarden
         - zoom
         - blanket
         - teamviewer
