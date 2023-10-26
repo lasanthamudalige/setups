@@ -7,35 +7,40 @@
 ## Install.sh 
   - This script will install 
     - From Curl
-      - NVM (node version manager)
-      - Deb-get package manager  
+      - nvm (node version manager)
+      - deb-get (package manager)  
     - From apt
-      - Ubuntu restricted extras
-      - Fish shell
-      - Htop
-      - Neofetch
-      - Neovim
-      - Git
-      - Curl
-      - Gnome-clocks
-      - Gnome-dictionary
-      - Vlc
-      - Build Essential
-      - Python3 pip
-      - Python3 TK
-      - OBS Studio
-      - Sqlite3
-      - p7zip-full, p7zip-rar
+      - ubuntu restricted extras
+      - fish shell
+      - htop
+      - neofetch
+      - neovim
+      - git
+      - curl
+      - gnome-clocks
+      - gnome-dictionary
+      - vlc
+      - build essential
+      - python3 pip
+      - python3 TK
+      - obs Studio
+      - sqlite3
+      - p7zip-full and p7zip-rar
      - From Deb-get
-        - Brave Browser
-        - Visual Studio Code
-        - Spotify
+        - google chrome
+        - brave browser
+        - visual studio Code
+        - spotify
+        - -bitwarden
+        - zoom
+        - blanket
+        - teamviewer
+        - virtualbox 7.0
      - From Flatpak
-        - Flatseal
-        - Tangram 
-        - Blanket
-
-  - (Optional) Remove default power manager 'power profile deamon' and install tlp 'On thinkpads"
+        - flatseal
+        - francis
+        - planner
+        - joplin
 
 ## Generate_new_ssh_key.sh
   - This will generate a ssh key for github
@@ -66,7 +71,7 @@
 
 ### Linux mint  
 
-  - To change cursor theme in flatpak apps
+  - ~~To change cursor theme in flatpak apps~~
     ```
     sudo update-alternatives --config x-cursor-theme
     ```
