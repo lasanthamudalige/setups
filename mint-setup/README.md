@@ -20,7 +20,7 @@
       - vlc
       - build essential
       - python3 pip
-      - python3 TK
+      - python3 tk
       - sqlite3
       - p7zip-full and p7zip-rar
       - obs studio
