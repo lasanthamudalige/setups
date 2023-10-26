@@ -48,21 +48,6 @@
     
 ## Custom changes
 
-### Linux mint  
-  - ~~To change cursor theme in flatpak apps~~
-    ```
-    sudo update-alternatives --config x-cursor-theme
-    ```
-    
-  - Disable bluetooth on startup
-    
-    - Open bluetooth main file
-      ```
-      sudo nano /etc/bluetooth/main.conf
-      ```
-    
-    - ***Go to the bottom and set "AutoEnable" to False***
-
 ### Change shell to fish
   
   - Install fish shell ***(If you didn't run the script)***
@@ -84,6 +69,21 @@
     ```
     sudo tlp start
     ```
+
+### Linux mint  
+  - ~~To change cursor theme in flatpak apps~~
+    ```
+    sudo update-alternatives --config x-cursor-theme
+    ```
+    
+  - Disable bluetooth on startup
+    
+    - Open bluetooth main file
+      ```
+      sudo nano /etc/bluetooth/main.conf
+      ```
+    
+    - ***Go to the bottom and set "AutoEnable" to False***
     
 ### Change Themes of Flatpak apps using Flatseal 
 
