@@ -6,7 +6,7 @@
 
 ## Install.sh 
   - This script will install 
-    - From Curl
+    - From curl
       - nvm (node version manager)
       - deb-get (package manager)  
     - From apt
@@ -26,7 +26,7 @@
       - obs Studio
       - sqlite3
       - p7zip-full and p7zip-rar
-     - From Deb-get
+     - From deb-get
         - google chrome
         - brave browser
         - visual studio Code
