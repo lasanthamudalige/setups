@@ -1,4 +1,4 @@
-# A script to auto install necessay apps in ubuntu
+# A script to auto install necessay apps in Linux mint
 
 ## Table of content
 * [Custom changes](#custom-changes)
