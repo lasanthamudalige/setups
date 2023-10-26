@@ -23,9 +23,7 @@
       - python3 TK
       - sqlite3
       - p7zip-full and p7zip-rar
-    -From snap
       - obs studio
-      - postman
     - From curl
       - nvm (node version manager)
       - deb-get (package manager)  
@@ -34,7 +32,7 @@
         - brave browser
         - visual studio Code
         - spotify
-        - -bitwarden
+        - bitwarden
         - zoom
         - blanket
         - teamviewer
@@ -49,6 +47,21 @@
   - This will generate a ssh key for github
     
 ## Custom changes
+
+### Linux mint  
+  - ~~To change cursor theme in flatpak apps~~
+    ```
+    sudo update-alternatives --config x-cursor-theme
+    ```
+    
+  - Disable bluetooth on startup
+    
+    - Open bluetooth main file
+      ```
+      sudo nano /etc/bluetooth/main.conf
+      ```
+    
+    - ***Go to the bottom and set "AutoEnable" to False***
 
 ### Change shell to fish
   
