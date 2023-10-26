@@ -4,11 +4,9 @@
 * [Custom changes](#custom-changes)
 * [Programming stuff](#programming-stuff)
 
+
 ## Install.sh 
   - This script will install 
-    - From curl
-      - nvm (node version manager)
-      - deb-get (package manager)  
     - From apt
       - ubuntu restricted extras
       - fish shell
@@ -23,9 +21,14 @@
       - build essential
       - python3 pip
       - python3 TK
-      - obs Studio
       - sqlite3
       - p7zip-full and p7zip-rar
+    -From snap
+      - obs studio
+      - postman
+    - From curl
+      - nvm (node version manager)
+      - deb-get (package manager)  
      - From deb-get
         - google chrome
         - brave browser
@@ -68,22 +71,6 @@
     ```
     sudo tlp start
     ```
-
-### Linux mint  
-
-  - ~~To change cursor theme in flatpak apps~~
-    ```
-    sudo update-alternatives --config x-cursor-theme
-    ```
-    
-  - Disable bluetooth on startup
-    
-    - Open bluetooth main file
-      ```
-      sudo nano /etc/bluetooth/main.conf
-      ```
-    
-    - ***Go to the bottom and set "AutoEnable" to False***
     
 ### Change Themes of Flatpak apps using Flatseal 
 
