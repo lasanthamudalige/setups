@@ -71,7 +71,7 @@
     ```
 
 ### Linux mint  
-  - ~~To change cursor theme in flatpak apps~~
+  - ~~To change cursor theme in flatpak apps~~(now fixed when changed in settings)
     ```
     sudo update-alternatives --config x-cursor-theme
     ```
