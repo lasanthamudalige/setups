@@ -23,6 +23,7 @@
       - python3 tk
       - sqlite3
       - p7zip-full and p7zip-rar
+      - gimp
     -From snap
       - obs studio
       - postman
@@ -39,6 +40,7 @@
         - blanket
         - teamviewer
         - virtualbox 7.0
+        - discord
      - From Flatpak
         - flatseal
         - francis

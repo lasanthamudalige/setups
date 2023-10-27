@@ -1,5 +1,5 @@
 # Refresh repos and install git, curl, vlc, ubuntu-restricted-extras and build-essential
-sudo apt install ubuntu-restricted-extras fish htop neofetch git curl gnome-clocks gnome-dictionary vlc build-essential python3-pip python3-tk sqlite3 p7zip-full p7zip-rar -y # Enter 'y' to download
+sudo apt install ubuntu-restricted-extras fish htop neofetch git curl gnome-clocks gnome-dictionary vlc build-essential python3-pip python3-tk sqlite3 p7zip-full p7zip-rar gimp -y # Enter 'y' to download
 
 # Install snap version for wayland and apt for xorg
 # sudo apt install obs-studio
@@ -34,7 +34,7 @@ curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | su
 # sudo apt remove power-profiles-daemon -y && sudo apt install tlp tlp-rdw -y
 
 # Install software from deb-get
-sudo deb-get install google-chrome-stable brave-browser code spotify-client bitwarden zoom blanket teamviewer virtualbox-7.0 onlyoffice-desktopeditors
+sudo deb-get install google-chrome-stable brave-browser code spotify-client bitwarden zoom blanket teamviewer virtualbox-7.0 onlyoffice-desktopeditors discord
 
 # Install flatpak
 # sudo apt install flatpak
