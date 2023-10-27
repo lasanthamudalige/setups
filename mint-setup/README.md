@@ -24,6 +24,7 @@
       - sqlite3
       - p7zip-full and p7zip-rar
       - obs studio
+      - gimp
     - From curl
       - nvm (node version manager)
       - deb-get (package manager)  
@@ -37,6 +38,7 @@
         - blanket
         - teamviewer
         - virtualbox 7.0
+        - discord
      - From Flatpak
         - flatseal
         - francis
