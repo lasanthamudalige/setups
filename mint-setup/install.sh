@@ -14,7 +14,7 @@ curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | su
 sudo deb-get install google-chrome-stable brave-browser code spotify-client bitwarden zoom blanket teamviewer virtualbox-7.0 onlyoffice-desktopeditors discord
 
 # Install flatpak apps
-# flatpak install flatseal francis planner joplin
+# flatpak install flatseal francis planner joplin -y
 
 # Install JetbrainsMono NerdFont
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
