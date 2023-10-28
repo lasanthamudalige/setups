@@ -41,7 +41,7 @@ sudo deb-get install google-chrome-stable brave-browser code spotify-client bitw
 # Add the flathub respository   
 # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # Install flatpak apps
-# flatpak install flatseal francis planner joplin -y
+# flatpak install flatseal pomodoro joplin -y
 
 # Install JetbrainsMono NerdFont
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
