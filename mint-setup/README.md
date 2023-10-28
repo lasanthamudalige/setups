@@ -25,11 +25,11 @@
       - p7zip-full and p7zip-rar
       - obs studio
       - gimp
+      - chromium
     - From curl
       - nvm (node version manager)
       - deb-get (package manager)  
      - From deb-get
-        - google chrome
         - brave browser
         - visual studio Code
         - spotify
