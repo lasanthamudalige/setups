@@ -43,8 +43,7 @@
         - discord
      - From Flatpak
         - flatseal
-        - francis
-        - planner
+        - pomodoro
         - joplin
 
 ## Generate_new_ssh_key.sh
