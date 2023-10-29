@@ -26,6 +26,7 @@
       - obs studio
       - gimp
       - chromium
+      - audacious
     - From curl
       - nvm (node version manager)
       - deb-get (package manager)  
@@ -61,15 +62,18 @@
       chsh -s /usr/bin/fish
       ```
    
-### Install tlp (On laptops)
-  ```
-  sudo apt install tlp
-  ```
+### Power management (On laptops)
   
-  - Start tlp
+  - ~~Install tlp (Not recommended)
     ```
-    sudo tlp start
+    sudo apt install tlp
     ```
+  
+    - ~~Start tlp
+      ```
+      sudo tlp start
+      ```
+  - Install auto-cpufreq (Recommended)
 
 ### Linux mint  
   - ~~To change cursor theme in flatpak apps~~(now fixed when changed in settings)
