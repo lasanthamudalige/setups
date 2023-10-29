@@ -73,7 +73,7 @@
       ```
       sudo tlp start
       ```
-  - Install auto-cpufreq (Recommended -  Repo in the github stars)     
+  - Install auto-cpufreq  (In the github stars)
 
 ### Linux mint  
   - ~~To change cursor theme in flatpak apps~~(now fixed when changed in settings)

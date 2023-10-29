@@ -63,15 +63,19 @@
       chsh -s /usr/bin/fish
       ```
    
-### Install tlp (On laptops)
-  ```
-  sudo apt install tlp
-  ```
+### Power management (On laptops)
   
-  - Start tlp
+  - ~~Install tlp (Not recommended)~~
     ```
-    sudo tlp start
+    sudo apt install tlp
     ```
+  
+    - ~~Start tlp~~
+      ```
+      sudo tlp start
+      ```
+  - Install auto-cpufreq  (In the github stars)
+
     
 ### Change Themes of Flatpak apps using Flatseal 
 
