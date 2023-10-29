@@ -64,16 +64,16 @@
    
 ### Power management (On laptops)
   
-  - ~~Install tlp (Not recommended)
+  - ~~Install tlp (Not recommended)~~
     ```
     sudo apt install tlp
     ```
   
-    - ~~Start tlp
+    - ~~Start tlp~~
       ```
       sudo tlp start
       ```
-  - Install auto-cpufreq (Recommended)
+  - Install auto-cpufreq (Recommended -  Repo in the github stars)     
 
 ### Linux mint  
   - ~~To change cursor theme in flatpak apps~~(now fixed when changed in settings)
