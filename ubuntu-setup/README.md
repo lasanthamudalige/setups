@@ -117,10 +117,16 @@
         ```
         fisher install FabioAntunes/fish-nvm edc/bass
         ```
- - Install nodemon for nodejs
+        
+- Install nodemon from nodejs
    ```
    npm install -g nodemon # or using yarn: yarn global add nodemon
    ```
+
+ - Install json server from nodejs
+   ```
+   npm install -g json-server
+   ``` 
    
 ### Add alias to execute custom shell scripts
    Add this to end of the ~/.bashrc file
