@@ -47,7 +47,7 @@ sudo deb-get install google-chrome-stable brave-browser code spotify-client bitw
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
 # # Update font cache
-fc-cache -rv
+fc-cache -vf
 
 # Install MongoDB 6 in ubuntu  version 22.04
 # Install gnupg if it is not already available
