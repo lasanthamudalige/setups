@@ -1,4 +1,4 @@
-# My arch i3wm setup (***unmaintained!***)
+# My arch i3wm setup (***outdated!***)
 
 ## Table of contents
 * [Arch install summery](#arch-install-summery)
