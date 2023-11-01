@@ -101,6 +101,12 @@
         /usr/share/themes
         ```
 
+  - Copy themes folder inn usr/share/themes to ~/.themes folder
+      
+      ```
+      sudo cp -r /usr/share/themes/. ~/.themes
+      ```
+
   - Add theme folder to **Files**
       
       ```
