@@ -10,7 +10,7 @@
 
 ***I installed it using archinstall***
   - Disk partition - ext4 with 1 partition with encryption
-  - profile - Desktop with Sway
+  - profile - Desktop with Sway login with ly
   - Sound - Pipewire
   - kernel - LTS kernel
   - Additional packages - 'firefox' 'kitty' 'git'
@@ -20,8 +20,6 @@
 ## Using dotfiles
 
 - ***Install firefox, kitty terminal and git if not installed***
-
-- ***Run the script "install.sh" or follow below instructions.***
   
 1. Clone the repo
   ```
@@ -63,7 +61,7 @@
       sudo systemctl enable paccache.timer
       ```
     
-    - Run xdg-user-dirs to create direcotries
+    - Run xdg-user-dirs to create directories
       ```
       xdg-user-dirs-update
       ```
