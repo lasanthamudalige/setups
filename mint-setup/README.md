@@ -100,7 +100,13 @@
         ```
         /usr/share/themes
         ```
-  
+
+  - Add theme folder to **Files**
+      
+      ```
+      ~/.themes
+      ```
+
   - Add GTK_THEME variable to the **Environment**
     
     - Add Adwaita Dark theme
