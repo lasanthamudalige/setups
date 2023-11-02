@@ -51,7 +51,7 @@
       systemctl start bluetooth
       ```
 
-    * Use ***iwctl*** and ***bluetoothctl*** commands to access wifi and bluetooth
+      * Use ***iwctl*** and ***bluetoothctl*** commands to access wifi and bluetooth
   
   * Install all essential Arch packages using:
 
@@ -73,10 +73,10 @@
   * Install all essential AUR packages using:
 
     ```bash
-    yay -S wob
+    yay -S wob swaynagmode wlsunet #progressbar, sway exit menu and day/night gamma adjustment program
     ```
 
-    * Setup ***wob*** using this [link](https://github.com/francma/wob/blob/master/contrib/README.md)
+    * Setup ***wob*** using this [link](https://github.com/francma/wob/blob/master/contrib/README.md) (If not working out of the box)
 
 * Change pacman configuration
   
@@ -138,11 +138,11 @@
     sudo pacman -S ly
     ```
 
-* Enable the service
+  * Enable the service
 
-  ```bash
-  sudo systemctl enable ly.service
-  ```
+    ```bash
+    sudo systemctl enable ly.service
+    ```
 
 * Install cutomizing programs
 
