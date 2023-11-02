@@ -1,228 +1,243 @@
 # My arch sway wm setup
 
 ## Table of contents
+
 * [Arch install summery](#arch-install-summery)
 * [Using dotfiles](#using-dotfiles)
 * [Other stuff](#other-stuff)
 
-
 ## Arch install summery
 
 ***I installed it using archinstall***
-  - Disk partition - ext4 with 1 partition with encryption
-  - profile - Desktop with Sway login with ly
-  - Sound - Pipewire
-  - kernel - LTS kernel
-  - Additional packages - 'firefox' 'kitty' 'git'
-  - Network configuration - NetworkManager
-  - Other settings are stock setting
+
+* Disk partition - ext4 with 1 partition with encryption
+* profile - Desktop with Sway login with ly
+* Sound - Pipewire
+* kernel - LTS kernel
+* Additional packages - 'firefox' 'kitty' 'git'
+* Network configuration - NetworkManager
+* Other settings are stock setting
   
 ## Using dotfiles
 
-- ***Install firefox, kitty terminal and git if not installed***
+* ***Install firefox, kitty terminal and git if not installed***
   
 1. Clone the repo
-  ```
-  git clone https://github.com/lasanthamudalige/dotfiles.git
-  ```
-               
-2. Do essential things
+
+    ```bash
+    git clone https://github.com/lasanthamudalige/dotfiles.git
+    ```
+
+2.Do essential things
+
+* Setup wifi and bluetooth
+
+  * Install wifi and bluetooth
+
+      ```bash
+      sudo pacman -S iwd bluez bluez-utils -y
+      ```
+
+    * Enable and start wifi and bluetooth
+
+      ```bash
+      systemctl enable iwd
+        
+      systemctl start iwd
+
+      systemctl enable bluetooth
+
+      systemctl start bluetooth
+      ```
   
-    - Install all essential Arch packages using:
-      ```
-      sudo pacman -S pacman-contrib xdg-user-dirs ufw wofi i3status swaybg dunst playerctl --needed
-      ```
-    - Install yay aur helper
-      ```
-      sudo pacman -S --needed base-devel git
-      mkdir Programs
-      cd Programs
-      git clone https://aur.archlinux.org/yay.git
-      cd yay
-      makepkg -si
-      ```
-    - Install all essential AUR packages using:
-      ```
-      yay -S azote clipman --needed #for wallpapers
-      ```
-    - Change pacman configuration
-       - Open the config file
-          ```
-          sudo vim /etc/pacman.conf
-          ```
+  * Install all essential Arch packages using:
 
-      - ***Uncomment "#Color" to change the black and white terminal to a colorful one.***
-      - ***Add "ILoveCandy" below it to change default install progress bar.*** 
+    ```bash
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako  -y
+    ```
 
-      - ***Save the file.***  
-     
-    - Activate the paccache timer to clean package cache
+  * Install yay aur helper
+
+    ```bash
+    sudo pacman -S --needed base-devel git
+    mkdir Programs
+    cd Programs
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+    ```
+
+  * Install all essential AUR packages using:
+
+    ```bash
+    yay -S wob
+    ```
+
+    * Setup ***wob*** using this [link](https://github.com/francma/wob/blob/master/contrib/README.md)
+
+* Change pacman configuration
+  
+  * Open the config file
+
+      ```bash
+      sudo vim /etc/pacman.conf
       ```
+
+    * ***Uncomment "#Color" to change the black and white terminal to a colorful one.***
+    * ***Add "ILoveCandy" below it to change default install progress bar.***
+
+    * ***Save the file.***  
+
+    * Activate the paccache timer to clean package cache
+
+      ```bash
       sudo systemctl enable paccache.timer
       ```
-    
-    - Run xdg-user-dirs to create directories
-      ```
+
+    * Run xdg-user-dirs to create directories
+
+      ```bash
       xdg-user-dirs-update
       ```
-    
-    - Setup firewall
-      - Enable UFW
-         ```
+
+    * Setup firewall
+      * Enable UFW
+
+         ```bash
         sudo ufw enable
         ```
 
-      - To check status
-        ```
+      * To check status
+
+        ```bash
         sudo ufw status verbose
         ```
 
-      - To auto start with the system
-        ```
+      * To auto start with the system
+
+        ```bash
         sudo systemctl enable ufw.service
         ```
 
-3. Move config files
+3.Move config files
 
-    - Move sway folder to "~/.config" folder
-      ```
-      sudo mv sway/ ~/.config/
-      ```
-      
-    - Move i3status folder to "~/.config" folder
-      ```
-      sudo mv i3status/ ~/.config/
-      ```
-        
-     - Move kitty folder to "~/.config" folder
-       ```
-       sudo mv kitty/ ~/.config/
-       ```
-        
-     - Move ranger folder to "~/.config" folder
-        ```
-        sudo mv ranger/ ~/.config/
-        ```
-      
-      - Move dunst folder to "~/.config" folder
-        ```
-        sudo mv dunst/ ~/.config/
-        ```
+* Move sway folder to "~/.config" folder.
 
-      - Move wofi folder to "~/.config" folder
-        ```
-        sudo mv wofi/ ~/.config/
-        ```
-    
-      - Move wallpapers folder to "~/.config" folder
-          ```
-          sudo mv wallpapers/ ~/Pictures/
-          ```
+  ```bash
+  sudo mv sway/ ~/.config/
+  ```
 
-4. Customizing sway setup
+* Move i3status folder to "~/.config" folder
 
-    - Install Ly login manager
-      ```
-      sudo pacman -S ly --needed
-      ```
+  ```bash
+  sudo mv i3status/ ~/.config/
+  ```
 
-        - Enable the service
-          ```
-          sudo systemctl enable ly.service
-          ```
-    
-    - Install cutomizing programs
-      ```
-      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code --needed
-      ```
+* Move kitty folder to "~/.config" folder
 
-5. Install necessary applications 
-     
-   - ***For Laptops***
+  ```bash
+  sudo mv kitty/ ~/.config/
+  ```
 
-     - Install necessery programs using
-       ```
-       sudo pacman -S blueman bluez bluez-utils bluez-libs brightnessctl thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad tlp tlp-rdw libreoffice-fresh --needed # or libreoffice-still for stable version
-       ```
-       
-     - Enable bluetooth
-       ```
-       sudo systemctl enable bluetooth
-       ```
-       
-     - To enable TLP
-       ```
-       sudo systemctl enable tlp.service
-       ```
+* Move ranger folder to "~/.config" folder
 
-     - tlp-rdw(Radio Device Wizard) it is required to use NetworkManager and enabling
-       ```
-        sudo systemctl enable NetworkManager-dispatcher.service
-       ```
+  ```bash
+  sudo mv ranger/ ~/.config/
+  ```
 
-     - Mask the following services to avoid conflicts and assure proper operation of tlp-rdw(Radio Device Wizard)
-       ```
-       sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
-       ``` 
-     
-   - ***For Desktops***
+* Move dunst folder to "~/.config" folder
 
-     - Install necessery programs using
-       ```
-       sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh --needed # or libreoffice-still for stable version
-       ```
-      - Install bluetooth
-          ```
-          sudo pacman -S blueman bluez bluez-utils bluez-libs --needed
-          ```
-      
-          - Enable bluetooth
-              ```
-              sudo systemctl enable bluetooth
-              ```
-       
+  ```bash
+  sudo mv dunst/ ~/.config/
+  ```
+
+* Move wofi folder to "~/.config" folder
+
+  ```bash
+  sudo mv wofi/ ~/.config/
+  ```
+
+* Move wallpapers folder to "~/.config" folder
+
+  ```bash
+  sudo mv wallpapers/ ~/Pictures/ 
+  ```
+
+4.Customizing sway setup
+
+* ~~Install Ly login manager~~ (Can now do in the arch install)
+
+    ```bash
+    sudo pacman -S ly
+    ```
+
+* Enable the service
+
+  ```bash
+  sudo systemctl enable ly.service
+  ```
+
+* Install cutomizing programs
+
+  ```bash
+  sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
+  ```
+
+5.Install necessary applications
+
+  ```bash
+  sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh # or libreoffice-still for stable version
+    ```
+
 ## Other stuff
 
 ### Change shell to fish
 
-  - Install fish shell
-      ```
+* Install fish shell
+
+      ```bash
       sudo pacman -S fish
       ```
-      
-  - Change shell to fish
-      ```
+
+* Change shell to fish
+
+      ```bash
       chsh -s /usr/bin/fish
       ```
-      
+
 ### Install google chrome, visual studio code with yay
-```
+
+```bash
 yay -S google-chrome visual-studio-code-bin -y
 ```
 
-  - ***To fix visual code code not saving login info install***
-    ```
+* ***To fix visual code code not saving login info install***
+
+    ```bash
     sudo pacman -S gnome-keyring
     ```
-    
-    - add a new password for the keyring
-    
+
+  * add a new password for the keyring
+
 ### ~~Install spotify~~ (Install commandline one below)
-```
-yay -S spotify-launcher
-```
+
+  ```bash
+  yay -S spotify-launcher
+  ```
 
 ***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
 
 ### Install postman
-```
+
+```bash
 yay -S postman-bin
 ```
 
 ### Install programming stuff
   
-  - Generate ssh key for github
-    ```
+* Generate ssh key for github
+
+    ```bash
     # Generate a new ssh key
     ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
 
@@ -234,67 +249,74 @@ yay -S postman-bin
     cat ~/.ssh/id_ed25519.pub
     ```
 
-  - Install python
-    ```
+* Install python
+
+    ```bash
     sudo pacman -S python tk python-pip # python-tk python-pip packages 
     ```
   
-  - Install nvm(Node version manager)
-    ```
-    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
-    ```
-    
+* Install nvm(Node version manager)
+
+  ```bash
+  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
+  ```
+
     ***Install nvm before doing below steps***
-    
-    - Install nvm in fish shell
-      
-      - Install fisher plugin
-        ```
+
+  * Install nvm in fish shell
+
+    * Install fisher plugin
+
+        ```bash
         curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
         ```
-      - Install fish nvm
-        ```
+
+    * Install fish nvm
+
+        ```bash
         fisher install FabioAntunes/fish-nvm edc/bass
         ```
- - Install nodemon for nodejs
-   ```
+
+* Install nodemon for nodejs
+
+   ```bash
    npm install -g nodemon # or using yarn: yarn global add nodemon
    ```
-   
- - Install MongoDB
-   ```
+
+* Install MongoDB
+
+   ```bash
    yay -S mongodb-bin
    ```
-   
-     - To run mongodb services
-        ```
-        sudo systemctl start mongodb
 
-        sudo systemctl status mongodb
-        ```
-     
-     - To enable mongodb
-        ```
-        sudo systemctl enable mongodb
-        ```
-     
-     - To test connection status
-        ```
-        mongod --version
-        ```
+  * To run mongodb services
 
-- Other programs
-    ```
-    yay -S termdown # commandline countdown program
-    yay -S devtodo # commandline todo list
-    sudo pacman -S calc # commandline calculator
-    sudo pacman -S ncspot # commandline spotify program
+    ```bash
+    sudo systemctl start mongodb
+
+    sudo systemctl status mongodb
     ```
 
-## Screenshots
+  * To enable mongodb
 
-![2023-03-13_21-24](https://user-images.githubusercontent.com/91461938/224756323-57b53b92-5525-4d4e-8bd6-cae8cb69bb1f.png)
-![image](https://user-images.githubusercontent.com/91461938/224755460-b365ca83-8ad4-4162-b2af-029190ab7190.png)
-![image](https://user-images.githubusercontent.com/91461938/224755227-7bcb489a-9ff7-401a-848c-a281f6971f54.png)
+    ```bash
+    sudo systemctl enable mongodb
+    ```
 
+  * To test connection status
+
+    ```bash
+    mongod --version
+    ```
+
+* Other programs
+
+  ```bash
+  yay -S termdown # commandline countdown program
+  yay -S devtodo # commandline todo list
+  sudo pacman -S calc # commandline calculator
+  sudo pacman -S ncspot # commandline spotify program
+  ```
+
+## Screenshots (Still working on it)
 
