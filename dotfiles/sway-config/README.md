@@ -153,7 +153,7 @@
 5.Install necessary applications
 
   ```bash
-  sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh # or libreoffice-still for stable version
+  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug noto-fonts-emoji flameshot grim ktorrent geoip kdnssd5 kplotting5 syndication5 taglib ristretto mousepad gspell libxfce4ui libreoffice-fresh # or libreoffice-still for stable version
   ```
 
 ## Other stuff
