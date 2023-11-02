@@ -24,6 +24,7 @@
   
 1. Clone the repo
 
+   <!-- This is how to properly declare code snippets  -->  
     ```bash
     git clone https://github.com/lasanthamudalige/dotfiles.git
     ```
@@ -49,6 +50,8 @@
 
       systemctl start bluetooth
       ```
+
+    * Use ***iwctl*** and ***bluetoothctl*** commands to access wifi and bluetooth
   
   * Install all essential Arch packages using:
 
@@ -121,46 +124,10 @@
 
 3.Move config files
 
-* Move sway folder to "~/.config" folder.
+* Move config folders to "~/.config" folder.
 
   ```bash
-  sudo mv sway/ ~/.config/
-  ```
-
-* Move i3status folder to "~/.config" folder
-
-  ```bash
-  sudo mv i3status/ ~/.config/
-  ```
-
-* Move kitty folder to "~/.config" folder
-
-  ```bash
-  sudo mv kitty/ ~/.config/
-  ```
-
-* Move ranger folder to "~/.config" folder
-
-  ```bash
-  sudo mv ranger/ ~/.config/
-  ```
-
-* Move dunst folder to "~/.config" folder
-
-  ```bash
-  sudo mv dunst/ ~/.config/
-  ```
-
-* Move wofi folder to "~/.config" folder
-
-  ```bash
-  sudo mv wofi/ ~/.config/
-  ```
-
-* Move wallpapers folder to "~/.config" folder
-
-  ```bash
-  sudo mv wallpapers/ ~/Pictures/ 
+  sudo mv sway/ i3status/ kitty/ ~/.config/
   ```
 
 4.Customizing sway setup
@@ -186,7 +153,7 @@
 5.Install necessary applications
 
   ```bash
-  sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh # or libreoffice-still for stable version
+  sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh # or libreoffice-still for stable version
   ```
 
 ## Other stuff
