@@ -187,7 +187,7 @@
 
   ```bash
   sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh # or libreoffice-still for stable version
-    ```
+  ```
 
 ## Other stuff
 
@@ -195,15 +195,15 @@
 
 * Install fish shell
 
-      ```bash
-      sudo pacman -S fish
-      ```
+  ```bash
+  sudo pacman -S fish
+  ```
 
 * Change shell to fish
 
-      ```bash
-      chsh -s /usr/bin/fish
-      ```
+  ```bash
+  chsh -s /usr/bin/fish
+  ```
 
 ### Install google chrome, visual studio code with yay
 
@@ -213,9 +213,9 @@ yay -S google-chrome visual-studio-code-bin -y
 
 * ***To fix visual code code not saving login info install***
 
-    ```bash
-    sudo pacman -S gnome-keyring
-    ```
+  ```bash
+  sudo pacman -S gnome-keyring
+  ```
 
   * add a new password for the keyring
 
@@ -229,25 +229,25 @@ yay -S google-chrome visual-studio-code-bin -y
 
 ### Install postman
 
-```bash
-yay -S postman-bin
-```
+  ```bash
+  yay -S postman-bin
+  ```
 
 ### Install programming stuff
   
 * Generate ssh key for github
 
-    ```bash
-    # Generate a new ssh key
-    ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
+  ```bash
+  # Generate a new ssh key
+  ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
 
-    # Add ssh key to ssh-agent
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_ed25519
+  # Add ssh key to ssh-agent
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_ed25519
 
-    # Print ssh public key to clipboard
-    cat ~/.ssh/id_ed25519.pub
-    ```
+  # Print ssh public key to clipboard
+  cat ~/.ssh/id_ed25519.pub
+  ```
 
 * Install python
 
