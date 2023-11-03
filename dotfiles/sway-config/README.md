@@ -56,7 +56,7 @@
   * Install all essential Arch packages using:
 
     ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako p7zip zip unzip  -y
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako -y
     ```
 
   * Install yay aur helper
@@ -150,10 +150,21 @@
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ```
 
-5.Install other applications
+5.Install basic set of applications
+
+* Thunar (file manager)
+* Ranger (cli file manager)
+* zathura (pdf viewer)
+* ristretto (image viewer)
+* mousepad (text editor)
+* libereoffice (office suite)
+* neofetch (CLI system information tool)
+* gimp (image manipulation tool)
+* chromium (browser)
+* obs-studio (screen-recoder)
 
   ```bash
-  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug noto-fonts-emoji flameshot grim ktorrent geoip kdnssd5 kplotting5 syndication5 taglib ristretto mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio # or libreoffice-still for stable version
+  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip noto-fonts-emoji zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio # or libreoffice-still for stable version
   ```
 
   <!-- Install onlyoffice from AUR -->
