@@ -152,6 +152,8 @@
 
 5.Install basic set of applications
 
+***You need to get a torrent client a screenshot tool and a clipboard manager for this***
+
 * Thunar (file manager)
 * Ranger (cli file manager)
 * mpv (media player)
@@ -297,4 +299,3 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
   * Use Shift + Return (Enter key)
 
 ## Screenshots (Still working on it)
-

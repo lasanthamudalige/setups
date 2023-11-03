@@ -303,7 +303,7 @@ exec wlsunset -l 7.2 -L 80.2
 exec wl-paste -t text --watch clipman store --no-persist
 # Paste from clipman clipboard
 
-# Launch flameshot 
-bindsym Print exec flameshot gui
+# Launch flameshot (Not working)
+# bindsym Print exec flameshot gui
 
 include /etc/sway/config.d/*
