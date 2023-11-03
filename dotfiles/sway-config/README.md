@@ -56,7 +56,7 @@
   * Install all essential Arch packages using:
 
     ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako  -y
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako p7zip zip unzip  -y
     ```
 
   * Install yay aur helper
@@ -150,10 +150,15 @@
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ```
 
-5.Install necessary applications
+5.Install other applications
 
   ```bash
-  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug noto-fonts-emoji flameshot grim ktorrent geoip kdnssd5 kplotting5 syndication5 taglib ristretto mousepad gspell libxfce4ui libreoffice-fresh gimp # or libreoffice-still for stable version
+  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug noto-fonts-emoji flameshot grim ktorrent geoip kdnssd5 kplotting5 syndication5 taglib ristretto mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio # or libreoffice-still for stable version
+  ```
+
+  <!-- Install onlyoffice from AUR -->
+  ```bash
+  yay -S onlyoffice-bin zoom
   ```
 
 ## Other stuff
@@ -166,17 +171,19 @@
   sudo pacman -S fish
   ```
 
-* Change shell to fish
+  * Change shell to fish
 
-  ```bash
-  chsh -s /usr/bin/fish
-  ```
+    ```bash
+    chsh -s /usr/bin/fish
+    ```
 
-### Install google chrome, visual studio code with yay
+### Install visual studio code, spotify, postman and brave browser with yay
 
 ```bash
-yay -S google-chrome visual-studio-code-bin -y
+yay -S visual-studio-code-bin spotify postman-bin brave-bin
 ```
+
+***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
 
 * ***To fix visual code code not saving login info install***
 
@@ -186,21 +193,7 @@ yay -S google-chrome visual-studio-code-bin -y
 
   * add a new password for the keyring
 
-### ~~Install spotify~~ (Install commandline one below)
-
-  ```bash
-  yay -S spotify-launcher
-  ```
-
-***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
-
-### Install postman
-
-  ```bash
-  yay -S postman-bin
-  ```
-
-### Install programming stuff
+### Setting programming stuff
   
 * Generate ssh key for github
 
@@ -216,10 +209,10 @@ yay -S google-chrome visual-studio-code-bin -y
   cat ~/.ssh/id_ed25519.pub
   ```
 
-* Install python
+* Install python, sqlite
 
     ```bash
-    sudo pacman -S python tk python-pip # python-tk python-pip packages 
+    sudo pacman -S python tk python-pip sqlite
     ```
   
 * Install nvm(Node version manager)
@@ -284,6 +277,12 @@ yay -S google-chrome visual-studio-code-bin -y
   sudo pacman -S calc # commandline calculator
   sudo pacman -S ncspot # commandline spotify program
   ```
+
+### Keyboard shortcuts
+
+* Launch terminal apps directly from wofi (Like fish, ranger)
+
+  * Use Shift + Return (Enter key)
 
 ## Screenshots (Still working on it)
 
