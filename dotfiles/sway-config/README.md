@@ -56,7 +56,7 @@
   * Install all essential Arch packages using:
 
     ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako -y
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako fish -y
     ```
 
   * Install yay aur helper
@@ -154,8 +154,9 @@
 
 * Thunar (file manager)
 * Ranger (cli file manager)
+* mpv (media player)
 * zathura (pdf viewer)
-* ristretto (image viewer)
+* ristretto/imv (image viewer/cli img viewer)
 * mousepad (text editor)
 * libereoffice (office suite)
 * neofetch (CLI system information tool)
@@ -164,7 +165,7 @@
 * obs-studio (screen-recoder)
 
   ```bash
-  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip noto-fonts-emoji zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio # or libreoffice-still for stable version
+  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio # or libreoffice-still for stable version
   ```
 
   <!-- Install onlyoffice from AUR -->

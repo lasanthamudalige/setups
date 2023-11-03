@@ -25,7 +25,7 @@ set $menu wofi --show run --gtk-dark
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/garden.jpg stretch
+output * bg ~/Downloads/the_artists_garden_at_eragny_1970.17.54.jpg stretch
 #
 # Example configuration:
 #
@@ -294,7 +294,7 @@ for_window [class="^.*"] border pixel 2
 
 # Set inner/outer gaps
 gaps inner 7
-gaps outer 2 
+gaps outer 2
 
 # Launch gammastep at start with location (latitite -l longitude -L)
 exec wlsunset -l 7.2 -L 80.2
@@ -304,5 +304,6 @@ exec wl-paste -t text --watch clipman store --no-persist
 # Paste from clipman clipboard
 
 # Launch flameshot 
+bindsym Print exec flameshot gui
 
 include /etc/sway/config.d/*
