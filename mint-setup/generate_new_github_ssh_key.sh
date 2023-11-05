@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # Generate a new ssh key
 ssh-keygen -t ed25519 -C "lasantha1130@gmail.com"
 
