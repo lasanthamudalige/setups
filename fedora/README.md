@@ -15,15 +15,15 @@
   
 * Install fish shell ***(If you didn't run the script)***
 
-      ```
-      sudo apt install fish
-      ```
+    ```bash
+    sudo apt install fish
+    ```
 
 * Change shell to fish
 
-      ```
-      chsh -s /usr/bin/fish
-      ```
+    ```bash
+    chsh -s /usr/bin/fish
+    ```
 
 ### Power management (On laptops)
   
@@ -49,21 +49,21 @@
 
 * Copy themes folder inn usr/share/themes to ~/.themes folder
 
-      ```
-      sudo cp -r /usr/share/themes/. ~/.themes
-      ```
+    ```bash
+    sudo cp -r /usr/share/themes/. ~/.themes
+    ```
 
 * Add theme folder to **Files**
 
-      ```
-      ~/.themes
-      ```
+    ```bash
+    ~/.themes
+    ```
 
 * Add GTK_THEME variable to the **Environment**
 
   * Add Adwaita Dark theme
 
-      ```
+      ```bash
       GTK_THEME=Adwaita-dark
       ```
 
@@ -81,9 +81,9 @@
 
 * ***Install nvm before doing below steps***
 
-    -Install nvm in fish shell
+- Install nvm in fish shell
 
-      -Install fisher plugin
+  - Install fisher plugin
 
         ```bash
         curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher

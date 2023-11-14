@@ -56,23 +56,23 @@
   
 * Install fish shell ***(If you didn't run the script)***
 
-      ```
-      sudo apt install fish
-      ```
+    ```bash
+    sudo apt install fish
+    ```
 
 * Change shell to fish
 
-      ```
-      chsh -s /usr/bin/fish
-      ```
+    ```bash
+    chsh -s /usr/bin/fish
+    ```
 
 ### Power management (On laptops)
   
 * ~~Install tlp (Not recommended)~~
 
-        ```bash
-        sudo apt install tlp
-        ```
+    ```bash
+    sudo apt install tlp
+    ```
   
   * ~~Start tlp~~
 
@@ -114,23 +114,23 @@
 
 * Copy themes folder inn usr/share/themes to ~/.themes folder
 
-      ```
-      sudo cp -r /usr/share/themes/. ~/.themes
-      ```
+    ```
+    sudo cp -r /usr/share/themes/. ~/.themes
+    ```
 
 * Add theme folder to **Files**
 
-      ```bash
-      ~/.themes
-      ```
+    ```bash
+    ~/.themes
+    ```
 
 * Add GTK_THEME variable to the **Environment**
 
   * Add Adwaita Dark theme
 
-      ```bash
-      GTK_THEME=Adwaita-dark
-      ```
+    ```bash
+    GTK_THEME=Adwaita-dark
+    ```
 
 ## Programming stuff
 
@@ -176,7 +176,7 @@
 
    Add this to end of the ~/.bashrc file
 
-   ```
+   ```bash
    # Custom commands
    # command to create github repos
    alias create="~/Development/shell-scripts/automate_repo.sh"
