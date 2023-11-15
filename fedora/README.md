@@ -11,6 +11,12 @@
 
 ## Custom changes
 
+### Add a custom shortcut to open terminal for mod + enter command
+  
+  ```bash
+  gnome-terminal --tab
+  ```
+
 ### Change shell to fish
   
 * Install fish shell ***(If you didn't run the script)***

@@ -1,7 +1,7 @@
-#!/bin/sh
+!/bin/sh
 
 # Enable parallel downloads and fastest mirror
-sudo printf '\nmax_parallel_downloads=10\nfastestmirror=true' >> /etc/dnf/dnf.conf
+#sudo sh -c 'echo -e  "\nmax_parallel_downloads=10\nfastestmirror=true" >> /etc/dnf/dnf.conf'
 
 # Enable RPM Fusion Repository
 # Free
@@ -10,7 +10,15 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
 # Install needed programs
-sudo dnf install fish htop neofetch git curl gnome-clocks gnome-dictionary vlc python3-pip python3-tkinter sqlite3 p7zip obs-studio gimp chromium discord gnome-tweaks gnome-extensions-app @development-tools kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras -y # Enter 'y' to download
+sudo dnf install fish htop neofetch git curl gnome-clocks gnome-dictionary vlc python3-pip python3-tkinter sqlite3 p7zip p7zip-plugins unzip unrar ffmpegthumbnailer  obs-studio gimp chromium discord gnome-tweaks gnome-extensions-app @development-tools kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras -y # Enter 'y' to download
+
+# Clear cache to show thumbnails nautilus
+rm -rf ~/.cache/thumbnails/fail/gnome-thumbnail-factory/*
+
+# Install multimedia codecs
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
+sudo dnf install lame\* --exclude=lame-devel -y
+sudo dnf group upgrade --with-optional Multimedia 
 
 # Download and install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
@@ -50,15 +58,15 @@ gpgkey=https://www.virtualbox.org/download/oracle_vbox_2016.asc
 EOF
 sudo dnf install VirtualBox-7.0 -y
 sudo usermod -a -G vboxusers $USER
-newgrp vboxusers
-id $USER
+#newgrp vboxusers
+#id $USER
 
 # Install only office
 wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
 sudo dnf install onlyoffice-desktopeditors.x86_64.rpm -y
 
 # Install flatpak apps
-flatpak install flathub flatseal io.gitlab.idevecore.Pomodoro joplin postman -y
+flatpak install flathub flatseal io.gitlab.idevecore.Pomodoro joplin postman bitwarden -y
 
 # Install JetbrainsMono NerdFont
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
@@ -66,23 +74,23 @@ flatpak install flathub flatseal io.gitlab.idevecore.Pomodoro joplin postman -y
 # # Update font cache
 fc-cache -vf
 
-# Install MongoDB 6 in ubuntu  version 22.04
-cat <<EOF | sudo tee /etc/yum.repos.d/mongodb-org-4.4.repo
-[Mongodb]
-name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/8/mongodb-org/4.4/x86_64/
-gpgcheck=1
-enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-4.4.asc
-EOF
-# Install latest version
-sudo dnf install mongodb-org -y
-# Start MongoDB following a system reboot
-sudo systemctl enable mongod
-# Start the mongod process 
-sudo systemctl start mongod
-# Show if the MongoDB has started 
-sudo systemctl status mongod
+# Install MongoDB 6 for fedora 38 (Not working)
+# sudo tee /etc/yum.repos.d/mongodb-org-6.0.repo<<EOF
+# [mongodb-org-6.0]
+# name=MongoDB Repository
+# baseurl=https://repo.mongodb.org/yum/redhat/9/mongodb-org/6.0/x86_64/
+# gpgcheck=1
+# enabled=1
+# gpgkey=https://www.mongodb.org/static/pgp/server-6.0.asc
+# EOF
+# # Install latest version
+# sudo dnf install mongodb-org -y
+# # Start MongoDB following a system reboot
+# sudo systemctl enable mongod
+# # Start the mongod process 
+# sudo systemctl start mongod
+# # Show if the MongoDB has started
+# sudo systemctl status mongod
 
 # Generate github ssh key
 BASEDIR=$(cd $(dirname $0) && pwd)
