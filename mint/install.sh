@@ -16,7 +16,7 @@ curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | su
 sudo deb-get install brave-browser code spotify-client bitwarden zoom blanket teamviewer virtualbox-7.0 onlyoffice-desktopeditors discord
 
 # Install flatpak apps
-# flatpak install flathub flatseal io.gitlab.idevecore.Pomodoro joplin postman -y
+flatpak install flathub flatseal io.gitlab.idevecore.Pomodoro joplin postman -y
 
 # Install JetbrainsMono NerdFont
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
