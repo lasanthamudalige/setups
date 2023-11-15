@@ -98,4 +98,4 @@ $BASEDIR/generate_new_github_ssh_key.sh
 
 # Add custom commands to .bashrc file  
 cd ~
-printf "\n# Custom commands\n# command to create github repos\nalias create='~/Development/shell-scripts/automate_repo.sh'\nalias wish='~/Development/shell-scripts/fb_birthday_wisher.sh'" >> .bashrc
+printf "\n# Custom commands\n# command to create github repos\nalias create='~/Development/shell-scripts/automate_repo.sh'\n# command to wish facebook birthdays\nalias wish='~/Development/shell-scripts/fb_birthday_wisher.sh'" >> .bashrc
