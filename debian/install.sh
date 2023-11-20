@@ -10,12 +10,15 @@ deb http://deb.debian.org/debian-security/ bookworm-security main contrib non-fr
 deb-src http://deb.debian.org/debian-security/ bookworm-security main contrib non-free non-free-firmware
 
 deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
-deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware" > /etc/apt/sources.list
 
 # Enable bookworm backports
-# bookworm-backports
+printf "\n# bookworm-backports
 deb http://deb.debian.org/debian bookworm-backports main contrib non-free
-deb-src http://deb.debian.org/debian bookworm-backports main contrib non-free" > /etc/apt/sources.list
+deb-src http://deb.debian.org/debian bookworm-backports main contrib non-free" >> /etc/apt/sources.list
+
+# Refresh 
+sudo apt update
 
 # Refresh repos and install git, curl, vlc, ubuntu-restricted-extras and build-essential
 sudo apt install fish htop neovim neofetch git curl gnome-clocks vlc haruna elisa ktorrent skanlite timeshift flatpak build-essential python3-pip python3-tk sqlite3 p7zip p7zip-full obs-studio gimp chromium libavcodec-extra ttf-mscorefonts-installer unrar gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi -y # Enter 'y' to download
