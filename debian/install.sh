@@ -17,7 +17,7 @@ printf "\n# bookworm-backports
 deb http://deb.debian.org/debian bookworm-backports main contrib non-free
 deb-src http://deb.debian.org/debian bookworm-backports main contrib non-free" >> /etc/apt/sources.list
 
-# Refresh 
+# Refresh local packages
 sudo apt update
 
 # Refresh repos and install git, curl, vlc, ubuntu-restricted-extras and build-essential
