@@ -37,6 +37,7 @@
     * flatpak
     * ttf-jetbrains-mono-nerd
     * ttf-fira-code
+    * noto-fonts-emoji
     * elisa
     * vlc
     * thunderbird
@@ -76,6 +77,19 @@
 * This will generate a ssh key for github
 
 ## Custom changes
+
+* Change pacman configuration
+  
+  * Open the config file
+
+      ```bash
+      sudo vim /etc/pacman.conf
+      ```
+
+    * ***Uncomment "#Color" to change the black and white terminal to a colorful one.***
+    * ***Add "ILoveCandy" below it to change default install progress bar.***
+
+    * ***Save the file.***  
 
 ### Change shell to fish
   

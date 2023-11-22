@@ -1,5 +1,5 @@
 # Install neccessary package
-sudo pacman -S bluez ufw bash-completion p7zip zip unzip fish python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kcalc kbackup ktorrent okular skanlite skanpage spectacle chromium kcron kclock libreoffice-fresh neofetch gimp chromium obs-studio
+sudo pacman -S bluez ufw bash-completion p7zip zip unzip fish python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts-emoji elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kcalc kbackup ktorrent okular skanlite skanpage spectacle chromium kcron kclock libreoffice-fresh neofetch gimp chromium obs-studio
 
 # Enable bluetooth
 sudo systemctl start bluetooth.service
@@ -16,9 +16,6 @@ sudo ufw status verbose
 # Start with the system
 sudo systemctl enable ufw.service
 
-# Install nvm
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
-
 # Install AUR helper 
 sudo pacman -S --needed base-devel git
 mkdir Programs
@@ -26,6 +23,9 @@ cd Programs
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
+# Install nvm
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
 
 # Install programs from AUR
 yay -S onlyoffice-bin zoom visual-studio-code-bin spotify postman-bin brave-bin mongodb-bin ttf-ms-fonts
