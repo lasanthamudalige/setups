@@ -25,6 +25,7 @@
     * bluez
     * ufw
     * bash-completion
+    * fwupd
     * p7zip
     * zip
     * unzip
