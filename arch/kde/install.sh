@@ -1,9 +1,20 @@
 # Install neccessary package
-sudo pacman -S bluez bash-completion p7zip zip unzip fish python tk python-pip sqlite neovim ttf-jetbrains-mono-nerd ttf-fira-code elisa kdegraphics-thumbnailers ffmpegthumbs gwenview kcalc ktorrent okular skanlite skanpage spectacle chromium kcron kclock libreoffice-fresh neofetch gimp chromium obs-studio -y
+sudo pacman -S bluez ufw bash-completion p7zip zip unzip fish python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kcalc kbackup ktorrent okular skanlite skanpage spectacle chromium kcron kclock libreoffice-fresh neofetch gimp chromium obs-studio
 
-# Enable aadfkjdfs
+# Enable bluetooth
 sudo systemctl start bluetooth.service
+# Start with the system
 sudo systemctl enable bluetooth.service
+
+# Install tlp
+# sudo apt install tlp tlp-rdw -y
+
+# Enable the firewall
+sudo ufw enable
+# Check firewall status
+sudo ufw status verbose
+# Start with the system
+sudo systemctl enable ufw.service
 
 # Install nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
@@ -17,9 +28,15 @@ cd yay
 makepkg -si
 
 # Install programs from AUR
-yay -S onlyoffice-bin zoom visual-studio-code-bin spotify postman-bin brave-bin mongodb-bin -y
+yay -S onlyoffice-bin zoom visual-studio-code-bin spotify postman-bin brave-bin mongodb-bin ttf-ms-fonts
 
-# Start and how show status of mongodb
+# Install flatpak applications
+flatpak install flathub flatseal io.gitlab.idevecore.Pomodoro joplin postman -y
+
+# Update font cache
+fc-cache -vf
+
+# Start and show status of mongodb
 sudo systemctl start mongodb
 sudo systemctl status mongodb
 
