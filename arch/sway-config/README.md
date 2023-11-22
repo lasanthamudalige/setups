@@ -257,6 +257,12 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
    npm install -g nodemon # or using yarn: yarn global add nodemon
    ```
 
+* Install json server from nodejs
+
+   ```bash
+   npm install -g json-server
+   ```
+
 * Install MongoDB
 
    ```bash
