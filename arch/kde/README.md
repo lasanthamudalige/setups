@@ -39,6 +39,7 @@
     * ttf-jetbrains-mono-nerd
     * ttf-fira-code
     * noto-fonts-emoji
+    * noto-fonts-cjk
     * elisa
     * vlc
     * thunderbird
