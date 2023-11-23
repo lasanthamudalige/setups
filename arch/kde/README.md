@@ -215,3 +215,8 @@
    alias create="~/Development/shell-scripts/automate_repo.sh"
    alias wish="~/Development/shell-scripts/fb_birthday_wisher.sh"
    ```
+
+* ***Note***
+* Install Miniconda
+* Install the Latest selenium webdriver using miniconda
+* Download the gecko driver and move it to /usr/local/bin
