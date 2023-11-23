@@ -218,5 +218,5 @@
 
 * ***Note***
 * Install Miniconda
-* Install the Latest selenium webdriver using miniconda
+* Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
