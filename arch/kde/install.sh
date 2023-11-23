@@ -31,7 +31,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 yay -S onlyoffice-bin zoom visual-studio-code-bin spotify postman-bin brave-bin mongodb-bin ttf-ms-fonts
 
 # Install flatpak applications
-flatpak install flathub flatseal io.gitlab.idevecore.Pomodoro joplin postman -y
+flatpak install flathub flatseal francis joplin postman -y
 
 # Update font cache
 fc-cache -vf
