@@ -28,7 +28,8 @@ makepkg -si
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
 
 # Install programs from AUR
-yay -S onlyoffice-bin zoom visual-studio-code-bin spotify postman-bin brave-bin mongodb-bin ttf-ms-fonts
+yay -S onlyoffice-bin zoom visual-studio-code-bin spotify brave-bin mongodb-bin ttf-ms-fonts
+# postman-bin - (outdated)
 
 # Install flatpak applications
 flatpak install flathub flatseal francis joplin postman -y

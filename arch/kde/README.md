@@ -69,6 +69,7 @@
     * Spotify
     * Mongodb
     * MS-fonts
+    * ~~postman-bin~~ (outdated)
   * From Flatpak
     * Flatseal
     * Pomodoro timer
