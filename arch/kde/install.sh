@@ -7,7 +7,7 @@ sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
 
 # Install tlp
-# sudo pacman -S tlp tlp-rdw
+#sudo pacman -S tlp tlp-rdw
 
 # Enable the firewall
 sudo ufw enable
