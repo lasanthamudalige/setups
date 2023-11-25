@@ -48,6 +48,7 @@
     * gwenview
     * kcalc
     * ktorrent
+    * kompare
     * okular
     * skanlite
     * skanpage
