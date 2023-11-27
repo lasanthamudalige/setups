@@ -1,4 +1,4 @@
-!/bin/sh
+#!/bin/bash
 
 # Enable parallel downloads and fastest mirror
 #sudo sh -c 'echo -e  "\nmax_parallel_downloads=10\nfastestmirror=true" >> /etc/dnf/dnf.conf'

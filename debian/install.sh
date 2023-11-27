@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Overrite /etc/apt/sources.list with below lines
 # Enable contrib and non-free sources

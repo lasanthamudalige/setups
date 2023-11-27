@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install neccessary package
 sudo pacman -S bluez ufw bash-completion fwupd p7zip zip unzip unrar fish python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts-emoji noto-fonts-cjk elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kcalc kbackup ktorrent kompare okular skanlite skanpage spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obs-studio
 
