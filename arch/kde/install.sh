@@ -18,7 +18,7 @@ sudo ufw status verbose
 # Start with the system
 sudo systemctl enable ufw.service
 
-# Install AUR helper 
+# Install AUR helper
 sudo pacman -S --needed base-devel git
 mkdir Programs
 cd Programs
@@ -27,7 +27,15 @@ cd yay
 makepkg -si
 
 # Install nvm
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+# Install miniconda
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+# Initialize miniconda in bash shell
+~/miniconda3/bin/conda init bash
 
 # Install programs from AUR
 yay -S onlyoffice-bin zoom visual-studio-code-bin spotify brave-bin mongodb-bin ttf-ms-fonts francis telegram-desktop rustdesk-bin
@@ -51,6 +59,6 @@ sudo systemctl enable mongodb
 BASEDIR=$(cd $(dirname $0) && pwd)
 $BASEDIR/generate_new_github_ssh_key.sh
 
-# Add custom commands to .bashrc file  
+# Add custom commands to .bashrc file
 cd ~
-printf "\n# Custom commands\n# command to create github repos\nalias create='~/Development/shell-scripts/automate_repo.sh'\n# command to wish facebook birthdays\nalias wish='~/Development/shell-scripts/fb_birthday_wisher.sh'" >> .bashrc
+printf "\n# Custom commands\n# command to create github repos\nalias create='~/Development/shell-scripts/automate_repo.sh'\n# command to wish facebook birthdays\nalias wish='~/Development/shell-scripts/fb_birthday_wisher.sh'" >>.bashrc
