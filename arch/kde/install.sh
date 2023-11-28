@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install neccessary package
-sudo pacman -S bluez ufw bash-completion fwupd p7zip zip unzip unrar fish python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts-emoji noto-fonts-cjk elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kcalc kbackup ktorrent kompare okular skanlite skanpage spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obs-studio
+sudo pacman -S bluez ufw bash-completion fwupd p7zip zip unzip unrar fish python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts-emoji noto-fonts-cjk elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kcalc ktorrent meld okular skanlite skanpage spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obs-studio
 
 # Enable bluetooth
 sudo systemctl start bluetooth.service
@@ -30,7 +30,7 @@ makepkg -si
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
 
 # Install programs from AUR
-yay -S onlyoffice-bin zoom visual-studio-code-bin spotify brave-bin mongodb-bin ttf-ms-fonts francis
+yay -S onlyoffice-bin zoom visual-studio-code-bin spotify brave-bin mongodb-bin ttf-ms-fonts francis telegram-desktop rustdesk-bin
 # postman-bin - (outdated)
 
 # Install flatpak applications

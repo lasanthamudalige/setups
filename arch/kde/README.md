@@ -48,7 +48,7 @@
     * gwenview
     * kcalc
     * ktorrent
-    * kompare
+    * meld
     * okular
     * skanlite
     * skanpage
@@ -70,10 +70,13 @@
     * Spotify
     * Mongodb
     * MS-fonts
+    * Francis
+    * Telegram
+    * Rustdesk
     * ~~postman-bin~~ (outdated)
   * From Flatpak
     * Flatseal
-    * Pomodoro timer
+    * ~~Francis~~ (available in AUr)
     * Joplin
 
 ## Generate_new_ssh_key.sh
