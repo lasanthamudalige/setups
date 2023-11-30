@@ -29,7 +29,7 @@
     * p7zip
     * zip
     * unzip
-    * fish
+    * zsh zsh-completions
     * python
     * python-tk
     * python-pip
@@ -68,7 +68,7 @@
     * Brave browser
     * Visual studio Code
     * Spotify
-    * Mongodb
+    * Mongodb (outdated)
     * MS-fonts
     * Francis
     * Telegram
@@ -97,20 +97,6 @@
     * ***Add "ILoveCandy" below it to change default install progress bar.***
 
     * ***Save the file.***  
-
-### Change shell to fish
-  
-* Install fish shell ***(If you didn't run the script)***
-
-    ```bash
-    sudo pacman -S install fish
-    ```
-
-* Change shell to fish
-
-    ```bash
-    chsh -s /usr/bin/fish
-    ```
 
 ### Power management (On laptops)
   
@@ -256,6 +242,8 @@
       ```
 
   3. Start a new terminal session.
+
+  * copy nvm setting from .bashrc file to .zshrc
 
 * ***Note***
 * Install Miniconda
