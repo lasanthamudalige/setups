@@ -180,24 +180,6 @@
     wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
     ```
 
-### Add nvm to fish shell
-
-* ***Install nvm before doing below steps***
-
-  * Install nvm in fish shell
-
-    * Install fisher plugin
-
-        ```bash
-        curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-        ```
-
-    * Install fish nvm
-
-        ```bash
-        fisher install FabioAntunes/fish-nvm edc/bass
-        ```
-
 * Install nodemon from nodejs
 
    ```bash
@@ -221,7 +203,63 @@
    alias wish="~/Development/shell-scripts/fb_birthday_wisher.sh"
    ```
 
+### Miniconda settings
+
+* Initialize conda for the current shell
+
+  ```bash
+  conda init zsh # or bash
+  ```
+
+### Zsh shell
+
+* Install zsh shell
+
+  ```bash
+    sudo pacman -S zsh zsh-completions
+  ```
+
+* List available shells
+
+  ```bash
+  chsh -l
+  ```
+
+* Change default shell to zsh
+
+  ```bash
+  chsh -s /usr/bin/zsh # And log back in
+  ```
+
+* Install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
+
+  ```bash
+  wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+  sh install.sh
+  ```
+
+* add zsh-autosuggestions
+
+  1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+
+      ```bash
+      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      ```
+
+  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
+
+      ```bash
+      plugins=( 
+      # other plugins...
+      zsh-autosuggestions
+      )
+      ```
+
+  3. Start a new terminal session.
+
 * ***Note***
 * Install Miniconda
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
+
+### Neovim stuff
