@@ -1,4 +1,4 @@
-# A script to auto install necessay apps in Linux mint
+# A script to auto install necessay apps in Arch Linux
 
 ## Table of content
 
