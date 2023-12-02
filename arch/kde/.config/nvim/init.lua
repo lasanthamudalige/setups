@@ -127,7 +127,7 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'onedark',
         component_separators = '|',
         section_separators = '',
@@ -232,6 +232,13 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- Show line numbers
+vim.o.relativenumber = true -- show relative line numbers
+vim.o.number = true         -- shows absolute line number on cursor line (when relative number is on)
+
+-- Highlight the current cursor line
+vim.o.cursorline = true
 
 -- [[ Basic Keymaps ]]
 
