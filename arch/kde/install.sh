@@ -38,7 +38,7 @@ rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 
 # Install programs from AUR
-yay -S onlyoffice-bin zoom visual-studio-code-bin spotify brave-bin mongodb-bin ttf-ms-fonts francis telegram-desktop rustdesk-bin postman-bin
+yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin mongodb-bin ttf-ms-fonts francis telegram-desktop rustdesk-bin postman-bin
 
 # Install flatpak applications
 flatpak install flathub flatseal joplin postman -y
