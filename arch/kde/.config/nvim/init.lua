@@ -201,7 +201,7 @@ require('lazy').setup({
         --       refer to the README for telescope-fzf-native for more instructions.
         build = 'make',
         cond = function()
-          return vim.fn.executable 'make' == 1
+         return vim.fn.executable 'make' == 1
         end,
       },
     },
@@ -280,12 +280,11 @@ vim.o.number = true -- shows absolute line number on cursor line (when relative 
 vim.o.cursorline = true -- highlight the current cursor line
 
 -- Tabs & indentation
-vim.o.tabstop = 2 -- 2 spaces for tabs (prettier default)
-vim.o.shiftwidth = 2 -- 2 spaces for indent width
+vim.o.tabstop = 4 -- 2 spaces for tabs (prettier default)
+vim.o.shifttabstop = 4
+vim.o.shiftwidth = 4 -- 2 spaces for indent width
 vim.o.expandtab = true -- expand tab to spaces
 vim.o.putoindent = true -- copy indent from current line when starting new one
-
--- vim.o.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- [[ Basic Keymaps ]]
 
@@ -302,6 +301,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Show file explore
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
