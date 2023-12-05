@@ -272,6 +272,21 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- Line numbers
+vim.o.relativenumber = true -- show relative line numbers
+vim.o.number = true -- shows absolute line number on cursor line (when relative number is on)
+
+-- Cursor line
+vim.o.cursorline = true -- highlight the current cursor line
+
+-- Tabs & indentation
+vim.o.tabstop = 2 -- 2 spaces for tabs (prettier default)
+vim.o.shiftwidth = 2 -- 2 spaces for indent width
+vim.o.expandtab = true -- expand tab to spaces
+vim.o.putoindent = true -- copy indent from current line when starting new one
+
+-- vim.o.signcolumn = "yes" -- show sign column so that text doesn't shift
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
@@ -531,11 +546,13 @@ require('mason-lspconfig').setup()
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
+  bashls = {},
   -- clangd = {},
   -- gopls = {},
-  -- pyright = {},
+  pyright = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
+  tsserver = {},
+  html = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
