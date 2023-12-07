@@ -25,6 +25,8 @@
     * bluez
     * ufw
     * bash-completion
+    * wl-copy
+    * ripgrep
     * fwupd
     * p7zip
     * zip
@@ -251,3 +253,33 @@
 * Download the gecko driver and move it to /usr/local/bin
 
 ### Neovim stuff
+
+* Move neovim config file to $HOME/.config/
+```
+sudo cp -r .config/neovim/ ~/.config/
+
+```
+
+* Install clipboard tool for wayland (Already is on the install.sh file)
+
+```
+sudo pacman -S wl-copy
+```
+
+* Install pyright from npm
+
+```
+npm i -g pyright
+```
+
+* Install tree-sitte-cli
+
+```
+npm i -g tree-sitter-cli
+```
+
+* Install ripgrep
+
+```
+sudo pacman -S ripgrep
+```
