@@ -248,38 +248,49 @@
   * copy nvm setting from .bashrc file to .zshrc
 
 * ***Note***
-* Install Miniconda
+~~* Install Miniconda
+* Install the Latest selenium webdriver to Miniconda base environment
+* Download the gecko driver and move it to /usr/local/bin~~
+
+* Install micromamba
+
+```bash
+"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+```
+    - Respond to all the input prompts
+
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
 
 ### Neovim stuff
 
 * Move neovim config file to $HOME/.config/
-```
+
+```bash
 sudo cp -r .config/neovim/ ~/.config/
 
 ```
 
 * Install clipboard tool for wayland (Already is on the install.sh file)
 
-```
+```bash
 sudo pacman -S wl-copy
 ```
 
 * Install pyright from npm
 
-```
+```bash
 npm i -g pyright
 ```
 
 * Install tree-sitte-cli
 
-```
+```bash
 npm i -g tree-sitter-cli
 ```
 
 * Install ripgrep
 
-```
+```bash
 sudo pacman -S ripgrep
 ```
