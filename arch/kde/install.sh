@@ -41,7 +41,8 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 
 # Install programs from AUR
-yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin mongodb-bin ttf-ms-fonts francis telegram-desktop rustdesk-bin postman-bin
+yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin ttf-ms-fonts francis telegram-desktop rustdesk-bin postman-bin
+# mongodb-bin (optional) 
 
 # Install flatpak applications
 flatpak install flathub flatseal joplin postman -y
@@ -51,11 +52,11 @@ flatpak install flathub flatseal joplin postman -y
 fc-cache -vf
 
 # Start and show status of mongodb
-sudo systemctl start mongodb
-sudo systemctl status mongodb
+#sudo systemctl start mongodb
+#sudo systemctl status mongodb
 
 # Enable mongodb
-sudo systemctl enable mongodb
+#sudo systemctl enable mongodb
 
 # Generate github ssh key
 BASEDIR=$(cd $(dirname $0) && pwd)
