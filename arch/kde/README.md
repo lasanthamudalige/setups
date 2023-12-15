@@ -27,6 +27,7 @@
     * bash-completion
     * wl-copy
     * ripgrep
+    * packagekit-qt5
     * fwupd
     * p7zip
     * zip
@@ -75,7 +76,7 @@
     * Francis
     * Telegram
     * Rustdesk
-    * ~~postman-bin~~ (outdated)
+    * postman-bin
   * From Flatpak
     * Flatseal
     * ~~Francis~~ (available in AUr)
@@ -191,7 +192,7 @@
    alias wish="~/Development/shell-scripts/fb_birthday_wisher.sh"
    ```
 
-### Miniconda settings
+### ~~Miniconda settings~~ (use micromamba)
 
 * Initialize conda for the current shell
 
