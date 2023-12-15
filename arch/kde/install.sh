@@ -29,7 +29,7 @@ makepkg -si
 # Install nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
-# Install miniconda (use micromamba)
+# ~~Install miniconda (use micromamba)~~
 #mkdir -p ~/miniconda3
 #wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 #bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
@@ -45,8 +45,8 @@ yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin ttf-ms-fonts francis
 # mongodb-bin (optional) 
 
 # Install flatpak applications
-flatpak install flathub flatseal joplin postman -y
-# francis (available in AUR)
+flatpak install flathub flatseal joplin -y
+# francis postman (available in AUR)
 
 # Update font cache
 fc-cache -vf
