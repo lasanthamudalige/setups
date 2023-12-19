@@ -287,7 +287,7 @@ vim.o.expandtab = true -- expand tab to spaces
 vim.o.putoindent = true -- copy indent from current line when starting new one
 
 -- Do not let cursor scroll below or above N number of lines when scrolling.                           
-vim.o.scrolloff = 10
+vim.o.scrolloff = 20
 
 -- [[ Basic Keymaps ]]
 
