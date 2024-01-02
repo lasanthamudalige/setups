@@ -28,14 +28,11 @@ set tabstop=4
 " Enable smart tab
 set smarttab
 
-" Use space characters instead of tabs.
-set expandtab
-
 " Do not save backup files.
 set nobackup
 
 " Do not let cursor scroll below or above N number of lines when scrolling.
-set scrolloff=10
+set scrolloff=20
 
 " Do not wrap lines. Allow long lines to extend as far as the line goes.
 set nowrap
