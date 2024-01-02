@@ -4,9 +4,9 @@
 sudo pacman -S bluez ufw bash-completion wl-clipboard ripgrep packagekit-qt5 fwupd p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts-emoji noto-fonts-cjk elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kcalc ktorrent meld okular skanlite skanpage spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obs-studio
 
 # Enable bluetooth
-sudo systemctl start bluetooth.service
+#sudo systemctl start bluetooth.service
 # Start with the system
-sudo systemctl enable bluetooth.service
+#sudo systemctl enable bluetooth.service
 
 # Install tlp
 #sudo pacman -S tlp tlp-rdw
