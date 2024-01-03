@@ -28,6 +28,7 @@
     * wl-copy
     * ripgrep
     * fwupd
+    * webp-pixbuf-loader
     * p7zip
     * zip
     * unzip
