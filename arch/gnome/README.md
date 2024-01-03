@@ -27,7 +27,6 @@
     * bash-completion
     * wl-copy
     * ripgrep
-    * packagekit-qt5
     * fwupd
     * p7zip
     * zip
@@ -43,22 +42,12 @@
     * ttf-fira-code
     * noto-fonts-emoji
     * noto-fonts-cjk
-    * elisa
     * vlc
     * thunderbird
-    * kdegraphics-thumbnailers
     * ffmpegthumbs
-    * gwenview
-    * kcalc
-    * ktorrent
+    * transmission-gtk
     * meld
-    * okular
-    * skanlite
-    * skanpage
-    * spectacle
     * chromium
-    * kcron
-    * kclock
     * libreoffice-fresh
     * neofetch
     * gimp
@@ -71,12 +60,12 @@
     * Brave browser
     * Visual studio Code
     * Spotify
-    * Mongodb (outdated)
     * MS-fonts
     * Francis
     * Telegram
     * Rustdesk
     * postman-bin
+    * Mongodb (optional)
   * From Flatpak
     * Flatseal
     * ~~Francis~~ (available in AUr)
@@ -272,7 +261,7 @@ sudo cp -r .config/neovim/ ~/.config/
 
 ```
 
-* Install clipboard tool for wayland (Already is on the install.sh file)
+* Install clipboard tool for wayland (Already in the install.sh file)
 
 ```bash
 sudo pacman -S wl-copy
