@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install neccessary package
-sudo pacman -S bluez ufw bash-completion wl-clipboard ripgrep fwupd p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts-emoji noto-fonts-cjk vlc thunderbird transmission-gtk meld chromium kclock libreoffice-fresh neofetch gimp obs-studio --needed
+sudo pacman -S bluez ufw bash-completion wl-clipboard ripgrep fwupd p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts-emoji noto-fonts-cjk vlc thunderbird transmission-gtk meld chromium celluloid libreoffice-fresh neofetch gimp obs-studio --needed
 
 # Enable bluetooth
 #sudo systemctl start bluetooth.service
@@ -60,8 +60,7 @@ fc-cache -vf
 #sudo systemctl enable mongodb
 
 # Generate github ssh key
-BASEDIR=$(cd $(dirname $0) && pwd)
-$BASEDIR/generate_new_github_ssh_key.sh
+./generate_new_github_ssh_key.sh
 
 # Add custom commands to .bashrc file
 cd ~
