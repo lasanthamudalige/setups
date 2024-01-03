@@ -14,7 +14,7 @@
 * profile - kde-plasma desktop with login with ly
 * Sound - Pipewire
 * kernel - Stable kernel (Linux)
-* Additional packages - 'firefox'
+* Additional packages - 'firefox git'
 * Network configuration - NetworkManager
 * Other settings are stock setting
 
@@ -44,7 +44,6 @@
     * noto-fonts-cjk
     * vlc
     * thunderbird
-    * ffmpegthumbs
     * transmission-gtk
     * meld
     * chromium
@@ -257,7 +256,7 @@
 * Move neovim config file to $HOME/.config/
 
 ```bash
-sudo cp -r .config/neovim/ ~/.config/
+cp -r .config/neovim/ ~/.config/
 
 ```
 
