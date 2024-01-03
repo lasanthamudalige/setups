@@ -25,6 +25,7 @@ cd Programs
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+cd ..
 
 # Install nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
@@ -59,9 +60,15 @@ fc-cache -vf
 #sudo systemctl enable mongodb
 
 # Generate github ssh key
-BASEDIR=$(cd $(dirname $0) && pwd)
-$BASEDIR/generate_new_github_ssh_key.sh
+./generate_new_github_ssh_key.sh
 
 # Add custom commands to .bashrc file
 cd ~
 printf "\n# Custom commands\n# command to wish facebook birthdays\nalias wish='micromamba run -n base ~/Development/shell-scripts/fb_birthday_wisher.sh'" >>.bashrc
+
+# Install oh my zsh
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh install.sh
+
+# Add zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
