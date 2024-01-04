@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Install neccessary package
-sudo pacman -S bluez ufw bash-completion wl-clipboard ripgrep fwupd webp-pixbuf-loader p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts-emoji noto-fonts-cjk timeshift vlc thunderbird transmission-gtk meld chromium celluloid rhythmbox libreoffice-fresh neofetch gimp obs-studio --needed
+sudo pacman -S ufw bash-completion wl-clipboard ripgrep fwupd webp-pixbuf-loader p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-fira-code noto-fonts-emoji noto-fonts-cjk timeshift vlc thunderbird transmission-gtk meld chromium celluloid rhythmbox libreoffice-fresh neofetch gimp obs-studio --needed
 
+# Install bluetooth
+#sudo pacman -S bluez
 # Enable bluetooth
 #sudo systemctl start bluetooth.service
 # Start with the system
