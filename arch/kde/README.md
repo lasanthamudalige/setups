@@ -43,6 +43,7 @@
     * ttf-fira-code
     * noto-fonts-emoji
     * noto-fonts-cjk
+    * timeshift
     * elisa
     * vlc
     * thunderbird
