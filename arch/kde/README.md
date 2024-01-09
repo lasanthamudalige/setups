@@ -29,6 +29,9 @@
     * ripgrep
     * packagekit-qt5
     * fwupd
+    * dosfstools 
+    * ntfs-3g
+    * exfat-utils
     * p7zip
     * zip
     * unzip
