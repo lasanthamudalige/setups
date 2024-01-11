@@ -281,10 +281,10 @@ vim.o.cursorline = true -- highlight the current cursor line
 
 -- Tabs & indentation
 vim.o.tabstop = 4 -- 2 spaces for tabs (prettier default)
-vim.o.shifttabstop = 4
+vim.o.tabstop = 4
 vim.o.shiftwidth = 4 -- 2 spaces for indent width
 vim.o.expandtab = true -- expand tab to spaces
-vim.o.putoindent = true -- copy indent from current line when starting new one
+vim.o.autoindent = true -- copy indent from current line when starting new one
 
 -- Do not let cursor scroll below or above N number of lines when scrolling.                           
 vim.o.scrolloff = 20
