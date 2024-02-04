@@ -119,5 +119,5 @@ unset __mamba_setup
 # <<< mamba initialize <<<
 
 # Custom commands
-# command to wish facebook birthdays using micromamba
-alias wish= micromamba run -n base'~/Development/shell-scripts/fb_birthday_wisher.sh'
+# command to wish facebook birthdays
+alias wish='micromamba run -n base ~/Development/shell-scripts/fb_birthday_wisher.sh'
