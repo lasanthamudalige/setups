@@ -28,6 +28,7 @@
     * wl-copy
     * ripgrep
     * packagekit-qt5
+	* speech-dispatcher
     * fwupd
     * dosfstools 
     * ntfs-3g
