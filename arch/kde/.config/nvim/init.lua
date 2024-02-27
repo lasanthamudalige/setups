@@ -552,7 +552,7 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
   bashls = {},
-  -- clangd = {},
+  clangd = {},
   gopls = {},
   pyright = {},
   -- rust_analyzer = {},
