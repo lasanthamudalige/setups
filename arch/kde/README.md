@@ -28,9 +28,9 @@
     * wl-copy
     * ripgrep
     * packagekit-qt5
-	* speech-dispatcher
+    * speech-dispatcher
     * fwupd
-    * dosfstools 
+    * dosfstools
     * ntfs-3g
     * exfat-utils
     * p7zip
@@ -146,7 +146,7 @@
 
 * Copy themes folder inn usr/share/themes to ~/.themes folder
 
-    ```
+    ```bash
     sudo cp -r /usr/share/themes/. ~/.themes
     ```
 
@@ -240,7 +240,7 @@
       git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       ```
 
-  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
+  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
       ```bash
       plugins=( 
@@ -251,7 +251,24 @@
 
   3. Start a new terminal session.
 
-  * copy nvm setting from .bashrc file to .zshrc
+* add zsh-syntax-highlighting
+
+  1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+
+      ```bash
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+      ```
+
+  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+
+      ```bash
+      plugins=( 
+      # other plugins...
+      zsh-syntax-highlighting 
+      )
+      ```
+
+* copy nvm setting from .bashrc file to .zshrc
 
 * ***Note***
 ~~* Install Miniconda
@@ -263,7 +280,8 @@
 ```bash
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 ```
-    - Respond to all the input prompts
+
+* **Respond to all the input prompts**
 
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
