@@ -251,7 +251,7 @@
 
   3. Start a new terminal session.
 
-* add zsh-syntax-highlighting
+* add zsh-syntax-highlighting (optional)
 
   1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
