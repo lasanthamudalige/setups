@@ -229,6 +229,9 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'custom.plugins' },
+  
+  { "nvim-neotest/nvim-nio" },
+
 }, {})
 
 -- [[ Setting options ]]

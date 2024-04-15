@@ -3,6 +3,8 @@
 # Install neccessary package
 sudo pacman -S ufw bash-completion wl-clipboard ripgrep packagekit-qt5 speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kcalc ktorrent meld okular skanlite skanpage spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obs-studio
 
+#sudo pacman -S obsidian telegram-desktop --needed
+
 # Install bluetooth
 #sudo pacman -S bluez
 # Enable bluetooth
@@ -45,7 +47,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 
 # Install programs from AUR
-yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin ttf-ms-fonts francis telegram-desktop rustdesk-bin postman-bin spotify
+yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin ttf-ms-fonts francis rustdesk-bin postman-bin spotify
 # mongodb-bin (optional) 
 
 # Install flatpak applications
