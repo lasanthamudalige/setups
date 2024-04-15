@@ -13,7 +13,7 @@ sudo pacman -S ufw bash-completion wl-clipboard ripgrep packagekit-qt5 speech-di
 # Install tlp
 #sudo pacman -S tlp tlp-rdw
 # Enable tlp
-# sudo systemctl enable tlp.service
+#sudo systemctl enable tlp.service
 
 # Enable the firewall
 sudo ufw enable
