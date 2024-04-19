@@ -42,21 +42,23 @@
     * Enable and start wifi and bluetooth
 
       ```bash
-      systemctl enable iwd
+      sudo systemctl enable iwd
         
-      systemctl start iwd
+      sudo systemctl start iwd
 
-      systemctl enable bluetooth
+      sudo systemctl start bluetooth.service
 
-      systemctl start bluetooth
+      sudo systemctl enable bluetooth.service
       ```
 
       * Use ***iwctl*** and ***bluetoothctl*** commands to access wifi and bluetooth
   
   * Install all essential Arch packages using:
 
+    * mako (notification deamon for wayland)
+
     ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako fish -y
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako -y
     ```
 
   * Install yay aur helper
@@ -144,7 +146,7 @@
     sudo systemctl enable ly.service
     ```
 
-* Install cutomizing programs
+* ~~Install cutomizing programs
 
   ```bash
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
@@ -166,9 +168,12 @@
 * chromium (browser)
 * obs-studio (screen-recoder)
 * neovim (terminal based test editor)
+* zsh (A advanced shell with more features)
+* Utils such as (p7zip, wl-clipboard, ripgrep, fwupd)
+* Timeshift (backup utility)
 
   ```bash
-  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim # or libreoffice-still for stable version
+  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift # or libreoffice-still for stable version
   ```
 
   <!-- Install onlyoffice from AUR -->
@@ -287,22 +292,6 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
   wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
   ```
 
-    ***Install nvm before doing below steps***
-
-  * Install nvm in fish shell
-
-    * Install fisher plugin
-
-        ```bash
-        curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-        ```
-
-    * Install fish nvm
-
-        ```bash
-        fisher install FabioAntunes/fish-nvm edc/bass
-        ```
-
 * Install nodemon for nodejs
 
    ```bash
@@ -314,6 +303,55 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
    ```bash
    npm install -g json-server
    ```
+
+* ***Note***
+~~* Install Miniconda
+* Install the Latest selenium webdriver to Miniconda base environment
+* Download the gecko driver and move it to /usr/local/bin~~
+
+* Install micromamba
+
+```bash
+"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+```
+
+* **Respond to all the input prompts**
+
+* Install the Latest selenium webdriver to Miniconda base environment
+* Download the gecko driver and move it to /usr/local/bin
+
+### Neovim stuff
+
+* Move neovim config file to $HOME/.config/
+
+```bash
+sudo cp -r .config/neovim/ ~/.config/
+
+```
+
+* Install clipboard tool for wayland (Already is on the install.sh file)
+
+```bash
+sudo pacman -S wl-copy
+```
+
+* Install pyright from npm
+
+```bash
+npm i -g pyright
+```
+
+* Install tree-sitte-cli
+
+```bash
+npm i -g tree-sitter-cli
+```
+
+* Install ripgrep
+
+```bash
+sudo pacman -S ripgrep
+```
 
 * Install MongoDB
 
