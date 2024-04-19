@@ -146,7 +146,7 @@
     sudo systemctl enable ly.service
     ```
 
-* ~~Install cutomizing programs
+* ~~Install cutomizing programs~~ (Run below command to install all)
 
   ```bash
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
