@@ -165,9 +165,10 @@
 * gimp (image manipulation tool)
 * chromium (browser)
 * obs-studio (screen-recoder)
+* neovim (terminal based test editor)
 
   ```bash
-  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio # or libreoffice-still for stable version
+  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim # or libreoffice-still for stable version
   ```
 
   <!-- Install onlyoffice from AUR -->
@@ -177,19 +178,70 @@
 
 ## Other stuff
 
-### Change shell to fish
+### Zsh shell
 
-* Install fish shell
+* Install zsh shell
 
   ```bash
-  sudo pacman -S fish
+    sudo pacman -S zsh zsh-completions
   ```
 
-  * Change shell to fish
+* List available shells
 
-    ```bash
-    chsh -s /usr/bin/fish
-    ```
+  ```bash
+  chsh -l
+  ```
+
+* Change default shell to zsh
+
+  ```bash
+  chsh -s /usr/bin/zsh # And log back in
+  ```
+
+* Install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
+
+  ```bash
+  wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+  sh install.sh
+  ```
+
+* add zsh-autosuggestions
+
+  1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+
+      ```bash
+      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      ```
+
+  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+
+      ```bash
+      plugins=( 
+      # other plugins...
+      zsh-autosuggestions
+      )
+      ```
+
+  3. Start a new terminal session.
+
+* add zsh-syntax-highlighting (optional)
+
+  1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+
+      ```bash
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+      ```
+
+  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+
+      ```bash
+      plugins=( 
+      # other plugins...
+      zsh-syntax-highlighting 
+      )
+      ```
+
+* copy nvm setting from .bashrc file to .zshrc
 
 ### Install visual studio code, spotify, postman and brave browser with yay
 
