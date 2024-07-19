@@ -1,5 +1,5 @@
 #+Title: Emacs Kickstarter
-#+Author: MiniApollo
+#+Author: Lasantha Mudalige
 #+Description: A starting point for Gnu Emacs with good defaults and packages that most people may want to use.
 #+PROPERTY: header-args:emacs-lisp :tangle ./init.el :mkdirp yes
 #+Startup: showeverything
@@ -40,6 +40,10 @@
   - [[#rainbow-delimiters][Rainbow Delimiters]]
   - [[#which-key][Which-Key]]
   - [[#vterm][Vterm]]
+  - [[#emacs-dashboard][Emacs-dashboard]]
+  - [[#ws-butler][Ws-butler]]
+  - [[#rainbow-mode][Rainbow Mode]]
+  - [[#undotree][UndoTree]]
 - [[#runtime-performance][Runtime Performance]]
 
 * Introduction
@@ -96,13 +100,17 @@ To update/upgrade packages, use the package-upgrade-all command.
 Check out the use-package [[https://www.gnu.org/software/emacs/manual/use-package.html][documentation]] to see how to use it.
 With Emacs 29 use-package is now built-in.
 #+begin_src emacs-lisp
-    (require 'use-package-ensure) ;; Load use-package-always-ensure
-    (setq use-package-always-ensure t) ;; Always ensures that a package is installed
-    (setq package-archives '(("melpa" . "https://melpa.org/packages/") ;; Sets default package repositories
-                             ("org" . "https://orgmode.org/elpa/")
-                             ("elpa" . "https://elpa.gnu.org/packages/")
-                             ("nongnu" . "https://elpa.nongnu.org/nongnu/"))) ;; For Eat Terminal
+        (require 'use-package-ensure) ;; Load use-package-always-ensure
+        (setq use-package-always-ensure t) ;; Always ensures that a package is installed
+        (setq package-archives '(("melpa" . "https://melpa.org/packages/") ;; Sets default package repositories
+                                 ("org" . "https://orgmode.org/elpa/")
+                                 ("elpa" . "https://elpa.gnu.org/packages/")
+                                 ("nongnu" . "https://elpa.nongnu.org/nongnu/") ;; For Eat Terminal
+                                 ("gnu-devel" . "https://elpa.gnu.org/devel/")))
 #+end_src
+
+#+RESULTS:
+: ((melpa . https://melpa.org/packages/) (org . https://orgmode.org/elpa/) (elpa . https://elpa.gnu.org/packages/) (nongnu . https://elpa.nongnu.org/nongnu/) (gnu-devel . https://elpa.gnu.org/devel/))
 
 ** Evil Mode
 An extensible vi/vim layer for Emacs. Because…let’s face it. The Vim keybindings are just plain better.
@@ -218,7 +226,7 @@ To search and replace, use query-replace-regexp to replace one by one C-M-% (SPC
       (menu-bar-mode nil)         ;; Disable the menu bar
       (scroll-bar-mode nil)       ;; Disable the scroll bar
       (tool-bar-mode nil)         ;; Disable the tool bar
-      (inhibit-startup-screen t)  ;; Disable welcome screen
+      ;; (inhibit-startup-screen t)  ;; Disable welcome screen
 
       (delete-selection-mode t)   ;; Select text and delete it by typing.
       (electric-indent-mode nil)  ;; Turn off the weird indenting that Emacs does by default.
@@ -341,21 +349,21 @@ Or add the lua-language-server executable to your path.
 If you can use a package manager just install the lsp server and add a hook.
 Use visual block to uncomment easily in Org documents (C-v).
 #+begin_src emacs-lisp
-    ;;(use-package eglot
-    ;;  :ensure nil ;; Don't install eglot because it's now built-in
-    ;;  :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
-    ;;                 lua-mode) ;; Lua-mode needs to be installed
-    ;;         . eglot-ensure)
-    ;;  :custom
-    ;;  ;; Good default
-    ;;  (eglot-events-buffer-size 0) ;; No event buffers (Lsp server logs)
-    ;;  (eglot-autoshutdown t);; Shutdown unused servers.
-    ;;  (eglot-report-progress nil) ;; Disable lsp server logs (Don't show lsp messages at the bottom, java)
-    ;;  ;; Manual lsp servers
-    ;;  :config
-    ;;  (add-to-list 'eglot-server-programs
-    ;;               `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
-    ;;  )
+    (use-package eglot
+      :ensure nil ;; Don't install eglot because it's now built-in
+      :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
+                     lua-mode) ;; Lua-mode needs to be installed
+             . eglot-ensure)
+      :custom
+      ;; Good default
+      (eglot-events-buffer-size 0) ;; No event buffers (Lsp server logs)
+      (eglot-autoshutdown t);; Shutdown unused servers.
+      (eglot-report-progress nil) ;; Disable lsp server logs (Don't show lsp messages at the bottom, java)
+      ;; Manual lsp servers
+      :config
+      (add-to-list 'eglot-server-programs
+                   `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
+      )
 #+end_src
 
 ** Yasnippet
@@ -699,6 +707,101 @@ Best terminal emulator for emacs
 #+begin_src emacs-lisp 
     (use-package vterm
       :ensure t)
+#+end_src
+
+** Emacs-dashboard
+Emacs dashboard is an extensible startup screen showing you recent files, bookmarks, agenda, items and an Emacs banner.
+#+begin_src emacs-lisp
+    ;; use-package with package.el:
+    (use-package dashboard
+      :ensure t
+      :init
+      ;; Set the title
+      (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
+      ;; Set the banner
+      (setq dashboard-startup-banner 'logo)
+      ;; Content is not centered by default. To center, set
+      (setq dashboard-center-content t)
+      ;; vertically center content
+      (setq dashboard-vertically-center-content t)
+
+      ;; To disable shortcut "jump" indicators for each section, set
+      (setq dashboard-show-shortcuts t)
+
+      (setq dashboard-items '((recents   . 5)
+                              (bookmarks . 5)
+                              (projects  . 5)
+                              (agenda    . 5)
+                              (registers . 5)))
+
+      (setq dashboard-startupify-list '(dashboard-insert-banner
+                                        dashboard-insert-newline
+                                        dashboard-insert-banner-title
+                                        dashboard-insert-newline
+                                        dashboard-insert-navigator
+                                        dashboard-insert-newline
+                                        dashboard-insert-init-info
+                                        dashboard-insert-items
+                                        dashboard-insert-newline
+                                        dashboard-insert-footer))
+
+      (setq dashboard-navigation-cycle t)
+
+      (setq dashboard-heading-shorcut-format " [%s]")
+
+      (setq dashboard-item-shortcuts '((recents   . "r")
+                                       (bookmarks . "m")
+                                       (projects  . "p")
+                                       (agenda    . "a")
+                                       (registers . "e")))
+
+      (setq dashboard-item-names '(("Recent Files:"               . "Recently opened files:")
+                                   ("Agenda for today:"           . "Today's agenda:")
+                                   ("Agenda for the coming week:" . "Agenda:")))
+
+      (setq dashboard-display-icons-p t)     ; display icons on both GUI and terminal
+      (setq dashboard-icon-type 'nerd-icons) ; use `nerd-icons' package
+
+      (setq dashboard-set-heading-icons t) ; display heading icons
+      (setq dashboard-set-file-icons t) ; display file icons
+
+      ;; To display today’s agenda items on the dashboard
+      (add-to-list 'dashboard-items '(agenda) t)
+      ;; To show agenda for the upcoming seven days
+      (setq dashboard-week-agenda t)
+      ;; To show all agenda entries except DONE
+      (setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
+
+      :config
+      (dashboard-setup-startup-hook)
+      )
+#+end_src
+
+** Ws-butler
+Removes whitespace from the ends of lines.
+#+begin_src emacs-lisp
+    (use-package ws-butler
+      :init (ws-butler-global-mode))
+#+end_src
+
+** Rainbow Mode
+Displays the actual color as a background for any hex color value (ex. #ffffff).
+#+begin_src emacs-lisp
+    (use-package rainbow-mode
+      :diminish
+      :hook
+      ((org-mode prog-mode) . rainbow-mode))
+#+end_src
+
+** UndoTree
+Visualizes undo history.
+#+begin_src emacs-lisp
+    (use-package undo-tree
+      :init
+      (global-undo-tree-mode)
+      :custom
+      ;; Use separate directory for undo history
+      (undo-tree-history-directory-alist '(("." . "~/.config/emacs/undoTree"))))
 #+end_src
 
 * Runtime Performance

@@ -1,0 +1,1 @@
+("~/Downloads/c/" "~/Development/setups/" "~/Downloads/42-EXAM/" "~/Development/setups/arch/kde/emacs/" "~/.config/emacs/" "~/Development/python/beginner-projects/")

@@ -1,0 +1,10 @@
+(undo-tree-save-format-version . 1)
+"b4b5133dcc0d7447f06d8af41221c547d444328d"
+[nil nil nil nil (26225 54962 344364 827000) 0 nil]
+([nil nil ((30 . 30) (30 . 34) (29 . 31) (21 . 29) (20 . 21) (19 . 20) (18 . 19) (#("." 0 1 (face font-lock-string-face ws-butler-chg chg fontified t)) . -18) (undo-tree-id1 . -1) (undo-tree-id2 . -1) 19 (17 . 19) (#("g" 0 1 (face font-lock-string-face ws-butler-chg chg fontified t)) . -17) (undo-tree-id3 . -1) (undo-tree-id4 . -1) (#(">" 0 1 (category c->-as-paren-syntax face (rainbow-delimiters-depth-1-face font-lock-string-face) ws-butler-chg chg fontified t)) . -18) (undo-tree-id5 . -1) (undo-tree-id6 . -1) 19 (13 . 19) (9 . 9) (9 . 13) (5 . 9) (2 . 2) (2 . 5) (1 . 2) (t . -1)) nil (26225 54962 344362 973000) 0 nil])
+([nil nil ((39 . 41) (38 . 40) (35 . 38) 33) nil (26225 54962 344357 463000) 0 nil])
+([nil nil ((#("  " 0 2 (ws-butler-chg chg fontified t)) . 36)) nil (26225 54962 344356 251000) 0 nil])
+([nil nil ((60 . 61) (#("b" 0 1 (face font-lock-string-face ws-butler-chg chg fontified t)) . -60) (undo-tree-id0 . -1) 61 (48 . 61) (47 . 49) (#("\"" 0 1 (face (rainbow-delimiters-depth-2-face) ws-butler-chg chg fontified nil)) . -47) (47 . 48) (46 . 48) (45 . 46) (40 . 45) (38 . 40)) nil (26225 54962 344354 517000) 0 nil])
+([nil nil ((75 . 76) (72 . 75) (67 . 67) (67 . 72) (65 . 67) (64 . 65) (63 . 64)) nil (26225 54962 344330 813000) 0 nil])
+([nil current ((78 . 79)) nil (26225 54962 344327 136000) 0 nil])
+nil

@@ -25,7 +25,8 @@
 (setq package-archives '(("melpa" . "https://melpa.org/packages/") ;; Sets default package repositories
                          ("org" . "https://orgmode.org/elpa/")
                          ("elpa" . "https://elpa.gnu.org/packages/")
-                         ("nongnu" . "https://elpa.nongnu.org/nongnu/"))) ;; For Eat Terminal
+                         ("nongnu" . "https://elpa.nongnu.org/nongnu/") ;; For Eat Terminal
+                         ("gnu-devel" . "https://elpa.gnu.org/devel/")))
 
 (use-package evil
   :init ;; Execute code Before a package is loaded
@@ -122,7 +123,7 @@
   (menu-bar-mode nil)         ;; Disable the menu bar
   (scroll-bar-mode nil)       ;; Disable the scroll bar
   (tool-bar-mode nil)         ;; Disable the tool bar
-  (inhibit-startup-screen t)  ;; Disable welcome screen
+  ;; (inhibit-startup-screen t)  ;; Disable welcome screen
 
   (delete-selection-mode t)   ;; Select text and delete it by typing.
   (electric-indent-mode nil)  ;; Turn off the weird indenting that Emacs does by default.
@@ -203,21 +204,21 @@
   (projectile-project-search-path '("~/projects/" "~/work/" ("~/github" . 1)))) ;; . 1 means only search the first subdirectory level for projects
 ;; Use Bookmarks for smaller, not standard projects
 
-;;(use-package eglot
-;;  :ensure nil ;; Don't install eglot because it's now built-in
-;;  :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
-;;                 lua-mode) ;; Lua-mode needs to be installed
-;;         . eglot-ensure)
-;;  :custom
-;;  ;; Good default
-;;  (eglot-events-buffer-size 0) ;; No event buffers (Lsp server logs)
-;;  (eglot-autoshutdown t);; Shutdown unused servers.
-;;  (eglot-report-progress nil) ;; Disable lsp server logs (Don't show lsp messages at the bottom, java)
-;;  ;; Manual lsp servers
-;;  :config
-;;  (add-to-list 'eglot-server-programs
-;;               `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
-;;  )
+(use-package eglot
+  :ensure nil ;; Don't install eglot because it's now built-in
+  :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
+                 lua-mode) ;; Lua-mode needs to be installed
+         . eglot-ensure)
+  :custom
+  ;; Good default
+  (eglot-events-buffer-size 0) ;; No event buffers (Lsp server logs)
+  (eglot-autoshutdown t);; Shutdown unused servers.
+  (eglot-report-progress nil) ;; Disable lsp server logs (Don't show lsp messages at the bottom, java)
+  ;; Manual lsp servers
+  :config
+  (add-to-list 'eglot-server-programs
+               `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
+  )
 
 (use-package yasnippet-snippets
   :hook (prog-mode . yas-minor-mode))
@@ -425,6 +426,85 @@
 
 (use-package vterm
   :ensure t)
+
+;; use-package with package.el:
+(use-package dashboard
+  :ensure t
+  :init
+  ;; Set the title
+  (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
+  ;; Set the banner
+  (setq dashboard-startup-banner 'logo)
+  ;; Content is not centered by default. To center, set
+  (setq dashboard-center-content t)
+  ;; vertically center content
+  (setq dashboard-vertically-center-content t)
+
+  ;; To disable shortcut "jump" indicators for each section, set
+  (setq dashboard-show-shortcuts t)
+
+  (setq dashboard-items '((recents   . 5)
+                          (bookmarks . 5)
+                          (projects  . 5)
+                          (agenda    . 5)
+                          (registers . 5)))
+
+  (setq dashboard-startupify-list '(dashboard-insert-banner
+                                    dashboard-insert-newline
+                                    dashboard-insert-banner-title
+                                    dashboard-insert-newline
+                                    dashboard-insert-navigator
+                                    dashboard-insert-newline
+                                    dashboard-insert-init-info
+                                    dashboard-insert-items
+                                    dashboard-insert-newline
+                                    dashboard-insert-footer))
+
+  (setq dashboard-navigation-cycle t)
+
+  (setq dashboard-heading-shorcut-format " [%s]")
+
+  (setq dashboard-item-shortcuts '((recents   . "r")
+                                   (bookmarks . "m")
+                                   (projects  . "p")
+                                   (agenda    . "a")
+                                   (registers . "e")))
+
+  (setq dashboard-item-names '(("Recent Files:"               . "Recently opened files:")
+                               ("Agenda for today:"           . "Today's agenda:")
+                               ("Agenda for the coming week:" . "Agenda:")))
+
+  (setq dashboard-display-icons-p t)     ; display icons on both GUI and terminal
+  (setq dashboard-icon-type 'nerd-icons) ; use `nerd-icons' package
+
+  (setq dashboard-set-heading-icons t) ; display heading icons
+  (setq dashboard-set-file-icons t) ; display file icons
+
+  ;; To display today’s agenda items on the dashboard
+  (add-to-list 'dashboard-items '(agenda) t)
+  ;; To show agenda for the upcoming seven days
+  (setq dashboard-week-agenda t)
+  ;; To show all agenda entries except DONE
+  (setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
+
+  :config
+  (dashboard-setup-startup-hook)
+  )
+
+(use-package ws-butler
+  :init (ws-butler-global-mode))
+
+(use-package rainbow-mode
+  :diminish
+  :hook
+  ((org-mode prog-mode) . rainbow-mode))
+
+(use-package undo-tree
+  :init
+  (global-undo-tree-mode)
+  :custom
+  ;; Use separate directory for undo history
+  (undo-tree-history-directory-alist '(("." . "~/.config/emacs/undoTree"))))
 
 ;; Make gc pauses faster by decreasing the threshold.
 (setq gc-cons-threshold (* 2 1000 1000))
