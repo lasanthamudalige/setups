@@ -135,7 +135,7 @@
   ;;(dired-kill-when-opening-new-dired-buffer t) ;; Dired don't create new buffer
   ;;(recentf-mode t) ;; Enable recent file mode
 
-  ;;(global-visual-line-mode t)           ;; Enable truncated lines
+  (global-visual-line-mode t)           ;; Enable truncated lines
   (display-line-numbers-type 'relative) ;; Relative line numbers
   (global-display-line-numbers-mode t)  ;; Display line numbers
 
@@ -219,6 +219,20 @@
   (add-to-list 'eglot-server-programs
                `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
   )
+
+(use-package company
+    :ensure t
+    :commands (global-company-mode)
+    :init
+    (global-company-mode)
+    :custom
+    (company-tooltip-align-annotations 't)
+    (company-minimum-prefix-length 1)
+    (company-idle-delay 0.1))
+
+(use-package markdown-mode
+  :ensure t
+  :magic "\\.md\\'")
 
 (use-package yasnippet-snippets
   :hook (prog-mode . yas-minor-mode))

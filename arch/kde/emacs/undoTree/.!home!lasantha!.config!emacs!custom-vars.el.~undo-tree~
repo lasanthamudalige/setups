@@ -1,5 +1,5 @@
 (undo-tree-save-format-version . 1)
-"5963573cba2a5c8e8431202b1902786370c64bcc"
+"6be75a7761a85af171c23785bfa800f50cba33cf"
 [nil nil nil nil (26225 53147 15018 74000) 0 nil]
 ([nil nil ((708 . 947) (#("(custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -53,7 +53,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(eglot @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 714 (fontified nil)) . -1) (t 26264 56756 277919 703000)) nil (26266 18109 984045 723000) 0 nil])
-([nil current ((731 . 970) (#("(custom-set-faces
+([nil nil ((731 . 970) (#("(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -66,4 +66,134 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(consult-themes eglot @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 729 (fontified nil)) . -1) (t 26266 18109 988910 950000)) nil (26266 18188 401929 322000) 0 nil])
+([nil nil ((725 . 964) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -725) (722 . 724) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -722) (274 . 723) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(consult-themes eglot @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 729 (fontified nil)) . -1) (t 26266 18188 417183 865000)) nil (26267 63041 628298 248000) 0 nil])
+([nil nil ((731 . 970) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -731) (728 . 730) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -728) (274 . 729) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(consult-themes @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 723 (fontified nil)) . -1) (t 26267 63041 632872 354000)) nil (26267 63041 976078 619000) 0 nil])
+([nil nil ((743 . 982) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -743) (740 . 742) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -740) (274 . 741) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(eglot consult-themes @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 729 (fontified nil)) . -1) (t 26267 63041 989543 159000)) nil (26267 63699 732303 381000) 0 nil])
+([nil nil ((752 . 991) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -752) (749 . 751) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -749) (274 . 750) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(python-mode eglot consult-themes @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 741 (fontified nil)) . -1) (t 26267 63699 737016 611000)) nil (26267 64489 427296 220000) 0 nil])
+([nil nil ((743 . 982) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -743) (740 . 742) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -740) (274 . 741) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(eglot-jl python-mode eglot consult-themes @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 750 (fontified nil)) . -1) (t 26267 64489 439768 990000)) nil (26267 64536 363552 282000) 0 nil])
+([nil nil ((737 . 976) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -737) (734 . 736) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -734) (274 . 735) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(python-mode eglot consult-themes @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 741 (fontified nil)) . -1) (t 26267 64536 376836 420000)) nil (26268 3414 735769 84000) 0 nil])
+([nil nil ((743 . 982) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -743) (740 . 742) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -740) (274 . 741) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(python-mode consult-themes @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 735 (fontified nil)) . -1) (t 26268 3414 748479 970000)) nil (26268 3414 925907 60000) 0 nil])
+([nil nil ((737 . 976) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -737) (734 . 736) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -734) (274 . 735) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(eglot python-mode consult-themes @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 741 (fontified nil)) . -1) (t 26268 3414 938482 524000)) nil (26268 3444 961936 630000) 0 nil])
+([nil nil ((743 . 982) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -743) (740 . 742) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -740) (274 . 741) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(python-mode consult-themes @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 735 (fontified nil)) . -1) (t 26268 3444 975551 874000)) nil (26268 3445 154597 649000) 0 nil])
+([nil current ((751 . 990) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -751) (748 . 750) (#("
+" 0 1 (ws-butler-chg chg fontified nil)) . -748) (274 . 749) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . 274) (1 . 275) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(eglot python-mode consult-themes @ treesit-auto undo-tree dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode rainbow-mode ws-butler retrie dashboard-ls vterm dashboard which-key rainbow-delimiters diminish consult nerd-icons-completion marginalia vertico orderless cape nerd-icons-corfu corfu diff-hl magit nerd-icons-ibuffer nerd-icons-dired eat org-superstar toc-org yasnippet-snippets projectile doom-modeline gruvbox-theme general evil-collection evil)))" 0 741 (fontified nil)) . -1) (t 26268 3445 168887 792000)) nil (26268 4635 793054 743000) 0 nil])
 nil
