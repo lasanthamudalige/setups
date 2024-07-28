@@ -186,9 +186,9 @@ Recommended so that you have your own copy to modify.
 
 ## 4. Eglot configuration
 
-1. Setup Python lsp
+1.   Setup Python lsp
 
-[Visit this repository](https://github.com/python-lsp/python-lsp-server)
+-   [Visit this repository](https://github.com/python-lsp/python-lsp-server)
 
 <a id="org14852f4"></a>
 
