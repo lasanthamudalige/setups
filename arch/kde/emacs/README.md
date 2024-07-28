@@ -1,5 +1,3 @@
-https://github.com/MiniApollo/kickstart.emacs/assets/72389030/5c66130d-66b9-459b-a26d-210f3f937459
-
 # Table of Contents
 
 1.  [Introduction](#orgb229cbd)
@@ -182,6 +180,12 @@ Change or install JetBrains Mono font
 ## 3. Fork the repository
 
 Recommended so that you have your own copy to modify.
+
+# # 4. Eglot configuration
+
+1. Setup Python lsp
+
+[visit](https://github.com/python-lsp/python-lsp-server)
 
 <a id="org14852f4"></a>
 
