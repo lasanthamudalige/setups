@@ -12,6 +12,7 @@
     -  [1. Install fonts](#org87d8fc9)
     -  [2. Open the configuration file](#org94fe140)
     -  [3. Fork the repository](#org23b14b0)
+    -  [4. Eglot configuration](#orgb07f321)
 4.  [Uninstallation](#org14852f4)
 5.  [Gallery](#orgc18728a)
 
@@ -181,11 +182,13 @@ Change or install JetBrains Mono font
 
 Recommended so that you have your own copy to modify.
 
-# # 4. Eglot configuration
+<a id="orgb07f321"></a>
+
+## 4. Eglot configuration
 
 1. Setup Python lsp
 
-[visit](https://github.com/python-lsp/python-lsp-server)
+[Visit this repository](https://github.com/python-lsp/python-lsp-server)
 
 <a id="org14852f4"></a>
 
