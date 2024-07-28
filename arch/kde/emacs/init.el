@@ -123,7 +123,7 @@
   (menu-bar-mode nil)         ;; Disable the menu bar
   (scroll-bar-mode nil)       ;; Disable the scroll bar
   (tool-bar-mode nil)         ;; Disable the tool bar
-  ;; (inhibit-startup-screen t)  ;; Disable welcome screen
+  (inhibit-startup-screen t)  ;; Disable welcome screen
 
   (delete-selection-mode t)   ;; Select text and delete it by typing.
   (electric-indent-mode nil)  ;; Turn off the weird indenting that Emacs does by default.
@@ -218,7 +218,27 @@
   :config
   (add-to-list 'eglot-server-programs
                `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
-  )
+  ;; C/C++ config
+  (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+  ;; Python config
+  (add-to-list 'eglot-server-programs '(python-mode . ("pylsp")))
+
+  (setq-default eglot-workspace-configuration
+                '((:pylsp . (:configurationSources ["flake8"] :plugins (:pycodestyle (:enabled nil) :mccabe (:enabled nil) :flake8 (:enabled t))))))
+
+  ;; Bash config
+  (add-to-list 'eglot-server-programs '((sh-mode bash-ts-mode) . ("bash-language-server" "start")))
+
+  ;; hook
+  ;; C/C++
+  (add-hook 'c-mode-hook 'eglot-ensure)
+  (add-hook 'c++-mode-hook 'eglot-ensure)
+  ;; Python
+  (python-mode . eglot-ensure)
+  ;; Bash
+  (sh-mode . eglot-ensure)
+  (bash-ts-mode . eglot-ensure)
+)
 
 (use-package company
     :ensure t

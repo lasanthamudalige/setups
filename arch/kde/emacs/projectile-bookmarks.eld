@@ -1,1 +1,1 @@
-("~/Downloads/c/" "~/Downloads/emacs-bedrock/" "~/Development/setups/" "~/Downloads/42-EXAM/" "~/Development/setups/arch/kde/emacs/" "~/.config/emacs/" "~/Development/python/beginner-projects/")
+("~/Development/setups/" "~/Downloads/c/" "~/Development/web-development/react/expense-manager/frontend/" "~/Downloads/42-EXAM/" "~/Development/setups/arch/kde/emacs/" "~/.config/emacs/" "~/Development/python/beginner-projects/")
