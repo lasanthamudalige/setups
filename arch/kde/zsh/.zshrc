@@ -105,19 +105,23 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/home/lasantha/.local/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/home/lasantha/micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/lasantha/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
+    eval "$__conda_setup"
 else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+    if [ -f "/home/lasantha/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/lasantha/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/lasantha/miniconda3/bin:$PATH"
+    fi
 fi
-unset __mamba_setup
-# <<< mamba initialize <<<
+unset __conda_setup
+# <<< conda initialize <<<
 
 # Custom commands
 # command to wish facebook birthdays
 alias wish='micromamba run -n base ~/Development/shell-scripts/fb_birthday_wisher.sh'
+
+
