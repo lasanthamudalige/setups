@@ -105,6 +105,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Custom commands
+# command to wish facebook birthdays
+alias wish='micromamba run -n base ~/Development/shell-scripts/fb_birthday_wisher.sh'
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/lasantha/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -119,9 +123,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# Custom commands
-# command to wish facebook birthdays
-alias wish='micromamba run -n base ~/Development/shell-scripts/fb_birthday_wisher.sh'
-
 
