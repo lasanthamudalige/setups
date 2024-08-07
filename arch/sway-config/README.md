@@ -171,9 +171,10 @@
 * zsh (A advanced shell with more features)
 * Utils such as (p7zip, wl-clipboard, ripgrep, fwupd)
 * Timeshift (backup utility)
+* Emacs
 
   ```bash
-  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift # or libreoffice-still for stable version
+  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs ripgrep fd
   ```
 
   <!-- Install onlyoffice from AUR -->
@@ -256,15 +257,15 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
 
 ***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
 
-* ***To fix visual code code not saving login info install***
+<!-- * ***To fix visual code code not saving login info install*** -->
 
-  ```bash
-  sudo pacman -S gnome-keyring
-  ```
+<!--   ```bash -->
+<!--   sudo pacman -S gnome-keyring -->
+<!--   ``` -->
 
-  * add a new password for the keyring
+<!--   * add a new password for the keyring -->
 
-### Setting programming stuff
+<!-- ### Setting programming stuff -->
   
 * Generate ssh key for github
 
