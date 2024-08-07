@@ -44,7 +44,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 #~/miniconda3/bin/conda init bash
 
 # Install micromamba
-"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+# "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 
 # Install programs from AUR
 yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin ttf-ms-fonts francis rustdesk-bin postman-bin spotify
