@@ -271,9 +271,22 @@
 * copy nvm setting from .bashrc file to .zshrc
 
 * ***Note***
-~~* Install Miniconda
+* Install Miniconda
+
+```bash
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+zsh ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+~/miniconda3/bin/conda init zsh
+```
+```bash
+<!-- bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3 -->
+<!-- ~/miniconda3/bin/conda init bash -->
+```
+
 * Install the Latest selenium webdriver to Miniconda base environment
-* Download the gecko driver and move it to /usr/local/bin~~
+* Download the gecko driver and move it to /usr/local/bin
 
 * Install micromamba
 
