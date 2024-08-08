@@ -186,7 +186,7 @@
 * Emacs
 
   ```bash
-  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs ripgrep fd
+  sudo pacman -S thunar catfish gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs ripgrep fd
   ```
 
   <!-- Install onlyoffice from AUR -->
