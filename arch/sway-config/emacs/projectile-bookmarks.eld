@@ -1,0 +1,1 @@
+("~/Downloads/setups/" "~/.config/emacs/")
