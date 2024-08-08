@@ -26,10 +26,10 @@
 
    <!-- This is how to properly declare code snippets  -->  
     ```bash
-    git clone https://github.com/lasanthamudalige/dotfiles.git
+    git clone https://github.com/lasanthamudalige/setups.git
     ```
 
-2.Do essential things
+2. Do essential things
 
 * Setup wifi and bluetooth
 
@@ -53,6 +53,18 @@
 
       * Use ***iwctl*** and ***bluetoothctl*** commands to access wifi and bluetooth
   
+  * Install tlp and enable it
+  
+	  Install tlp
+	  ```bash
+	  sudo pacman -S tlp tlp-rdw
+	  ```
+
+	  Enable tlp
+	  ```
+	  sudo systemctl enable tlp.service
+	  ```
+
   * Install all essential Arch packages using:
 
     * mako (notification deamon for wayland)
@@ -124,7 +136,7 @@
         sudo systemctl enable ufw.service
         ```
 
-3.Move config files
+3. Move config files
 
 * Move config folders to "~/.config" folder.
 
@@ -132,7 +144,7 @@
   sudo mv sway/ i3status/ kitty/ ~/.config/
   ```
 
-4.Customizing sway setup
+4. Customizing sway setup
 
 * ~~Install Ly login manager~~ (Can now do in the arch install)
 
@@ -152,7 +164,7 @@
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ```
 
-5.Install basic set of applications
+5. Install basic set of applications
 
 ***You need to get a torrent client a screenshot tool and a clipboard manager for this***
 
@@ -174,7 +186,7 @@
 * Emacs
 
   ```bash
-  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow sudo transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs ripgrep fd
+  sudo pacman -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs ripgrep fd
   ```
 
   <!-- Install onlyoffice from AUR -->
@@ -306,11 +318,24 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
    ```
 
 * ***Note***
-~~* Install Miniconda
-* Install the Latest selenium webdriver to Miniconda base environment
-* Download the gecko driver and move it to /usr/local/bin~~
+* Install Miniconda
 
-* Install micromamba
+```
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+zsh ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+~/miniconda3/bin/conda init zsh
+```
+```
+<!-- bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3 -->
+<!-- ~/miniconda3/bin/conda init bash -->
+```
+
+* Install the Latest selenium webdriver to Miniconda base environment
+* Download the gecko driver and move it to /usr/local/bin
+
+* Install micromamba (optional)
 
 ```bash
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
