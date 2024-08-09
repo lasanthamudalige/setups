@@ -13,7 +13,7 @@
 * Disk partition - ext4 with 1 partition with encryption
 * profile - Desktop with Sway login with ly
 * Sound - Pipewire
-* kernel - LTS kernel
+* kernel - Latest kernel
 * Additional packages - 'firefox' 'kitty' 'git'
 * Network configuration - NetworkManager
 * Other settings are stock setting
@@ -261,9 +261,9 @@
 
 ### Install visual studio code, spotify, postman and brave browser with yay
 
-```bash
-yay -S visual-studio-code-bin spotify postman-bin brave-bin
-```
+  ```bash
+  yay -S visual-studio-code-bin spotify postman-bin brave-bin
+  ```
 
 ***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
 
@@ -293,9 +293,9 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
 
 * Install python, sqlite
 
-    ```bash
-    sudo pacman -S python tk python-pip sqlite
-    ```
+  ```bash
+  sudo pacman -S python tk python-pip sqlite
+  ```
   
 * Install nvm(Node version manager)
 
@@ -305,40 +305,40 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
 
 * Install nodemon for nodejs
 
-   ```bash
-   npm install -g nodemon # or using yarn: yarn global add nodemon
-   ```
+  ```bash
+  npm install -g nodemon # or using yarn: yarn global add nodemon
+  ```
 
 * Install json server from nodejs
 
-   ```bash
-   npm install -g json-server
-   ```
+  ```bash
+  npm install -g json-server
+  ```
 
 * ***Note***
 * Install Miniconda
 
-   ```bash
-   mkdir -p ~/miniconda3
-   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-   zsh ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-   rm -rf ~/miniconda3/miniconda.sh
-   ~/miniconda3/bin/conda init zsh
-   ```
+  ```bash
+  mkdir -p ~/miniconda3
+  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+  zsh ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+  rm -rf ~/miniconda3/miniconda.sh
+  ~/miniconda3/bin/conda init zsh
+  ```
 Optional
-   ```bash
-   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-   ~/miniconda3/bin/conda init bash
-   ```
+  ```bash
+  bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+  ~/miniconda3/bin/conda init bash
+  ```
 
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
 
 * Install micromamba (optional)
 
-   ```bash
-   "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
-   ```
+  ```bash
+  "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+  ```
 
 * **Respond to all the input prompts**
 
@@ -349,34 +349,34 @@ Optional
 
 * Move neovim config file to $HOME/.config/
 
-```bash
-sudo cp -r .config/neovim/ ~/.config/
-
-```
+  ```bash
+  sudo cp -r .config/neovim/ ~/.config/
+  
+  ```
 
 * Install clipboard tool for wayland (Already is on the install.sh file)
 
-```bash
-sudo pacman -S wl-copy
-```
+  ```bash
+  sudo pacman -S wl-copy
+  ```
 
 * Install pyright from npm
 
-```bash
-npm i -g pyright
-```
+  ```bash
+  npm i -g pyright
+  ```
 
 * Install tree-sitte-cli
 
-```bash
-npm i -g tree-sitter-cli
-```
+  ```bash
+  npm i -g tree-sitter-cli
+  ```
 
 * ~~Install ripgrep~~
 
-```bash
-sudo pacman -S ripgrep
-```
+  ```bash
+  sudo pacman -S ripgrep
+  ```
 
 * Install MongoDB
 
@@ -415,7 +415,7 @@ sudo pacman -S ripgrep
 
 ### Keyboard shortcuts
 
-* Launch terminal apps directly from wofi (Like fish, ranger)
+* Launch terminal apps directly from wofi (Like emacs, ranger)
 
   * Use Shift + Return (Enter key)
 
