@@ -181,9 +181,10 @@
 * Timeshift (backup utility)
 * Emacs native compliation
 * Thunderbird (Email client)
+* Obsidian (Note taking application)
 
   ```bash
-  sudo pacman -S thunar catfish gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs-nativecomp ripgrep fd thunderbird
+  sudo pacman -S thunar catfish gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs-nativecomp ripgrep fd thunderbird obsidian
   ```
 
   <!-- Install onlyoffice from AUR -->
@@ -317,27 +318,27 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
 * ***Note***
 * Install Miniconda
 
-```bash
-mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-zsh ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-~/miniconda3/bin/conda init zsh
-```
+   ```bash
+   mkdir -p ~/miniconda3
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+   zsh ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+   rm -rf ~/miniconda3/miniconda.sh
+   ~/miniconda3/bin/conda init zsh
+   ```
 Optional
-```bash
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-~/miniconda3/bin/conda init bash
-```
+   ```bash
+   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+   ~/miniconda3/bin/conda init bash
+   ```
 
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
 
 * Install micromamba (optional)
 
-```bash
-"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
-```
+   ```bash
+   "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+   ```
 
 * **Respond to all the input prompts**
 
