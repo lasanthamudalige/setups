@@ -39,19 +39,15 @@
       sudo pacman -S iwd bluez bluez-utils -y
       ```
 
-    * Enable and start wifi and bluetooth
+    * Enable and start bluetooth
 
       ```bash
-      sudo systemctl enable iwd
-        
-      sudo systemctl start iwd
-
       sudo systemctl start bluetooth.service
 
       sudo systemctl enable bluetooth.service
       ```
 
-      * Use ***iwctl*** and ***bluetoothctl*** commands to access wifi and bluetooth
+      * Use ***nmtui*** and ***bluetoothctl*** commands to access wifi and bluetooth
   
   * Install tlp and enable it
   
@@ -141,7 +137,7 @@
 * Move config folders to "~/.config" folder.
 
   ```bash
-  sudo mv sway/ i3status/ kitty/ ~/.config/
+  cp -r emacs/ i3status/ kitty/ nvim/ ranger/ sway/ ~/.config/
   ```
 
 4. Customizing sway setup
@@ -183,10 +179,10 @@
 * zsh (A advanced shell with more features)
 * Utils such as (p7zip, wl-clipboard, ripgrep, fwupd)
 * Timeshift (backup utility)
-* Emacs
+* Emacs native compliation
 
   ```bash
-  sudo pacman -S thunar catfish gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs ripgrep fd
+  sudo pacman -S thunar catfish gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs-nativecomp ripgrep fd
   ```
 
   <!-- Install onlyoffice from AUR -->
