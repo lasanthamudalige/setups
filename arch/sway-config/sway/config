@@ -25,7 +25,7 @@ set $menu wofi --show run --gtk-dark
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/the_artists_garden_at_eragny_1970.17.54.jpg stretch
+output * bg ~/Pictures/wallpapers/wallpapers/b-609.jpg center
 #
 # Example configuration:
 #
@@ -100,39 +100,55 @@ input type:touchpad {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+	# Menu to lock, logut, suspen, reboot, shotdown and to boot to bios
+	set $mode_system System: (l) lock, (e) logout, (s) suspend, (r) reboot, (S) shutdown, (R) UEFI
+	mode "$mode_system" {
+		bindsym l exec swaylock -f -c 808080, mode "default"
+		bindsym e exit
+		bindsym s exec --no-startup-id systemctl suspend, mode "default"
+		bindsym r exec --no-startup-id systemctl reboot, mode "default"
+		bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+		bindsym Shift+r exec --no-startup-id systemctl reboot --firmware-setup, mode "default"
+
+		# return to default mode
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
+	}
+	bindsym $mod+Shift+e mode "$mode_system"
+
     # Exit sway (logs you out of your Wayland session)
     #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-# Exit sway (using keyboard abouve on use the mouse)
-  set {
-    $nag         exec swaynagmode
-    $nag_exit    $nag --exit
-    $nag_confirm $nag --confirm
-    $nag_select  $nag --select
-  }
-  mode "nag" {
-    bindsym {
-      Ctrl+d    mode "default"
-
-      Ctrl+c    $nag_exit
-      q         $nag_exit
-      Escape    $nag_exit
-
-      Return    $nag_confirm
-
-      Tab       $nag_select prev
-      Shift+Tab $nag_select next
-
-      Left      $nag_select next
-      Right     $nag_select prev
-
-      Up        $nag_select next
-      Down      $nag_select prev
-    }
-  }
-  bindsym {
-    $mod+Shift+q $nag -t "warning" -m "Exit Sway?" -b "Exit" "swaymsg exit" -b "Reload" "swaymsg reload"
-  }
+    # Exit sway (using keyboard abouve on use the mouse)
+    #  set {
+    #    $nag         exec swaynagmode
+    #    $nag_exit    $nag --exit
+    #    $nag_confirm $nag --confirm
+    #    $nag_select  $nag --select
+    #  }
+    #  mode "nag" {
+    #    bindsym {
+    #      Ctrl+d    mode "default"
+    #
+    #      Ctrl+c    $nag_exit
+    #      q         $nag_exit
+    #      Escape    $nag_exit
+    #
+    #      Return    $nag_confirm
+    #
+    #      Tab       $nag_select prev
+    #      Shift+Tab $nag_select next
+    #
+    #      Left      $nag_select next
+    #      Right     $nag_select prev
+    #
+    #      Up        $nag_select next
+    #      Down      $nag_select prev
+    #    }
+    #  }
+    #  bindsym {
+    #    $mod+Shift+q $nag -t "warning" -m "Exit Sway?" -b "Exit" "swaymsg exit" -b "Reload" "swaymsg reload"
+    #  }
 
 #
 # Moving around:
