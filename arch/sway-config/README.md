@@ -63,7 +63,12 @@
 
   * Install all essential Arch packages using:
 
-    * mako (notification deamon for wayland)
+	* pacman-contrib (Contributed scripts and tools for pacman systems)
+	* xdg-utils (Command line tools that assist applications with a variety of desktop integration tasks)
+	* ufw (firewall)
+	* bash-completion (auto completion for bash shell)
+	* i3status (replacement bar for swaybar)
+	* mako (notification deamon for wayland)
 
     ```bash
     sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako
