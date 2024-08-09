@@ -20,7 +20,7 @@ set $term kitty
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-set $menu wofi --show run --gtk-dark
+set $menu wofi --show drun --gtk-dark
 
 ### Output configuration
 #
@@ -100,21 +100,21 @@ input type:touchpad {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-	# Menu to lock, logut, suspen, reboot, shotdown and to boot to bios
-	set $mode_system System: (l) lock, (e) logout, (s) suspend, (r) reboot, (S) shutdown, (R) UEFI
-	mode "$mode_system" {
-		bindsym l exec swaylock -f -c 808080, mode "default"
-		bindsym e exit
-		bindsym s exec --no-startup-id systemctl suspend, mode "default"
-		bindsym r exec --no-startup-id systemctl reboot, mode "default"
-		bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-		bindsym Shift+r exec --no-startup-id systemctl reboot --firmware-setup, mode "default"
+    # Menu to lock, logut, suspen, reboot, shotdown and to boot to bios
+    set $mode_system System: (l) lock, (e) logout, (s) suspend, (r) reboot, (S) shutdown, (R) UEFI
+    mode "$mode_system" {
+	    bindsym l exec swaylock -f -c 808080, mode "default"
+	    bindsym e exit
+	    bindsym s exec --no-startup-id systemctl suspend, mode "default"
+	    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+	    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+	    bindsym Shift+r exec --no-startup-id systemctl reboot --firmware-setup, mode "default"
 
-		# return to default mode
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
-	}
-	bindsym $mod+Shift+e mode "$mode_system"
+    # return to default mode
+	    bindsym Return mode "default"
+	    bindsym Escape mode "default"
+    }
+    bindsym $mod+Shift+e mode "$mode_system"
 
     # Exit sway (logs you out of your Wayland session)
     #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -312,8 +312,8 @@ for_window [class="^.*"] border pixel 2
 gaps inner 7
 gaps outer 2
 
-# Launch gammastep at start with location (latitite -l longitude -L)
-exec wlsunset -l 7.2 -L 80.2
+# Launch gammastep at start with location (-t night temperature -S sunrise, -s sunset)
+exec wlsunset -t 4500 -S 07:00 -s 19:00
 
 # Launch clipman
 exec wl-paste -t text --watch clipman store --no-persist
