@@ -36,7 +36,7 @@
   * Install wifi and bluetooth
 
       ```bash
-      sudo pacman -S iwd bluez bluez-utils -y
+      sudo pacman -S iwd bluez bluez-utils
       ```
 
     * Enable and start bluetooth
@@ -66,7 +66,7 @@
     * mako (notification deamon for wayland)
 
     ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako -y
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako
     ```
 
   * Install yay aur helper
@@ -180,9 +180,10 @@
 * Utils such as (p7zip, wl-clipboard, ripgrep, fwupd)
 * Timeshift (backup utility)
 * Emacs native compliation
+* Thunderbird (Email client)
 
   ```bash
-  sudo pacman -S thunar catfish gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs-nativecomp ripgrep fd
+  sudo pacman -S thunar catfish gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs-nativecomp ripgrep fd thunderbird
   ```
 
   <!-- Install onlyoffice from AUR -->
@@ -316,16 +317,17 @@ yay -S visual-studio-code-bin spotify postman-bin brave-bin
 * ***Note***
 * Install Miniconda
 
-```
+```bash
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 zsh ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init zsh
 ```
-```
-<!-- bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3 -->
-<!-- ~/miniconda3/bin/conda init bash -->
+Optional
+```bash
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+~/miniconda3/bin/conda init bash
 ```
 
 * Install the Latest selenium webdriver to Miniconda base environment
@@ -369,7 +371,7 @@ npm i -g pyright
 npm i -g tree-sitter-cli
 ```
 
-* Install ripgrep
+* ~~Install ripgrep~~
 
 ```bash
 sudo pacman -S ripgrep
