@@ -69,6 +69,7 @@
     * gimp
     * chromium
     * obs-studio
+	* solaar
   * From curl
     * nvm (node version manager)
   * From AUR
