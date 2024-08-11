@@ -1,4 +1,3 @@
-;; somethin
 ;; Kickstart.emacs is *not* a distribution.
 ;; It's a template for your own configuration.
 
@@ -91,18 +90,17 @@
     "d v" '(dired :wk "Open dired")
     "d j" '(dired-jump :wk "Dired jump to current"))
 
-  ;;  (start/leader-keys
-  ;;    "e" '(:ignore t :wk "Eglot Evaluate")
-  ;;    "e e" '(eglot-reconnect :wk "Eglot Reconnect")
-  ;;    "e f" '(eglot-format :wk "Eglot Format")
-  ;;    "e l" '(consult-flymake :wk "Consult Flymake")
-  ;;    "e b" '(eval-buffer :wk "Evaluate elisp in buffer")
-  ;;    "e r" '(eval-region :wk "Evaluate elisp in region"))
+  (start/leader-keys
+    "e" '(:ignore t :wk "Eglot Evaluate")
+    "e e" '(eglot-reconnect :wk "Eglot Reconnect")
+    "e f" '(eglot-format :wk "Eglot Format")
+    "e l" '(consult-flymake :wk "Consult Flymake")
+    "e b" '(eval-buffer :wk "Evaluate elisp in buffer")
+    "e r" '(eval-region :wk "Evaluate elisp in region"))
 
-   (start/leader-keys
+  (start/leader-keys
     "g" '(:ignore t :wk "Git")
-    "g s" '(magit-status :wk "Magit status")
-    "g d" '(magit-diff :wk "Magit status"))
+    "g g" '(magit-status :wk "Magit status"))
 
   (start/leader-keys
     "h" '(:ignore t :wk "Help") ;; To get more help use C-h commands (describe variable, function, etc.)
@@ -113,8 +111,7 @@
 
   (start/leader-keys
     "s" '(:ignore t :wk "Show")
-    "s e" '(eat :wk "Eat terminal")
-    "s v" '(vterm :wk "Vterm termial"))
+    "s e" '(eat :wk "Eat terminal"))
 
   (start/leader-keys
     "t" '(:ignore t :wk "Toggle")
@@ -246,138 +243,47 @@
 
 ;;   )
 
-(defun efs/lsp-mode-setup ()
-  (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
-  (lsp-headerline-breadcrumb-mode))
-
 (use-package lsp-mode
-  :commands (lsp lsp-deferred)
-  :hook (lsp-mode . efs/lsp-mode-setup)
+  :custom
+  (lsp-completion-provider :none) ;; we use Corfu!
+  ;; Disable unneeded features
+  (lsp-lens-enable nil) ;; Disable references count
+  (lsp-headerline-breadcrumb-enable nil) ;; Disable Header line
+  (lsp-ui-sideline-show-code-actions nil) ;; Hide right side code actions
+  (lsp-ui-sideline-show-hover nil) ;; Hide right hover symbols
+  (lsp-modeline-code-actions-enable nil) ;; Disable modeline code actions
+  (lsp-eldoc-enable-hover nil) ;; Disable eldoc (echo area info)
+  (lsp-modeline-diagnostics-enable nil) ;; Disable Modeline diagnostic status
+  (lsp-signature-auto-activate nil) ;; Disable Signature help you could manually request them via `lsp-signature-activate`
+  (lsp-completion-show-detail nil) ;; Disable Completion item detail
   :init
-  (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
-  :config
-  (lsp-enable-which-key-integration t))
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "C-c l")
+  (defun my/lsp-mode-setup-completion ()
+    (setf (alist-get 'styles (alist-get 'lsp-capf completion-category-defaults))
+          '(flex))) ;; Configure flex (corfu)
 
+  :hook (;; Automatic Language Modes
+         (prog-mode . lsp)
+         (lsp-completion-mode . my/lsp-mode-setup-completion) ;; corfu completion
+         ;; if you want which-key integration
+         (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp)
+;; optionally
 (use-package lsp-ui
-  :hook (lsp-mode . lsp-ui-mode)
-  :custom
-  (lsp-ui-doc-position 'bottom))
+  :commands lsp-ui-mode)
+;; if you are ivy user
+(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 
-(use-package lsp-treemacs
-  :after lsp)
-
-(use-package lsp-ivy
-  :after lsp)
-
-(use-package dap-mode
-  ;; Uncomment the config below if you want all UI panes to be hidden by default!
-  ;; :custom
-  ;; (lsp-enable-dap-auto-configure nil)
-  ;; :config
-  ;; (dap-ui-mode 1)
-  :commands dap-debug
-  :config
-  ;; Set up Node debugging
-  (require 'dap-node)
-  (dap-node-setup) ;; Automatically installs Node debug adapter if needed
-
-  ;; Bind `C-c l d` to `dap-hydra` for easy access
-  (general-define-key
-   :keymaps 'lsp-mode-map
-   :prefix lsp-keymap-prefix
-   "d" '(dap-hydra t :wk "debugger")))
-
-(use-package python-mode
-  :ensure t
-  :hook (python-mode . lsp-deferred)
-  :custom
-  ;; NOTE: Set these if Python 3 is called "python3" on your system!
-  ;; (python-shell-interpreter "python3")
-  ;; (dap-python-executable "python3")
-  (dap-python-debugger 'debugpy)
-  :config
-  (require 'dap-python))
-
-(use-package pyvenv
-  :after python-mode
-  :config
-  (pyvenv-mode 1))
-
-
-;; (use-package lsp-mode
-;;   :init
-;;   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-;;   (setq lsp-keymap-prefix "C-c l")
-;;   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-;;          (c++-mode . lsp)
-;;          (python-mode . lsp)
-;;          ;; if you want which-key integration
-;;          (lsp-mode . lsp-enable-which-key-integration))
-;;   :commands lsp)
-
-;; ;; optionally
-;; (use-package lsp-ui :commands lsp-ui-mode)
-;; ;; if you are helm user
-;; (use-package helm-lsp :commands helm-lsp-workspace-symbol)
-;; ;; if you are ivy user
-;; (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-;; (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
-
-;; ;; optionally if you want to use debugger
-;; (use-package dap-mode)
-;; ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
-
-;; ;; optional if you want which-key integration
-;; (use-package which-key
-;;   :config
-;;   (which-key-mode))
-
-;; ;; (use-package lsp-mode
-;; ;;   :custom
-;; ;;   (lsp-completion-provider :none) ;; we use Corfu!
-;; ;;   ;; Disable unneeded feature
-s
-;;   (lsp-lens-enable nil) ;; Disable references count
-;;   (lsp-headerline-breadcrumb-enable nil) ;; Disable Header line
-;;   (lsp-ui-sideline-show-code-actions nil) ;; Hide right side code actions
-;;   (lsp-ui-sideline-show-hover nil) ;; Hide right hover symbols
-;;   (lsp-modeline-code-actions-enable nil) ;; Disable modeline code actions
-;;   (lsp-eldoc-enable-hover nil) ;; Disable eldoc (echo area info)
-;;   (lsp-modeline-diagnostics-enable nil) ;; Disable Modeline diagnostic status
-;;   (lsp-signature-auto-activate nil) ;; Disable Signature help you could manually request them via `lsp-signature-activate`
-;;   (lsp-completion-show-detail nil) ;; Disable Completion item detail
-;;   :init
-;;   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-;;   (setq lsp-keymap-prefix "C-c l")
-;;   (defun my/lsp-mode-setup-completion ()
-;;     (setf (alist-get 'styles (alist-get 'lsp-capf completion-category-defaults))
-;;           '(flex))) ;; Configure flex (corfu)
-
-;;   :hook (;; Automatic Language Modes
-;;          (prog-mode . lsp)
-;;          (lsp-completion-mode . my/lsp-mode-setup-completion) ;; corfu completion
-;;          ;; if you want which-key integration
-;;          (lsp-mode . lsp-enable-which-key-integration))
-;;   :Commands lsp)
-;; ;; optionally
-;; (use-package lsp-ui
-;;   :commands lsp-ui-mode)
-;; ;; if you are ivy user
-;; (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-
-(use-package company
-  :after lsp-mode
-  :hook (lsp-mode . company-mode)
-  :bind (:map company-active-map
-              ("<tab>" . company-complete-selection))
-  (:map lsp-mode-map
-        ("<tab>" . company-indent-or-complete-common))
-  :custom
-  (company-minimum-prefix-length 1)
-  (company-idle-delay 0.0))
-
-(use-package company-box
-  :hook (company-mode . company-box-mode))
+;; (use-package company
+;;     :ensure t
+;;     :commands (global-company-mode)
+;;     :init
+;;     (global-company-mode)
+;;     :custom
+;;     (company-tooltip-align-annotations 't)
+;;     (company-minimum-prefix-length 1)
+;;     (company-idle-delay 0.1))
 
 (use-package markdown-mode
   :ensure t
@@ -415,7 +321,6 @@ s
 
 (use-package eat
   :hook ('eshell-load-hook #'eat-eshell-mode))
-(setq eat-kill-buffer-on-exit t))
 
 ;; (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -589,23 +494,7 @@ s
   (which-key-allow-imprecise-window-fit nil)) ;; Fixes which-key window slipping out in Emacs Daemon
 
 (use-package vterm
-  :ensure t
-  :bind ("C-c v" . vterm-other-window)
-  :init
-  (setq vterm-module-cmake-args
-        "-DUSE_SYSTEM_LIBVTERM=no")
-  :config
-  (setq vterm-term-environment-variable
-        "eterm-color")
-  (setq vterm-kill-buffer-on-exit t))
-(use-package vterm-toggle)
-(use-package multi-vterm)
-
-(use-package exec-path-from-shell
-  :init
-  (setq exec-path-from-shell-check-startup-files nil)
-  :config (exec-path-from-shell-initialize)
-  )
+  :ensure t)
 
 ;; use-package with package.el:
 (use-package dashboard
