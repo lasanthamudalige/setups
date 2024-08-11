@@ -385,6 +385,13 @@ Optional
   ```bash
   sudo pacman -S ripgrep
   ```
+### Emacs stuff
+
+* Install Python language server
+
+  ``` bash
+	python-language-server
+	```
 
 * Install MongoDB
 
