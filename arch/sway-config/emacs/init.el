@@ -33,6 +33,7 @@
   (evil-mode)
   :config ;; Execute code After a package is loaded
   (evil-set-initial-state 'eat-mode 'insert) ;; Set initial state in eat terminal to insert mode
+  (evil-set-initial-state 'dashboard-mode 'emacs) ;; Set initial state in dashboard to emacs mode
   :custom ;; Customization of package custom variables
   (evil-want-keybinding nil)    ;; Disable evil bindings in other modes (It's not consistent and not good)
   (evil-want-C-u-scroll t)      ;; Set C-u to scroll up
@@ -165,9 +166,9 @@
           nil nil t)
   )
 
-(use-package gruvbox-theme
+(use-package ample-zen-theme
   :config
-  (load-theme 'gruvbox-dark-medium t)) ;; We need to add t to trust this package
+  (load-theme 'ample-zen ))
 
 (set-face-attribute 'default nil
                     ;; :font "JetBrains Mono" ;; Set your favorite type of font or download JetBrains Mono
@@ -201,16 +202,14 @@
   :custom
   (projectile-run-use-comint-mode t) ;; Interactive run dialog when running projects inside emacs (like giving input)
   (projectile-switch-project-action #'projectile-dired) ;; Open dired when switching to a project
-  (projectile-project-search-path '("~/projects/" "~/work/" ("~/github" . 1)))) ;; . 1 means only search the first subdirectory level for projects
+  (projectile-project-search-path '("~/projects/" "~/work/" "~/Development/" ("~/github" . 1)))) ;; . 1 means only search the first subdirectory level for projects
 ;; Use Bookmarks for smaller, not standard projects
 
-;; (use-package eglot
+;;  (use-package eglot
 ;;   :ensure nil ;; Don't install eglot because it's now built-in
 ;;   :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
 ;;                  python-mode
-;;                  sh-mode
-;;                  bash-ts-mode
-;;                  ) ;; Lua-mode needs to be installed
+;;                  lua-mode) ;; Lua-mode needs to be installed
 ;;          . eglot-ensure)
 ;;   :custom
 ;;   ;; Good default
@@ -221,26 +220,6 @@
 ;;   :config
 ;;   (add-to-list 'eglot-server-programs
 ;;                `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
-;;   ;; C/C++
-;;   (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
-;;   ;; Python
-;;   (add-to-list 'eglot-server-programs '(python-mode . ("pylsp")))
-;;   (
-;;    setq-default eglot-workspace-configuration
-;;    '((:pylsp . (:configurationSources ["flake8"] :plugins (:pycodestyle (:enabled nil) :mccabe (:enabled nil) :flake8 (:enabled t))))))
-;;   ;; Bash
-;;   (add-to-list 'eglot-server-programs '((sh-mode bash-ts-mode) . ("bash-language-server" "start")))
-
-;;   ;; hook
-;;   ;; C/C++
-;;   ;; (add-hook 'c-mode-hook 'eglot-ensure)
-;;   ;; (add-hook 'c++-mode-hook 'eglot-ensure)
-;;   ;; ;; Python
-;;   ;; (python-mode . eglot-ensure)
-;;   ;; ;; Bash
-;;   ;; (sh-mode . eglot-ensure)
-;;   ;; (bash-ts-mode . eglot-ensure)
-
 ;;   )
 
 (use-package lsp-mode
@@ -258,7 +237,7 @@
   (lsp-completion-show-detail nil) ;; Disable Completion item detail
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-  (setq lsp-keymap-prefix "C-c l")
+  ;; (lsp-keymap-prefix "C-c l")
   (defun my/lsp-mode-setup-completion ()
     (setf (alist-get 'styles (alist-get 'lsp-capf completion-category-defaults))
           '(flex))) ;; Configure flex (corfu)
@@ -275,15 +254,41 @@
 ;; if you are ivy user
 (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 
-;; (use-package company
-;;     :ensure t
-;;     :commands (global-company-mode)
-;;     :init
-;;     (global-company-mode)
-;;     :custom
-;;     (company-tooltip-align-annotations 't)
-;;     (company-minimum-prefix-length 1)
-;;     (company-idle-delay 0.1))
+(use-package flycheck
+  :diminish
+  :init (global-flycheck-mode))
+
+(use-package ivy
+  :bind
+  (("C-c C-r" . ivy-resume) ;; Resumes the last Ivy-based completion.
+   ("C-x B" . ivy-switch-buffer-other-window))
+  :diminish
+  :custom
+  (ivy-use-virtual-buffers t)
+  (ivy-count-format "(%d/%d) ")
+  (enable-recursive-minibuffers t)
+  :config
+  (ivy-mode))
+
+(use-package ivy-rich ;; This gets us descriptions in M-x.
+  :init (ivy-rich-mode 1))
+
+(use-package nerd-icons-ivy-rich ;; Adds icons to M-x.
+  :init (nerd-icons-ivy-rich-mode 1))
+
+(use-package counsel
+  :diminish
+  :config (counsel-mode))
+
+(use-package company
+  :ensure t
+  :commands (global-company-mode)
+  :init
+  (global-company-mode)
+  :custom
+  (company-tooltip-align-annotations 't)
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.1))
 
 (use-package markdown-mode
   :ensure t
@@ -291,6 +296,41 @@
 
 (use-package yasnippet-snippets
   :hook (prog-mode . yas-minor-mode))
+
+(use-package emmet-mode
+  :hook (html-mode . emmet-mode))
+
+(use-package treesit-auto
+  :custom
+  (treesit-auto-install 'prompt)
+  (c-ts-mode-indent-offset 4) ;; Fix weird indentation in c-ts (C, C++)
+  :config
+  ;; Remove treesitter modes, go-ts-mode not working currently
+  (setq treesit-auto-langs (cl-set-difference treesit-auto-langs '(go gomod)))
+  ;; Important: Delete before 'treesit-auto-add-to-auto-mode-alist'
+  (treesit-auto-add-to-auto-mode-alist 'all)
+  (global-treesit-auto-mode)
+  (setq treesit-language-source-alist
+        '((bash "https://github.com/tree-sitter/tree-sitter-bash")
+          (cmake "https://github.com/uyha/tree-sitter-cmake")
+          (css "https://github.com/tree-sitter/tree-sitter-css")
+          (elisp "https://github.com/Wilfred/tree-sitter-elisp")
+          (go "https://github.com/tree-sitter/tree-sitter-go")
+          (html "https://github.com/tree-sitter/tree-sitter-html")
+          (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
+          (json "https://github.com/tree-sitter/tree-sitter-json")
+          (make "https://github.com/alemuller/tree-sitter-make")
+          (markdown "https://github.com/ikatyang/tree-sitter-markdown")
+          (python "https://github.com/tree-sitter/tree-sitter-python")
+          (toml "https://github.com/tree-sitter/tree-sitter-toml")
+          (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
+          (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
+          (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
+  )
+
+(use-package cmake-ts-mode
+  :ensure nil
+  :mode ("CMakeLists\\.txt\\'" "\\.cmake\\'"))
 
 (use-package org
   :ensure nil
@@ -321,6 +361,11 @@
 
 (use-package eat
   :hook ('eshell-load-hook #'eat-eshell-mode))
+
+(use-package vterm
+  :commands vterm
+  :custom
+  (vterm-max-scrollback 5000))
 
 ;; (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -474,10 +519,33 @@
   ;; (setq consult-project-function nil)
   )
 
+(use-package undo-tree
+  :init
+  (global-undo-tree-mode)
+  :custom
+  ;; Use separate directory for undo history
+  (undo-tree-history-directory-alist '(("." . "~/.config/emacs/undoTree"))))
+
+(use-package sudo-edit
+  :custom (sudo-edit-local-method "doas")) ;; To use doas
+
+(use-package drag-stuff
+  :init
+  (drag-stuff-global-mode 1)
+  (drag-stuff-define-keys))
+
+(use-package evil-mc
+  :commands (evil-mc-mode))
+
 (use-package diminish)
 
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
+
+(use-package rainbow-mode
+  :diminish
+  :hook
+  ((org-mode prog-mode) . rainbow-mode))
 
 (use-package which-key
   :init
@@ -493,17 +561,32 @@
   (which-key-max-description-length 25)
   (which-key-allow-imprecise-window-fit nil)) ;; Fixes which-key window slipping out in Emacs Daemon
 
-(use-package vterm
-  :ensure t)
+(use-package ws-butler
+  :init (ws-butler-global-mode))
 
 ;; use-package with package.el:
 (use-package dashboard
   :ensure t
-  :init
+  :config
+  (dashboard-setup-startup-hook)
+  (setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
   ;; Set the title
   (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
   ;; Set the banner
   (setq dashboard-startup-banner 'logo)
+  ;; Value can be:
+  ;;  - 'official which displays the official emacs logo.
+  ;;  - 'logo which displays an alternative emacs logo.
+  ;;  - an integer which displays one of the text banners
+  ;;    (see dashboard-banners-directory files).
+  ;;  - a string that specifies a path for a custom banner
+  ;;    currently supported types are gif/image/text/xbm.
+  ;;  - a cons of 2 strings which specifies the path of an image to use
+  ;;    and other path of a text file to use if image isn't supported.
+  ;;    ("path/to/image/file/image.png" . "path/to/text/file/text.txt").
+  ;;  - a list that can display an random banner,
+  ;;    supported values are: string (filepath), 'official, 'logo and integers.
+
   ;; Content is not centered by default. To center, set
   (setq dashboard-center-content t)
   ;; vertically center content
@@ -522,8 +605,6 @@
                                     dashboard-insert-newline
                                     dashboard-insert-banner-title
                                     dashboard-insert-newline
-                                    dashboard-insert-navigator
-                                    dashboard-insert-newline
                                     dashboard-insert-init-info
                                     dashboard-insert-items
                                     dashboard-insert-newline
@@ -538,42 +619,20 @@
                                    (projects  . "p")
                                    (agenda    . "a")
                                    (registers . "e")))
-
   (setq dashboard-item-names '(("Recent Files:"               . "Recently opened files:")
                                ("Agenda for today:"           . "Today's agenda:")
                                ("Agenda for the coming week:" . "Agenda:")))
 
-  (setq dashboard-display-icons-p t)     ; display icons on both GUI and terminal
-  (setq dashboard-icon-type 'nerd-icons) ; use `nerd-icons' package
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
 
-  (setq dashboard-set-heading-icons t) ; display heading icons
-  (setq dashboard-set-file-icons t) ; display file icons
-
-  ;; To display today’s agenda items on the dashboard
   (add-to-list 'dashboard-items '(agenda) t)
-  ;; To show agenda for the upcoming seven days
-  (setq dashboard-week-agenda t)
-  ;; To show all agenda entries except DONE
-  (setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
 
-  :config
-  (dashboard-setup-startup-hook)
+  (setq dashboard-week-agenda t)
+  (setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
   )
 
-(use-package ws-butler
-  :init (ws-butler-global-mode))
-
-(use-package rainbow-mode
-  :diminish
-  :hook
-  ((org-mode prog-mode) . rainbow-mode))
-
-(use-package undo-tree
-  :init
-  (global-undo-tree-mode)
-  :custom
-  ;; Use separate directory for undo history
-  (undo-tree-history-directory-alist '(("." . "~/.config/emacs/undoTree"))))
+(use-package mentor)
 
 ;; Make gc pauses faster by decreasing the threshold.
 (setq gc-cons-threshold (* 2 1000 1000))

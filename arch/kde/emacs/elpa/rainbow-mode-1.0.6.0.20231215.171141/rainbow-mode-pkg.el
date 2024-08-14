@@ -1,2 +1,0 @@
-;; Generated package description from rainbow-mode.el  -*- no-byte-compile: t -*-
-(define-package "rainbow-mode" "1.0.6.0.20231215.171141" "Colorize color names in buffers" 'nil :commit "f7db3b5919f70420a91eb199f8663468de3033f3" :url "https://elpa.gnu.org/packages/rainbow-mode.html" :authors '(("Julien Danjou" . "julien@danjou.info")) :maintainer '("Julien Danjou" . "julien@danjou.info") :keywords '("faces"))

@@ -25,6 +25,7 @@
   - [[#company][Company]]
   - [[#markdown][Markdown]]
   - [[#yasnippet][Yasnippet]]
+  - [[#emmit-mode][Emmit-mode]]
   - [[#language-modes][Language modes]]
   - [[#terminal][Terminal]]
 - [[#multi-file-example][Multi File Example]]
@@ -39,14 +40,17 @@
   - [[#orderless][Orderless]]
   - [[#vertico-and-marginalia][Vertico and Marginalia]]
   - [[#consult][Consult]]
+  - [[#undotree][UndoTree]]
+  - [[#sudo-edit][Sudo edit]]
+  - [[#drag-stuff][Drag stuff]]
+  - [[#evil-mc][Evil-mc]]
   - [[#diminish][Diminish]]
   - [[#rainbow-delimiters][Rainbow Delimiters]]
-  - [[#which-key][Which-Key]]
-  - [[#vterm][Vterm]]
-  - [[#emacs-dashboard][Emacs-dashboard]]
-  - [[#ws-butler][Ws-butler]]
   - [[#rainbow-mode][Rainbow Mode]]
-  - [[#undotree][UndoTree]]
+  - [[#which-key][Which-Key]]
+  - [[#ws-butler][Ws-butler]]
+  - [[#emacs-dashboard][Emacs-dashboard]]
+  - [[#mentor][Mentor]]
 - [[#runtime-performance][Runtime Performance]]
 
 * Introduction
@@ -130,6 +134,7 @@ If you don't want to use evil-mode don't forget to remove:
       (evil-mode)
       :config ;; Execute code After a package is loaded
       (evil-set-initial-state 'eat-mode 'insert) ;; Set initial state in eat terminal to insert mode
+      (evil-set-initial-state 'dashboard-mode 'emacs) ;; Set initial state in dashboard to emacs mode
       :custom ;; Customization of package custom variables
       (evil-want-keybinding nil)    ;; Disable evil bindings in other modes (It's not consistent and not good)
       (evil-want-C-u-scroll t)      ;; Set C-u to scroll up
@@ -277,9 +282,9 @@ To search and replace, use query-replace-regexp to replace one by one C-M-% (SPC
 Set gruvbox theme, if you want some themes try out doom-themes.
 Use consult-theme to easily try out themes (*Epilepsy* Warning).
 #+begin_src emacs-lisp
-    (use-package gruvbox-theme
+    (use-package ample-zen-theme
       :config
-      (load-theme 'gruvbox-dark-medium t)) ;; We need to add t to trust this package
+      (load-theme 'ample-zen ))
 #+end_src
 
 ** Fonts
@@ -330,7 +335,7 @@ Project interaction library for Emacs.
       :custom
       (projectile-run-use-comint-mode t) ;; Interactive run dialog when running projects inside emacs (like giving input)
       (projectile-switch-project-action #'projectile-dired) ;; Open dired when switching to a project
-      (projectile-project-search-path '("~/projects/" "~/work/" ("~/github" . 1)))) ;; . 1 means only search the first subdirectory level for projects
+      (projectile-project-search-path '("~/projects/" "~/work/" "~/Development/" ("~/github" . 1)))) ;; . 1 means only search the first subdirectory level for projects
     ;; Use Bookmarks for smaller, not standard projects
 #+end_src
 
@@ -352,45 +357,23 @@ Or add the lua-language-server executable to your path.
 If you can use a package manager just install the lsp server and add a hook.
 Use visual block to uncomment easily in Org documents (C-v).
 #+begin_src emacs-lisp
-    ;; (use-package eglot
-    ;;   :ensure nil ;; Don't install eglot because it's now built-in
-    ;;   :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
-    ;;                  python-mode
-    ;;                  sh-mode
-    ;;                  bash-ts-mode
-    ;;                  ) ;; Lua-mode needs to be installed
-    ;;          . eglot-ensure)
-    ;;   :custom
-    ;;   ;; Good default
-    ;;   (eglot-events-buffer-size 0) ;; No event buffers (Lsp server logs)
-    ;;   (eglot-autoshutdown t);; Shutdown unused servers.
-    ;;   (eglot-report-progress nil) ;; Disable lsp server logs (Don't show lsp messages at the bottom, java)
-    ;;   ;; Manual lsp servers
-    ;;   :config
-    ;;   (add-to-list 'eglot-server-programs
-    ;;                `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
-    ;;   ;; C/C++
-    ;;   (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
-    ;;   ;; Python
-    ;;   (add-to-list 'eglot-server-programs '(python-mode . ("pylsp")))
-    ;;   (
-    ;;    setq-default eglot-workspace-configuration
-    ;;    '((:pylsp . (:configurationSources ["flake8"] :plugins (:pycodestyle (:enabled nil) :mccabe (:enabled nil) :flake8 (:enabled t))))))
-    ;;   ;; Bash
-    ;;   (add-to-list 'eglot-server-programs '((sh-mode bash-ts-mode) . ("bash-language-server" "start")))
-
-    ;;   ;; hook
-    ;;   ;; C/C++
-    ;;   ;; (add-hook 'c-mode-hook 'eglot-ensure)
-    ;;   ;; (add-hook 'c++-mode-hook 'eglot-ensure)
-    ;;   ;; ;; Python
-    ;;   ;; (python-mode . eglot-ensure)
-    ;;   ;; ;; Bash
-    ;;   ;; (sh-mode . eglot-ensure)
-    ;;   ;; (bash-ts-mode . eglot-ensure)
-
-    ;;   )
-    ;;  #+end_src
+   ;;  (use-package eglot
+   ;;   :ensure nil ;; Don't install eglot because it's now built-in
+   ;;   :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
+   ;;                  python-mode
+   ;;                  lua-mode) ;; Lua-mode needs to be installed
+   ;;          . eglot-ensure)
+   ;;   :custom
+   ;;   ;; Good default
+   ;;   (eglot-events-buffer-size 0) ;; No event buffers (Lsp server logs)
+   ;;   (eglot-autoshutdown t);; Shutdown unused servers.
+   ;;   (eglot-report-progress nil) ;; Disable lsp server logs (Don't show lsp messages at the bottom, java)
+   ;;   ;; Manual lsp servers
+   ;;   :config
+   ;;   (add-to-list 'eglot-server-programs
+   ;;                `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
+   ;;   )
+#+end_src
 
 ** LSP mode
 Client for Language Server Protocol. lsp-mode aims to provide IDE-like experience by providing optional integration with the most popular Emacs packages like company, flycheck and projectile.
@@ -410,7 +393,7 @@ Client for Language Server Protocol. lsp-mode aims to provide IDE-like experienc
       (lsp-completion-show-detail nil) ;; Disable Completion item detail
       :init
       ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-      (setq lsp-keymap-prefix "C-c l")
+      ;; (lsp-keymap-prefix "C-c l")
       (defun my/lsp-mode-setup-completion ()
         (setf (alist-get 'styles (alist-get 'lsp-capf completion-category-defaults))
               '(flex))) ;; Configure flex (corfu)
@@ -428,18 +411,51 @@ Client for Language Server Protocol. lsp-mode aims to provide IDE-like experienc
     (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 #+end_src
 
+*** Flycheck
+Modern on-the-fly syntax checking extension. Recommended for lsp-mode.
+#+begin_src emacs-lisp
+    (use-package flycheck
+      :diminish
+      :init (global-flycheck-mode))
+#+end_src
+
+*** Ivy and Counsel
+#+begin_src emacs-lisp
+(use-package ivy
+  :bind
+  (("C-c C-r" . ivy-resume) ;; Resumes the last Ivy-based completion.
+   ("C-x B" . ivy-switch-buffer-other-window))
+  :diminish
+  :custom
+  (ivy-use-virtual-buffers t)
+  (ivy-count-format "(%d/%d) ")
+  (enable-recursive-minibuffers t)
+  :config
+  (ivy-mode))
+
+(use-package ivy-rich ;; This gets us descriptions in M-x.
+  :init (ivy-rich-mode 1))
+
+(use-package nerd-icons-ivy-rich ;; Adds icons to M-x.
+  :init (nerd-icons-ivy-rich-mode 1))
+
+(use-package counsel
+  :diminish
+  :config (counsel-mode))
+#+end_src
+
 ** Company
 Company is a text completion framework for Emacs. The name stands for "complete anything". It uses pluggable back-ends and front-ends to retrieve and display completion candidates.
 #+begin_src emacs-lisp
-   ;; (use-package company
-   ;;     :ensure t
-   ;;     :commands (global-company-mode)
-   ;;     :init
-   ;;     (global-company-mode)
-   ;;     :custom
-   ;;     (company-tooltip-align-annotations 't)
-   ;;     (company-minimum-prefix-length 1)
-   ;;     (company-idle-delay 0.1))
+    (use-package company
+      :ensure t
+      :commands (global-company-mode)
+      :init
+      (global-company-mode)
+      :custom
+      (company-tooltip-align-annotations 't)
+      (company-minimum-prefix-length 1)
+      (company-idle-delay 0.1))
 #+end_src
 
 ** Markdown
@@ -458,11 +474,58 @@ To use it write out the full keyword (or use autocompletion) and press Tab.
       :hook (prog-mode . yas-minor-mode))
 #+end_src
 
+** Emmit-mode
+For HTML, CSS snippets. Use C-j to complete.
+#+begin_src emacs-lisp
+    (use-package emmet-mode
+      :hook (html-mode . emmet-mode))
+#+end_src
+
 ** Language modes
 It's not required for every language like C,C++,C#,Java,Javascript etc. to install language mode packages,
-but for more specific languages it is necessary for syntax highlighting.
+but for more specific languages it is necessar
+y for syntax highlighting.
 If you want to use TreeSitter, check out this [[https://www.masteringemacs.org/article/how-to-get-started-tree-sitter][website]] or try out [[https://github.com/renzmann/treesit-auto][Treesit-auto]].
 Currently it's tedious to use Treesitter, because emacs has not yet fully migrated to it.
+*** Treesit-Auto
+Automatically install and use tree-sitter major modes in Emacs 29+. If the tree-sitter version can’t be used, fall back to the original major mode.
+#+begin_src emacs-lisp
+    (use-package treesit-auto
+      :custom
+      (treesit-auto-install 'prompt)
+      (c-ts-mode-indent-offset 4) ;; Fix weird indentation in c-ts (C, C++)
+      :config
+      ;; Remove treesitter modes, go-ts-mode not working currently
+      (setq treesit-auto-langs (cl-set-difference treesit-auto-langs '(go gomod)))
+      ;; Important: Delete before 'treesit-auto-add-to-auto-mode-alist'
+      (treesit-auto-add-to-auto-mode-alist 'all)
+      (global-treesit-auto-mode)
+      (setq treesit-language-source-alist
+            '((bash "https://github.com/tree-sitter/tree-sitter-bash")
+              (cmake "https://github.com/uyha/tree-sitter-cmake")
+              (css "https://github.com/tree-sitter/tree-sitter-css")
+              (elisp "https://github.com/Wilfred/tree-sitter-elisp")
+              (go "https://github.com/tree-sitter/tree-sitter-go")
+              (html "https://github.com/tree-sitter/tree-sitter-html")
+              (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
+              (json "https://github.com/tree-sitter/tree-sitter-json")
+              (make "https://github.com/alemuller/tree-sitter-make")
+              (markdown "https://github.com/ikatyang/tree-sitter-markdown")
+              (python "https://github.com/tree-sitter/tree-sitter-python")
+              (toml "https://github.com/tree-sitter/tree-sitter-toml")
+              (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
+              (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
+              (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
+      )
+#+end_src
+
+*** CMake mode
+#+begin_src emacs-lisp
+    (use-package cmake-ts-mode
+      :ensure nil
+      :mode ("CMakeLists\\.txt\\'" "\\.cmake\\'"))
+#+end_src
+
 *** Lua mode
 Example, how to setup a language mode (if you don't want it, feel free to delete it).
 Use SPC-tab to uncomment the lines.
@@ -525,6 +588,15 @@ We setup eat with eshell, if you want to use bash, zsh etc., check out their git
 #+begin_src emacs-lisp
     (use-package eat
       :hook ('eshell-load-hook #'eat-eshell-mode))
+#+end_src
+
+*** VTerm
+Fully-fledged terminal emulator inside GNU Emacs. Fast, POSIX compliant shell, handles UIs well. Eat don’t support C-arrow key movement and don’t work well with evil mode.
+#+begin_src emacs-lisp
+    (use-package vterm
+      :commands vterm
+      :custom
+      (vterm-max-scrollback 5000))
 #+end_src
 
 * Multi File Example
@@ -754,6 +826,40 @@ Check out their [[https://github.com/minad/consult][git repository]] for more aw
       )
 #+end_src
 
+** UndoTree
+Visualizes undo history.
+#+begin_src emacs-lisp
+    (use-package undo-tree
+      :init
+      (global-undo-tree-mode)
+      :custom
+      ;; Use separate directory for undo history
+      (undo-tree-history-directory-alist '(("." . "~/.config/emacs/undoTree"))))
+#+end_src
+
+** Sudo edit
+Utilities for opening files with root privileges (also works with doas).
+#+begin_src emacs-lisp
+    (use-package sudo-edit
+      :custom (sudo-edit-local-method "doas")) ;; To use doas
+#+end_src
+
+** Drag stuff
+Makes it possible to move selected text, regions, lines.
+#+begin_src emacs-lisp
+    (use-package drag-stuff
+      :init
+      (drag-stuff-global-mode 1)
+      (drag-stuff-define-keys))
+#+end_src
+
+** Evil-mc
+Multiple-cursors for evil mode.
+#+begin_src emacs-lisp
+    (use-package evil-mc
+      :commands (evil-mc-mode))
+#+end_src
+
 ** Diminish
 This package implements hiding or abbreviation of the modeline displays (lighters) of minor-modes.
 With this package installed, you can add ‘:diminish’ to any use-package block to hide that particular mode in the modeline.
@@ -766,6 +872,15 @@ Adds colors to brackets.
 #+begin_src emacs-lisp
     (use-package rainbow-delimiters
       :hook (prog-mode . rainbow-delimiters-mode))
+#+end_src
+
+** Rainbow Mode
+Displays the actual color as a background for any hex color value (ex. #ffffff).
+#+begin_src emacs-lisp
+    (use-package rainbow-mode
+      :diminish
+      :hook
+      ((org-mode prog-mode) . rainbow-mode))
 #+end_src
 
 ** Which-Key
@@ -786,11 +901,11 @@ Which-key is a helper utility for keychords (which key to press).
       (which-key-allow-imprecise-window-fit nil)) ;; Fixes which-key window slipping out in Emacs Daemon
 #+end_src
 
-** Vterm
-Best terminal emulator for emacs
-#+begin_src emacs-lisp 
-    (use-package vterm
-      :ensure t)
+** Ws-butler
+Removes whitespace from the ends of lines.
+#+begin_src emacs-lisp
+    (use-package ws-butler
+      :init (ws-butler-global-mode))
 #+end_src
 
 ** Emacs-dashboard
@@ -799,11 +914,26 @@ Emacs dashboard is an extensible startup screen showing you recent files, bookma
     ;; use-package with package.el:
     (use-package dashboard
       :ensure t
-      :init
+      :config
+      (dashboard-setup-startup-hook)
+      (setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
       ;; Set the title
       (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
       ;; Set the banner
       (setq dashboard-startup-banner 'logo)
+      ;; Value can be:
+      ;;  - 'official which displays the official emacs logo.
+      ;;  - 'logo which displays an alternative emacs logo.
+      ;;  - an integer which displays one of the text banners
+      ;;    (see dashboard-banners-directory files).
+      ;;  - a string that specifies a path for a custom banner
+      ;;    currently supported types are gif/image/text/xbm.
+      ;;  - a cons of 2 strings which specifies the path of an image to use
+      ;;    and other path of a text file to use if image isn't supported.
+      ;;    ("path/to/image/file/image.png" . "path/to/text/file/text.txt").
+      ;;  - a list that can display an random banner,
+      ;;    supported values are: string (filepath), 'official, 'logo and integers.
+
       ;; Content is not centered by default. To center, set
       (setq dashboard-center-content t)
       ;; vertically center content
@@ -822,8 +952,6 @@ Emacs dashboard is an extensible startup screen showing you recent files, bookma
                                         dashboard-insert-newline
                                         dashboard-insert-banner-title
                                         dashboard-insert-newline
-                                        dashboard-insert-navigator
-                                        dashboard-insert-newline
                                         dashboard-insert-init-info
                                         dashboard-insert-items
                                         dashboard-insert-newline
@@ -838,54 +966,23 @@ Emacs dashboard is an extensible startup screen showing you recent files, bookma
                                        (projects  . "p")
                                        (agenda    . "a")
                                        (registers . "e")))
-
       (setq dashboard-item-names '(("Recent Files:"               . "Recently opened files:")
                                    ("Agenda for today:"           . "Today's agenda:")
                                    ("Agenda for the coming week:" . "Agenda:")))
 
-      (setq dashboard-display-icons-p t)     ; display icons on both GUI and terminal
-      (setq dashboard-icon-type 'nerd-icons) ; use `nerd-icons' package
+      (setq dashboard-set-heading-icons t)
+      (setq dashboard-set-file-icons t)
 
-      (setq dashboard-set-heading-icons t) ; display heading icons
-      (setq dashboard-set-file-icons t) ; display file icons
-
-      ;; To display today’s agenda items on the dashboard
       (add-to-list 'dashboard-items '(agenda) t)
-      ;; To show agenda for the upcoming seven days
-      (setq dashboard-week-agenda t)
-      ;; To show all agenda entries except DONE
-      (setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
 
-      :config
-      (dashboard-setup-startup-hook)
+      (setq dashboard-week-agenda t)
+      (setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
       )
 #+end_src
 
-** Ws-butler
-Removes whitespace from the ends of lines.
+** Mentor
 #+begin_src emacs-lisp
-    (use-package ws-butler
-      :init (ws-butler-global-mode))
-#+end_src
-
-** Rainbow Mode
-Displays the actual color as a background for any hex color value (ex. #ffffff).
-#+begin_src emacs-lisp
-    (use-package rainbow-mode
-      :diminish
-      :hook
-      ((org-mode prog-mode) . rainbow-mode))
-#+end_src
-
-** UndoTree
-Visualizes undo history.
-#+begin_src emacs-lisp
-    (use-package undo-tree
-      :init
-      (global-undo-tree-mode)
-      :custom
-      ;; Use separate directory for undo history
-      (undo-tree-history-directory-alist '(("." . "~/.config/emacs/undoTree"))))
+    (use-package mentor)
 #+end_src
 
 * Runtime Performance
