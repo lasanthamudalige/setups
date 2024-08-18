@@ -11,7 +11,7 @@
 ***I installed it using archinstall***
 
 * Disk partition - ext4 with 1 partition with encryption
-* profile - Minimal install 
+* profile - Xorg install 
 * Sound - Pipewire
 * kernel - Latest kernel
 * Additional packages - 'firefox' 'kitty' 'git' 'bash-completion'
@@ -24,8 +24,12 @@
 
 ```bash
 git clone git://git.suckless.org/dwm 
+```
+
+```bash
 git clone git://git.suckless.org/dwmstatus
 ```
+
 * Change default terminal in dwm/config.def.h to kitty
 
 2. Compile the code using
