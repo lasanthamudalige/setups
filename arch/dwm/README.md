@@ -1,4 +1,4 @@
-# My arch sway wm setup
+# My arch DWM setup
 
 ## Table of contents
 
@@ -14,9 +14,25 @@
 * profile - Minimal install 
 * Sound - Pipewire
 * kernel - Latest kernel
-* Additional packages - 'firefox' 'kitty' 'git'
+* Additional packages - 'firefox' 'kitty' 'git' 'bash-completion'
 * Network configuration - NetworkManager
 * Other settings are stock setting
+
+## First things to do 
+
+1. Git clone dwm, dwmstatus
+
+```bash
+git clone git://git.suckless.org/dwm 
+git clone git://git.suckless.org/dwmstatus
+```
+* Change default terminal in dwm/config.def.h to kitty
+
+2. Compile the code using
+
+```bash
+sudo make clean install
+```
   
 ## Using dotfiles
 
