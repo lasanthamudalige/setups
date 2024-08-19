@@ -221,7 +221,7 @@ main(void)
 		t0 = gettemperature("/sys/devices/virtual/thermal/thermal_zone0", "temp");
 		t1 = gettemperature("/sys/devices/virtual/thermal/thermal_zone1", "temp");
 
-		status = smprintf("T:%s|%s L:%s B:%s %s",
+		status = smprintf("TEMP:%s|%s CPU:%s BAT:%s %s",
 				t0, t1, avgs, bat, tmbln);
 		setstatus(status);
 
