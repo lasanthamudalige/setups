@@ -450,8 +450,8 @@ Optional
 
 ### Keyboard shortcuts
 
-* Launch terminal apps directly from wofi (Like emacs, ranger)
+<!-- * Launch terminal apps directly from wofi (Like emacs, ranger) -->
 
-  * Use Shift + Return (Enter key)
+  <!-- * Use Shift + Return (Enter key) -->
 
 ## Screenshots (Still working on it)
