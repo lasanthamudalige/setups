@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -115,32 +114,3 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
 
-/* Adjusting volume */
-static const char *up_vol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%",   NULL };
-static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-10%",   NULL };
-static const char *mute_vol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle", NULL };
-...
-
-static const Key keys[] = {
-	...
-
-       { 0, XF86XK_AudioMute,        spawn, {.v = mute_vol } },
-       { 0, XF86XK_AudioLowerVolume, spawn, {.v = down_vol } },
-       { 0, XF86XK_AudioRaiseVolume, spawn, {.v = up_vol } },
-
-	...
-};
-
-/* Adjusting brightness */
-static const char *brighter[] = { "brightnessctl", "set", "10%+", NULL };
-static const char *dimmer[]   = { "brightnessctl", "set", "10%-", NULL };
-...
-
-static const Key keys[] = {
-	...
-
-       { 0, XF86XK_MonBrightnessDown, spawn, {.v = dimmer } },
-       { 0, XF86XK_MonBrightnessUp,   spawn, {.v = brighter } },
-
-	...
-};
