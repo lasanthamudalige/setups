@@ -46,7 +46,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod2Mask /* Mod2Mask is super key, Mod1Mask is alt key */
+#define MODKEY Mod2Mask /* Mod1Mask is alt key, Mod2Mask is super key */
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
