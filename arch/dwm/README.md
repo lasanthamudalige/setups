@@ -30,7 +30,7 @@ git clone git://git.suckless.org/dwm
 git clone git://git.suckless.org/dwmstatus
 ```
 
-** Change default terminal in dwm/config.def.h to kitty
+* Change default terminal in dwm/config.def.h to kitty
 
 2. Compile the code using
 
@@ -44,7 +44,7 @@ sudo make clean install
 sudo pacman -S emptty
 ```
 
-** To enable display manager
+* To enable display manager
 
 ```bash
 sudo systemctl enable emptty
