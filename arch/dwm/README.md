@@ -20,9 +20,9 @@
 
 ## First things to do 
 
-* Copy .xinitrc to ~ and dwm.desktop to /usr/share/xsessions/ (make directory if there is no xsessions)
+1 Copy .xinitrc to ~ and dwm.desktop to /usr/share/xsessions/ (make directory if there is no xsessions)
 
-1. Git clone dwm, dwmstatus (use the once in the config)
+2. Git clone dwm, dwmstatus (use the once in the config)
 
 ```bash
 git clone git://git.suckless.org/dwm 
@@ -34,13 +34,13 @@ git clone git://git.suckless.org/dwmstatus
 
 * Change default terminal in dwm/config.def.h to kitty
 
-2. Compile the code using
+3. Compile the code using
 
 ```bash
 sudo make clean install
 ```
 
-3. Install a login manager
+4. Install a login manager
 
 ```bash
 sudo pacman -S emptty
