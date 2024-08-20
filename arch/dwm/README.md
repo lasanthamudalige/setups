@@ -51,6 +51,8 @@ sudo pacman -S emptty
 ```bash
 sudo systemctl enable emptty
 ```
+
+* Edit 'conf' file in /etc/emptty/conf to set DEAFAULT_USER and XINITRC_LAUNCH=true
   
 ## Using dotfiles
 
