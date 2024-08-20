@@ -14,7 +14,7 @@
 * profile - Xorg install 
 * Sound - Pipewire
 * kernel - Latest kernel
-* Additional packages - 'firefox' 'kitty' 'git' 'bash-completion'
+* Additional packages - 'firefox' 'kitty' 'git' 'bash-completion' 'terminus-font'
 * Network configuration - NetworkManager
 * Other settings are stock setting
 
