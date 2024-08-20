@@ -20,7 +20,7 @@
 char *tzargentina = "America/Buenos_Aires";
 char *tzutc = "UTC";
 char *tzberlin = "Europe/Berlin";
-char *tzcolombo = "Indian-Ocean/Berlin";
+char *tzcolombo = "Asia/Colombo";
 
 static Display *dpy;
 
