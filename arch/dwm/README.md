@@ -3,6 +3,7 @@
 ## Table of contents
 
 * [Arch install summery](#arch-install-summery)
+* [First things to do](#first-things-to-do)
 * [Using dotfiles](#using-dotfiles)
 * [Other stuff](#other-stuff)
 
