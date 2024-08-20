@@ -20,7 +20,9 @@
 
 ## First things to do 
 
-1. Git clone dwm, dwmstatus
+* Copy .xinitrc to ~ and dwm.desktop to /usr/share/xsessions/ (make directory if there is no xsessions)
+
+1. Git clone dwm, dwmstatus (use the once in the config)
 
 ```bash
 git clone git://git.suckless.org/dwm 
