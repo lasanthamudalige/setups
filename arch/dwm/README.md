@@ -56,7 +56,7 @@ sudo systemctl enable emptty
   
 ## Using dotfiles
 
-* ***Install firefox, kitty terminal and git if not installed***
+* ***Install firefox, kitty terminal, git, bash-completion and terminus-font if not installed***
   
 1. Clone the repo
 
