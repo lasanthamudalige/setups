@@ -24,35 +24,35 @@
 
 2. Git clone dwm, dwmstatus (use the once in the config)
 
-```bash
-git clone git://git.suckless.org/dwm 
-```
+	```bash
+	git clone git://git.suckless.org/dwm 
+	```
 
-```bash
-git clone git://git.suckless.org/dwmstatus
-```
+	```bash
+	git clone git://git.suckless.org/dwmstatus
+	```
 
-* Change default terminal in dwm/config.def.h to kitty
+	* Change default terminal in dwm/config.def.h to kitty
 
 3. Compile the code using
 
-```bash
-sudo make clean install
-```
+	```bash
+	sudo make clean install
+	```
 
 4. Install a login manager
+	
+	```bash
+	sudo pacman -S emptty
+	```
 
-```bash
-sudo pacman -S emptty
-```
+	* To enable display manager
 
-* To enable display manager
+	```bash
+	sudo systemctl enable emptty
+	```
 
-```bash
-sudo systemctl enable emptty
-```
-
-* Edit 'conf' file in /etc/emptty/conf to set DEAFAULT_USER and XINITRC_LAUNCH=true
+	* Edit 'conf' file in /etc/emptty/conf to set DEAFAULT_USER and XINITRC_LAUNCH=true
   
 ## Using dotfiles
 
