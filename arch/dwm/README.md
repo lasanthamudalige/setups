@@ -37,6 +37,18 @@ git clone git://git.suckless.org/dwmstatus
 ```bash
 sudo make clean install
 ```
+
+3. Install a login manager
+
+```bash
+sudo pacman -S emptty
+```
+
+* To enable display manager
+
+```bash
+sudo systemctl enable emptty
+```
   
 ## Using dotfiles
 
