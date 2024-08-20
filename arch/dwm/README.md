@@ -20,7 +20,7 @@
 
 ## First things to do 
 
-1 Copy .xinitrc to ~ and dwm.desktop to /usr/share/xsessions/ (make directory if there is no xsessions)
+1. Copy .xinitrc to ~ and dwm.desktop to /usr/share/xsessions/ (make directory if there is no xsessions)
 
 2. Git clone dwm, dwmstatus (use the once in the config)
 
