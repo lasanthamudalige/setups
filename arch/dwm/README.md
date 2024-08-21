@@ -26,6 +26,15 @@
    sudo pacman -S kitty bash-completion terminus-font dmenu slock xautolock
    ``` 
    * Configure [slock](https://wiki.archlinux.org/title/Slock) from this link.
+   
+	   * Add below code to xorg.conf in /etc/X11/
+
+		   ```bash
+		   Section "ServerFlags"
+			   Option "DontVTSwitch" "True"
+			   Option "DontZap"      "True"
+		   EndSection
+		   ```
 
 2. Copy .xinitrc to ~ and dwm.desktop to /usr/share/xsessions/ (make directory if there is no xsessions)
 
