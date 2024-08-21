@@ -17,7 +17,7 @@
 * kernel - Latest kernel
 * Additional packages - 'firefox' 'git'
 * Network configuration - NetworkManager
-* Other settings are stock setting
+* Other settings are stock settings
 
 ## First things to do 
 
