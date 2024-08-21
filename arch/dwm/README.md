@@ -21,7 +21,7 @@
 
 ## First things to do 
 
-1. Install essential programs
+1. First installs
    ```bash
    sudo pacman -S kitty bash-completion terminus-font dmenu
    ``` 
@@ -109,11 +109,9 @@
 	* xdg-utils (Command line tools that assist applications with a variety of desktop integration tasks)
 	* ufw (firewall)
 	* bash-completion (auto completion for bash shell)
-	* i3status (replacement bar for swaybar)
-	* mako (notification deamon for wayland)
 
     ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw
     ```
 
   * Install yay aur helper
@@ -130,7 +128,7 @@
   * Install all essential AUR packages using:
 
     ```bash
-    yay -S wob wlsunet #progressbar and day/night gamma adjustment program
+    yay -S wlsunet #progressbar and day/night gamma adjustment program
     ```
 
     * Setup ***wob*** using this [link](https://github.com/francma/wob/blob/master/contrib/README.md) (If not working out of the box)
