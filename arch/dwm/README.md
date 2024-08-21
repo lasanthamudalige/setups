@@ -15,15 +15,20 @@
 * profile - Xorg install 
 * Sound - Pipewire
 * kernel - Latest kernel
-* Additional packages - 'firefox' 'kitty' 'git' 'bash-completion' 'terminus-font'
+* Additional packages - 'firefox' 'git'
 * Network configuration - NetworkManager
 * Other settings are stock setting
 
 ## First things to do 
 
-1. Copy .xinitrc to ~ and dwm.desktop to /usr/share/xsessions/ (make directory if there is no xsessions)
+1. Install essential programs
+   ```bash
+   sudo pacman -S kitty bash-completion terminus-font dmenu
+   ``` 
 
-2. Git clone dwm, dwmstatus (use the once in the config)
+2. Copy .xinitrc to ~ and dwm.desktop to /usr/share/xsessions/ (make directory if there is no xsessions)
+
+3. Git clone dwm, dwmstatus (use the once in the config)
 
 	```bash
 	git clone git://git.suckless.org/dwm 
@@ -35,13 +40,13 @@
 
 	* Change default terminal in dwm/config.def.h to kitty
 
-3. Compile the code using
+4. Compile the code using
 
 	```bash
 	sudo make clean install
 	```
 
-4. Install a login manager
+5. Install a login manager
 	
 	```bash
 	sudo pacman -S emptty
