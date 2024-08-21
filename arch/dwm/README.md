@@ -178,19 +178,7 @@
   cp -r emacs/ nvim/ ranger/ ~/.config/
   ```
 
-4. Customizing sway setup
-
-* ~~Install Ly login manager~~ (Can now do in the arch install)
-
-    ```bash
-    sudo pacman -S ly
-    ```
-
-  * Enable the service
-
-    ```bash
-    sudo systemctl enable ly.service
-    ```
+4. Customizing DWM setup
 
 * ~~Install cutomizing programs~~ (Run below command to install all)
 
