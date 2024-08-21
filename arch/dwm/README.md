@@ -412,7 +412,7 @@
 * Install Python language server
 
   ``` bash
-	python-language-server
+	sudo pacman -S python-lsp-server
 	```
 
 * Install MongoDB
