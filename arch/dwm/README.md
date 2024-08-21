@@ -180,7 +180,7 @@
 
 4. Customizing DWM setup
 
-* ~~Install cutomizing programs~~ (Run below command to install all)
+* ~~Install cutomizing programs (Run below command to install all)~~
 
   ```bash
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
