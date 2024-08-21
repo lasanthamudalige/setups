@@ -217,7 +217,7 @@ main(void)
 	for (;;sleep(30)) {
 		avgs = loadavg();
 		bat = getbattery("/sys/class/power_supply/BAT0");
-		tmbln = mktimes("%Y-%m-%d %H:%M", tzcolombo);
+		tmbln = mktimes("%a %b %d-%m-%Y %H:%M", tzcolombo);
 		t0 = gettemperature("/sys/devices/virtual/thermal/thermal_zone0", "temp");
 		t1 = gettemperature("/sys/devices/virtual/thermal/thermal_zone1", "temp");
 
