@@ -184,7 +184,7 @@
 * Move config folders to "~/.config" folder.
 
   ```bash
-  cp -r emacs/ i3status/ kitty/ nvim/ ranger/ sway/ ~/.config/
+  cp -r emacs/ nvim/ ranger/ ~/.config/
   ```
 
 4. Customizing sway setup
@@ -375,7 +375,7 @@
   rm -rf ~/miniconda3/miniconda.sh
   ~/miniconda3/bin/conda init zsh
   ```
-Optional
+* Optional
   ```bash
   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
   ~/miniconda3/bin/conda init bash
