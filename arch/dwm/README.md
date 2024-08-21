@@ -109,9 +109,10 @@
 	* xdg-utils (Command line tools that assist applications with a variety of desktop integration tasks)
 	* ufw (firewall)
 	* bash-completion (auto completion for bash shell)
+	* Day/night gamma adjustment program
 
     ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw redshift
     ```
 
   * Install yay aur helper
@@ -124,14 +125,6 @@
     cd yay
     makepkg -si
     ```
-
-  * Install all essential AUR packages using:
-
-    ```bash
-    yay -S wlsunet #progressbar and day/night gamma adjustment program
-    ```
-
-    * Setup ***wob*** using this [link](https://github.com/francma/wob/blob/master/contrib/README.md) (If not working out of the box)
 
 * Change pacman configuration
   
