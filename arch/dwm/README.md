@@ -209,7 +209,7 @@
 
 5. Install basic set of applications
 
-***You need to get a torrent client a screenshot tool and a clipboard manager for this***
+***You need to get a torrent client, a screenshot tool and a clipboard manager for this***
 
 * Pcmanfm + dependencies (file manager)
 * Xarchiver + dependencies (command line archivers)
