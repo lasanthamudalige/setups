@@ -203,7 +203,6 @@ int
 main(void)
 {
 	char *status;
-	char *avgs;
 	char *bat;
 	char *tmbln;
 	char *t0;
@@ -215,19 +214,17 @@ main(void)
 	}
 
 	for (;;sleep(30)) {
-		avgs = loadavg();
 		bat = getbattery("/sys/class/power_supply/BAT0");
 		tmbln = mktimes("%a %b %d-%m-%Y %H:%M", tzcolombo);
 		t0 = gettemperature("/sys/devices/virtual/thermal/thermal_zone0", "temp");
 		t1 = gettemperature("/sys/devices/virtual/thermal/thermal_zone1", "temp");
 
-		status = smprintf("TEMP:%s|%s CPU:%s BAT:%s %s",
-				t0, t1, avgs, bat, tmbln);
+		status = smprintf("TEMP:%s|%s BAT:%s %s",
+				t0, t1, bat, tmbln);
 		setstatus(status);
 
 		free(t0);
 		free(t1);
-		free(avgs);
 		free(bat);
 		free(tmbln);
 		free(status);
