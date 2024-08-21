@@ -27,7 +27,7 @@
    ``` 
    * Configure [slock](https://wiki.archlinux.org/title/Slock) from this link.
    
-	   * Add below code to xorg.conf in /etc/X11/
+	   * Add below code to xorg.conf in /etc/X11/ (make a file if there is not xorg.conf)
 
 		   ```bash
 		   Section "ServerFlags"
