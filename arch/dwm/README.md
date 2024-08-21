@@ -109,7 +109,7 @@
 	* xdg-utils (Command line tools that assist applications with a variety of desktop integration tasks)
 	* ufw (firewall)
 	* bash-completion (auto completion for bash shell)
-	* Day/night gamma adjustment program
+	* redshift (Day/night gamma adjustment program)
 
     ```bash
     sudo pacman -S pacman-contrib xdg-user-dirs ufw redshift
