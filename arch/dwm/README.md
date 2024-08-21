@@ -23,8 +23,9 @@
 
 1. First installs
    ```bash
-   sudo pacman -S kitty bash-completion terminus-font dmenu
+   sudo pacman -S kitty bash-completion terminus-font dmenu slock xautolock
    ``` 
+   * Configure [slock](https://wiki.archlinux.org/title/Slock) from this link.
 
 2. Copy .xinitrc to ~ and dwm.desktop to /usr/share/xsessions/ (make directory if there is no xsessions)
 
