@@ -158,7 +158,9 @@
   ```bash
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ```
+  
   * Refresh fonts using
+    
     ```bash
     fc-cache -fv
     ```
