@@ -74,12 +74,13 @@
 	* i3status (replacement bar for swaybar)
 	* Redshift (Day/night gamma adjustment program)
   	* xss-lock (Program to autolock on suspend)
+   	* picom (to reduce screen flickering and tearing) 
   	* nitrogen (to add wallpapers)
   	* xfce4-clipman-plugin (clipboard for i3)
    	* flameshot (screenshot application for xorg)
 
 	```bash
-	sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion i3status redshift xss-lock nitrogen xfce4-clipman-plugin --needed
+	sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion i3status redshift xss-lock picom nitrogen xfce4-clipman-plugin --needed
 	```
 
   * Install yay aur helper
