@@ -11,12 +11,12 @@
 ***I installed it using archinstall***
 
 * Disk partition - ext4 with 1 partition with encryption
-* profile - Desktop with Sway login with ly
+* profile - Desktop with Sway with ly login manager
 * Sound - Pipewire
 * kernel - Latest kernel
 * Additional packages - 'firefox' 'kitty' 'git'
 * Network configuration - NetworkManager
-* Other settings are stock setting
+* Other settings are stock settings
   
 ## Using dotfiles
 
