@@ -78,9 +78,9 @@
    	* xfce4-clipman-plugin (clipboard for i3)
       	* flameshot (screenshot program)   
 
-    ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion i3status redshift xss-lock nitrogen xfce4-clipman-plugin --needed
-    ```
+	    ```bash
+	    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion i3status redshift xss-lock nitrogen xfce4-clipman-plugin --needed
+	    ```
 
   * Install yay aur helper
 
