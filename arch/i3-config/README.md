@@ -75,8 +75,8 @@
 	* Redshift (Day/night gamma adjustment program)
   	* xss-lock (Program to autolock on suspend)
   	* nitrogen (to add wallpapers)
-   	* xfce4-clipman-plugin (clipboard for i3)
-    	* flameshot  
+  	* xfce4-clipman-plugin (clipboard for i3)
+   * flameshot
 
 	```bash
 	sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion i3status redshift xss-lock nitrogen xfce4-clipman-plugin --needed
