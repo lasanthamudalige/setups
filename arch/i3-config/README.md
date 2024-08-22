@@ -51,12 +51,12 @@
   
   * Install tlp and enable it
   
-	  Install tlp
+	* Install tlp
   	  ```bash
   	  sudo pacman -S tlp tlp-rdw
   	  ```
 
-	  Enable tlp
+	* Enable tlp
   	  ```bash
   	  sudo systemctl enable tlp.service
   	  ```
@@ -73,8 +73,8 @@
 	* bash-completion (auto completion for bash shell)
 	* i3status (replacement bar for swaybar)
 	* Redshift (Day/night gamma adjustment program)
-  * xss-lock (Program to autolock on suspend)
-  * nitrogen (to add wallpapers)
+  	* xss-lock (Program to autolock on suspend)
+  	* nitrogen (to add wallpapers)
 
     ```bash
     sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion i3status redshift xss-lock nitrogen --needed
