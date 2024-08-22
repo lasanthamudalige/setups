@@ -10,7 +10,7 @@
 
 ***I installed it using archinstall***
 
-* Disk partition - ext4 with 1 partition with encryption
+* Disk partition - ext4 with encryption
 * profile - Desktop with Sway with ly login manager
 * Sound - Pipewire
 * kernel - Latest kernel
