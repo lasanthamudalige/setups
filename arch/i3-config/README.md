@@ -363,12 +363,6 @@ Optional
   
   ```
 
-* Install clipboard tool for wayland (Already is on the install.sh file)
-
-  ```bash
-  sudo pacman -S wl-copy
-  ```
-
 * Install pyright from npm
 
   ```bash
