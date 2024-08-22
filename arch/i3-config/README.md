@@ -75,9 +75,11 @@
 	* Redshift (Day/night gamma adjustment program)
   	* xss-lock (Program to autolock on suspend)
   	* nitrogen (to add wallpapers)
+   	* xfce4-clipman-plugin (clipboard for i3)
+      	* flameshot (screenshot program)   
 
     ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion i3status redshift xss-lock nitrogen --needed
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion i3status redshift xss-lock nitrogen xfce4-clipman-plugin --needed
     ```
 
   * Install yay aur helper
@@ -153,7 +155,7 @@
 
 5. Install basic set of applications
 
-***You need to get a torrent client a screenshot tool and a clipboard manager for this***
+***You need to get a torrent client for this***
 
 * Pcmanfm + dependencies (file manager)
 * Xarchiver + dependencies (command line archivers)
