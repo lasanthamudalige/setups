@@ -144,6 +144,12 @@
   ```bash
   cp -r emacs/ i3status/ kitty/ nvim/ ranger/ i3/ ~/.config/
   ```
+  
+* Move "90-toucpad.conf" file to "xorg.conf.d" folder to eneble touchpad tap functions
+
+  ```bash
+  sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
+  ```
 
 4. Customizing i3 setup
 
