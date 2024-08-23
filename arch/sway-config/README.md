@@ -333,7 +333,15 @@
   rm -rf ~/miniconda3/miniconda.sh
   ~/miniconda3/bin/conda init zsh
   ```
-Optional
+  
+  	* Disable base automatic base activation
+    
+		```bash
+    	conda config --set auto_activate_base false
+    	```
+  
+* Optional
+  
   ```bash
   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
   ~/miniconda3/bin/conda init bash
@@ -389,8 +397,8 @@ Optional
 
 * Install Python language server
 
-  ``` bash
-	python-language-server
+	``` bash
+	sudo pacman -S python-lsp-server
 	```
 
 * Install MongoDB
