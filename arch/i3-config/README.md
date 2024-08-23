@@ -303,7 +303,7 @@
 * Install python, sqlite
 
   ```bash
-  sudo pacman -S python tk python-pip sqlite
+  sudo pacman -S python tk python-pip sqlite --needed
   ```
   
 * Install nvm(Node version manager)
@@ -385,14 +385,14 @@
 * ~~Install ripgrep~~
 
   ```bash
-  sudo pacman -S ripgrep
+  sudo pacman -S ripgrep --needed
   ```
 ### Emacs stuff
 
 * Install Python language server
 
   	``` bash
-	sudo pacman -S python-lsp-server
+	sudo pacman -S python-lsp-server --needed
 	```
 
 * Install MongoDB
