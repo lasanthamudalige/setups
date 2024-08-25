@@ -36,7 +36,7 @@
   * Install wifi and bluetooth
 
       ```bash
-      sudo pacman -S iwd bluez bluez-utils
+      sudo pacman -S iwd bluez bluez-utils --needed
       ```
 
     * Enable and start bluetooth
