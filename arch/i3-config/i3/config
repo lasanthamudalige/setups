@@ -17,7 +17,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 9
+font pango:monospace 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -34,9 +34,12 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock -l -- i3lock -c 000000
 
+# Suspend the the computer after 30 min of inactivity
+#exec xautolock -time 30 -locker "systemctl suspend" -detectsleep
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -44,6 +47,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# screen brigthness adjustment using brightnessctl(this is for laptops hot keys)
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -59,7 +66,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Terminus (TTF)-11'
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -222,9 +229,6 @@ mode "$mode_system" {
 # key combination to launch above menu
 bindsym $mod+BackSpace mode "$mode_system"
 
-# scree brigthness adjustment using light(this is for laptops hot keys)
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # Increase brightness by 5%
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # Decrease brightness by 5%
 
 # add wallpaper using nitrogen
 # restore wallpaper on restart
@@ -238,11 +242,11 @@ exec --no-startup-id xfce4-clipman
 # key combination to open clipboard
 bindsym $mod+c exec xfce4-popup-clipman
 
-# Start redshift with current location mozila location service
-exec --no-startup-id  redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
+# Start redshift with current the location 
+exec --no-startup-id redshift -l 7.24:80.26
 
 # execute rofi application menu
-bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
+#bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 
 # screenshots using flameshot
 # start program at the start
@@ -251,7 +255,7 @@ bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 bindsym Print exec "flameshot gui"
 
 # Add auto tiling
-exec_always --no-startup-id autotiling 
+#exec_always --no-startup-id autotiling 
 
-
-
+# Disable bluetooth on startup
+exec bluetoothctl power off
