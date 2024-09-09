@@ -8,7 +8,7 @@
 
 general {
         colors = true
-        interval = 5
+        interval = 30 
 }
 
 #order += "ipv6"
@@ -51,5 +51,5 @@ memory {
 }
 
 tztime local {
-        format = "%Y-%m-%d %a %H:%M:%S"
+        format = "%Y-%m-%d %a %H:%M"
 }
