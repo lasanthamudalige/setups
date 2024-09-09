@@ -1,0 +1,1 @@
+("~/Development/setups/" "~/Downloads/c/" "~/Development/codewars/codewars-python/")
