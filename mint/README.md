@@ -1,184 +1,268 @@
-# A script to auto install necessay apps in Linux mint
+# Linux mint setup
 
-## Table of content
+## Table of contents
 
-* [Custom changes](#custom-changes)
-* [Programming stuff](#programming-stuff)
+* [Using dotfiles](#using-dotfiles)
+* [Other stuff](#other-stuff)
 
-## Install.sh
+## Using dotfiles
 
-* This script will install
-  * From apt
-    * ubuntu restricted extras
-    * fish shell
-    * htop
-    * neofetch
-    * neovim
-    * git
-    * curl
-    * gnome-clocks
-    * gnome-dictionary
-    * vlc
-    * build essential
-    * python3 pip
-    * python3 tk
-    * sqlite3
-    * p7zip-full and p7zip-rar
-    * obs studio
-    * gimp
-    * chromium
-    * audacious
-  * From curl
-    * nvm (node version manager)
-    * deb-get (package manager)  
-  * From deb-get
-    * brave browser
-    * visual studio Code
-    * spotify
-    * bitwarden
-    * zoom
-    * blanket
-    * teamviewer
-    * virtualbox 7.0
-    * discord
-  * From Flatpak
-    * flatseal
-    * pomodoro
-    * joplin
+1. Clone the repo
 
-## Generate_new_ssh_key.sh
-
-* This will generate a ssh key for github
-
-## Custom changes
-
-### Change shell to fish
-  
-* Install fish shell ***(If you didn't run the script)***
-
+   <!-- This is how to properly declare code snippets  -->  
     ```bash
-    sudo apt install fish
+    git clone https://github.com/lasanthamudalige/setups.git
     ```
 
-* Change shell to fish
+2. Do essential things
 
+  * Install tlp and enable it
+  
+	* Install tlp
+  	  ```bash
+  	  sudo apt install tlp tlp-rdw -y
+  	  ```
+
+	* Enable tlp
+  	  ```bash
+  	  sudo systemctl enable tlp.service
+  	  ```
+
+  * Install deb-get program
+	```bash
+	sudo apt install curl lsb-release wget
+	curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+	```
+
+3. Move config files
+
+* Move config folders to "~/.config" folder.
+
+  ```bash
+  cp -r emacs/ nvim/ ranger/ kitty/ ~/.config/
+  ```
+
+4. Customizing the setup
+
+  ```bash
+  sudo apt install fonts-jetbrains-mono fonts-firacode -y
+  ```
+  
+  * Refresh fonts using
+    
     ```bash
-    chsh -s /usr/bin/fish
+    fc-cache -fv
     ```
 
-### Power management (On laptops)
-  
-* ~~Install tlp (Not recommended)~~
+5. Install basic set of applications
 
-    ```bash
-    sudo apt install tlp
-    ```
+* Ranger (Cli file manager)
+* Kitty (Terminal emulator)
+* neofetch (CLI system information tool)
+* gimp (Image manipulation tool)
+* chromium (Browser)
+* obs-studio (Bcreen-recoder)
+* neovim (Terminal based test editor)
+* zsh (A advanced shell with more features)
+* Emacs 
+* Obsidian (Note taking application)
+* Solaar (Linux device manager for a wide range of Logitech devices)
+* VLC (Media player)
+* Deadbeef (Music player)
+
+  ```bash
+  sudo apt install ranger kitty neofetch gimp chromium obs-studio zsh fwupd python3 python3-tk python3-pip sqlite3 emacs ripgrep  obsidian solaar vlc ubuntu-restricted-extras -y
+  ```
+
+  <!-- Install onlyoffice from deb-get -->
+  ```bash
+  deb-get install onlyoffice-desktopeditors zoom deadbeef-static
+  ```
   
-  * ~~Start tlp~~
+  ** Change defaults **
+
+## Other stuff
+
+### Zsh shell
+
+* Install zsh shell
+
+  ```bash
+    sudo apt install zsh -y
+  ```
+
+* List available shells
+
+  ```bash
+  chsh -l
+  ```
+
+* Change default shell to zsh
+
+  ```bash
+  chsh -s /usr/bin/zsh # And log back in
+  ```
+
+* Install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
+
+  ```bash
+  wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+  sh install.sh
+  ```
+
+* add zsh-autosuggestions
+
+  1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
 
       ```bash
-      sudo tlp start
+      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       ```
 
-* Install auto-cpufreq  (In the github stars)
-
-### Linux mint  
-
-* ~~To change cursor theme in flatpak apps~~(now fixed when changed in settings)
-
-    ```bash
-    sudo update-alternatives --config x-cursor-theme
-    ```
-
-* Disable bluetooth on startup
-
-  * Open bluetooth main file
+  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
       ```bash
-      sudo nano /etc/bluetooth/main.conf
+      plugins=( 
+      # other plugins...
+      zsh-autosuggestions
+      )
       ```
 
-  * ***Go to the bottom and set "AutoEnable" to False***
+  3. Start a new terminal session.
 
-### Change Themes of Flatpak apps using Flatseal
+* add zsh-syntax-highlighting (optional)
 
-* Go to All applications and locate **filesystem**
+  1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
-  * Add theme location in **Other files**
+      ```bash
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+      ```
 
-    * In Linux Mint
+  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
-        ```bash
-        /usr/share/themes
-        ```
+      ```bash
+      plugins=( 
+      # other plugins...
+      zsh-syntax-highlighting 
+      )
+      ```
 
-* Copy themes folder inn usr/share/themes to ~/.themes folder
+* copy nvm setting from .bashrc file to .zshrc
 
-    ```
-    sudo cp -r /usr/share/themes/. ~/.themes
-    ```
+### Install visual studio code, spotify and brave browser with yay
 
-* Add theme folder to **Files**
+  ```bash
+  deb-get install code spotify-client brave-browser
+  ```
+ 
+* Generate ssh key for github
 
-    ```bash
-    ~/.themes
-    ```
+  ```bash
+  # Generate a new ssh key
+  ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
 
-* Add GTK_THEME variable to the **Environment**
+  # Add ssh key to ssh-agent
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_ed25519
 
-  * Add Adwaita Dark theme
+  # Print ssh public key to clipboard
+  cat ~/.ssh/id_ed25519.pub
+  ```
 
-    ```bash
-    GTK_THEME=Adwaita-dark
-    ```
+* Install python, sqlite
 
-## Programming stuff
-
-### Install nvm (If you didn't run the script)
-
+  ```bash
+  sudo pacman -S python3 python3-tk python3-pip sqlite3 -y
+  ```
+  
 * Install nvm(Node version manager)
 
-    ```bash
-    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
-    ```
+  ```bash
+  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
+  ```
 
-### Add nvm to fish shell
+* Install nodemon for nodejs
 
-* ***Install nvm before doing below steps***
-
-  * Install nvm in fish shell
-
-    * Install fisher plugin
-
-        ```bash
-        curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-        ```
-
-    * Install fish nvm
-
-        ```bash
-        fisher install FabioAntunes/fish-nvm edc/bass
-        ```
-
-* Install nodemon from nodejs
-
-   ```bash
-   npm install -g nodemon # or using yarn: yarn global add nodemon
-   ```
+  ```bash
+  npm install -g nodemon # or using yarn: yarn global add nodemon
+  ```
 
 * Install json server from nodejs
 
-   ```bash
-   npm install -g json-server
-   ```
+  ```bash
+  npm install -g json-server
+  ```
 
-### Add alias to execute custom shell scripts
+* ***Note***
+* Install Miniconda
 
-   Add this to end of the ~/.bashrc file
+  ```bash
+  mkdir -p ~/miniconda3
+  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+  zsh ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+  rm -rf ~/miniconda3/miniconda.sh
+  ~/miniconda3/bin/conda init zsh
+  ```
+  
+  * Disable base automatic base activation
+    
+    ```bash
+    conda config --set auto_activate_base false
+    ```
+  
+* Optional
+  ```bash
+  bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+  ~/miniconda3/bin/conda init bash
+  ```
 
-   ```bash
-   # Custom commands
-   # command to create github repos
-   alias create="~/Development/shell-scripts/automate_repo.sh"
-   alias wish="~/Development/shell-scripts/fb_birthday_wisher.sh"
-   ```
+* Install the Latest selenium webdriver to Miniconda base environment
+* Download the gecko driver and move it to /usr/local/bin
+
+* Install micromamba (optional)
+
+  ```bash
+  "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+  ```
+
+* **Respond to all the input prompts**
+
+* Install the Latest selenium webdriver to Miniconda base environment
+* Download the gecko driver and move it to /usr/local/bin
+
+### Neovim stuff
+
+* Move neovim config file to $HOME/.config/
+
+  ```bash
+  sudo cp -r .config/neovim/ ~/.config/
+  
+  ```
+
+* Install pyright from npm
+
+  ```bash
+  npm i -g pyright
+  ```
+
+* Install tree-sitte-cli
+
+  ```bash
+  npm i -g tree-sitter-cli
+  ```
+
+* ~~Install ripgrep~~
+
+  ```bash
+  sudo apt install ripgrep -y
+  ```
+### Emacs stuff
+
+* Install Python language server
+
+  	``` bash
+	sudo apt install python3-pylsp -y
+	```
+
+* Install MongoDB
+  
+  * [Visit the website for instructions](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
