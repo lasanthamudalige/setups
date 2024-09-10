@@ -79,7 +79,7 @@
   deb-get install onlyoffice-desktopeditors zoom deadbeef-static
   ```
   
-  ***Change defaults***
+  * ***Change defaults to relevent programs***
 
 ## Other stuff
 
