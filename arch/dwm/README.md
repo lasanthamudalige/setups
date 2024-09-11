@@ -78,7 +78,7 @@
 
    <!-- This is how to properly declare code snippets  -->  
     ```bash
-    git clone https://github.com/lasanthamudalige/setups.git
+    git clone https://github.com/lasanthamudalige/setups
     ```
 
 2. Do essential things
