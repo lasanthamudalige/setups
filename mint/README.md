@@ -11,7 +11,7 @@
 
    <!-- This is how to properly declare code snippets  -->  
     ```bash
-    git clone https://github.com/lasanthamudalige/setups.git
+    git clone https://github.com/lasanthamudalige/setups
     ```
 
 2. Do essential things
@@ -64,14 +64,15 @@
 * obs-studio (Bcreen-recoder)
 * neovim (Terminal based test editor)
 * zsh (A advanced shell with more features)
-* Emacs 
 * Obsidian (Note taking application)
 * Solaar (Linux device manager for a wide range of Logitech devices)
 * VLC (Media player)
 * Deadbeef (Music player)
+* Emacs 
+* Spotify client
 
   ```bash
-  sudo apt install ranger kitty neofetch gimp chromium obs-studio zsh fwupd python3 python3-tk python3-pip sqlite3 emacs ripgrep  obsidian solaar vlc ubuntu-restricted-extras -y
+  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs ripgrep  obsidian solaar vlc spotify-client ubuntu-restricted-extras -y
   ```
 
   <!-- Install onlyoffice from deb-get -->
@@ -151,7 +152,7 @@
 ### Install visual studio code, spotify and brave browser with yay
 
   ```bash
-  deb-get install code spotify-client brave-browser
+  deb-get install code brave-browser
   ```
  
 * Generate ssh key for github
