@@ -72,7 +72,7 @@
 * Spotify client
 
   ```bash
-  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs ripgrep  obsidian solaar vlc spotify-client ubuntu-restricted-extras -y
+  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep  obsidian solaar vlc spotify-client ubuntu-restricted-extras htop btop -y
   ```
 
   <!-- Install onlyoffice from deb-get -->
