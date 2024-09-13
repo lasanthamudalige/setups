@@ -80,7 +80,7 @@
   deb-get install onlyoffice-desktopeditors zoom deadbeef-static
   ```
 
-  Install spotify-client using (this)[https://www.spotify.com/us/download/linux/]
+  Install spotify-client using [this](https://www.spotify.com/us/download/linux/)
   
   * ***Change defaults to relevent programs***
 
