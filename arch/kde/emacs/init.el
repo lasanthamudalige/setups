@@ -112,7 +112,8 @@
 
   (start/leader-keys
     "s" '(:ignore t :wk "Show")
-    "s e" '(eat :wk "Eat terminal"))
+    "s e" '(eat :wk "Eat terminal")
+    "s v" '(vterm :wk "Vterm terminal"))
 
   (start/leader-keys
     "t" '(:ignore t :wk "Toggle")
