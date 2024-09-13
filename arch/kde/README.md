@@ -338,6 +338,8 @@
 	sudo pacman -S python-lsp-server --needed
 	```
 
+### MongoDB
+
 * Install MongoDB (**check the wiki**)
 
    ```bash
