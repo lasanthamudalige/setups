@@ -95,6 +95,13 @@
       ```
 
     * Setup firewall
+
+      * Install UFW
+
+         ```bash
+         sudo pacman -S ufw
+         ```
+
       * Enable UFW
 
          ```bash
