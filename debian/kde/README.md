@@ -72,13 +72,15 @@
 * Spotify client
 
   ```bash
-  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep  obsidian solaar vlc spotify-client ubuntu-restricted-extras htop btop -y
+  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep  obsidian solaar vlc htop btop -y
   ```
 
   <!-- Install onlyoffice from deb-get -->
   ```bash
   deb-get install onlyoffice-desktopeditors zoom deadbeef-static
   ```
+
+  Install spotify-client using (this)[https://www.spotify.com/us/download/linux/]
   
   * ***Change defaults to relevent programs***
 
