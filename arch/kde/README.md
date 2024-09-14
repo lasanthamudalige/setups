@@ -148,7 +148,7 @@
 
   <!-- Install onlyoffice from AUR -->
   ```bash
-  yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin ttf-ms-fonts postman-bin spotify
+  yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin ttf-ms-fonts postman-bin
   ```
 
 ## Other stuff
@@ -218,10 +218,10 @@
 
 * copy nvm setting from .bashrc file to .zshrc
 
-### Install visual studio code, spotify, postman and brave browser with yay
+### Install visual studio code, postman and brave browser with yay
 
   ```bash
-  yay -S visual-studio-code-bin spotify postman-bin brave-bin
+  yay -S visual-studio-code-bin postman-bin brave-bin
   ```
 
 ***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
