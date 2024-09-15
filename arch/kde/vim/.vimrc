@@ -25,6 +25,9 @@ set shiftwidth=4
 " Set tab width to 4 columns.
 set tabstop=4
 
+" Set Auto indent.
+set autoindent
+
 " Enable smart tab
 set smarttab
 
