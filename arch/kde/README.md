@@ -344,13 +344,7 @@
 	* Using pacman
 
 	    ```bash
-		sudo pacman -S python-lsp-server bash-language-server eslint-language-server --needed
-		```
-	
-	* Using npm
-	
-		```bash
-		npm i -g bash-language-server vscode-langservers-extracted javascript-typescript-langserver typescript-language-server unified-language-server
+		sudo pacman -S python-lsp-server marksman --needed
 		```
 
 ### MongoDB
