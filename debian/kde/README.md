@@ -1,4 +1,4 @@
-# Debain Kde setup
+# Debian Kde setup
 
 ## Table of contents
 
@@ -18,25 +18,28 @@
 
   * Install tlp and enable it
   
-	* Install tlp
-  	  ```bash
-  	  sudo apt install tlp tlp-rdw -y
-  	  ```
+    - Install tlp
+  
+	    ```bash
+	    sudo apt install tlp tlp-rdw -y
+	    ```
 
-	* Enable tlp
-  	  ```bash
-  	  sudo systemctl enable tlp.service
-  	  ```
+  * Enable tlp
 
-  * Install deb-get program
-	```bash
-	sudo apt install curl lsb-release wget
-	curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
-	```
+    ```bash
+    sudo systemctl enable tlp
+    ```
+
+  * Install [deb-get](https://github.com/wimpysworld/deb-get) program
+
+    ```bash
+    sudo apt install curl lsb-release wget
+    curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+    ```
 
 3. Move config files
 
-* Move config folders to "~/.config" folder.
+- Move config folders to "~/.config" folder.
 
   ```bash
   cp -r emacs/ nvim/ ranger/ kitty/ ~/.config/
@@ -44,45 +47,30 @@
 
 4. Customizing the setup
 
-  ```bash
-  sudo apt install fonts-jetbrains-mono fonts-firacode -y
-  ```
+    ```bash
+    sudo apt install fonts-jetbrains-mono fonts-firacode -y
+    ```
   
-  * Refresh fonts using
-    
+- Refresh fonts using
+
     ```bash
     fc-cache -fv
     ```
 
-5. Install basic set of applications
+5. Install basic set of applications like: ranger, kitty, neofetch, gimp, chromium, obs-studio, neovim, zsh, python tk and pip, sqlite3, emacs and dependancies, thunderbird, timeshift, ktorrent, solaar, vlc, htop, btop, onlyoffice, zoom, deadbeef music player, obsidian, brave browser, codium (FOSS version of vs code)
 
-* Ranger (Cli file manager)
-* Kitty (Terminal emulator)
-* neofetch (CLI system information tool)
-* gimp (Image manipulation tool)
-* chromium (Browser)
-* obs-studio (Bcreen-recoder)
-* neovim (Terminal based test editor)
-* zsh (A advanced shell with more features)
-* Obsidian (Note taking application)
-* Solaar (Linux device manager for a wide range of Logitech devices)
-* VLC (Media player)
-* Deadbeef (Music player)
-* Emacs 
-* Spotify client
+    ```bash
+    sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep thunderbird timeshift ktorrent solaar vlc htop btop -y
+    ```
 
-  ```bash
-  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep  obsidian solaar vlc htop btop -y
-  ```
-
-  <!-- Install onlyoffice from deb-get -->
-  ```bash
-  deb-get install onlyoffice-desktopeditors zoom deadbeef-static
-  ```
+    <!-- Install onlyoffice from deb-get -->
+    ```bash
+    deb-get install onlyoffice-desktopeditors zoom deadbeef-static obsidian brave-browser codium
+    ```
 
   Install spotify-client using [this](https://www.spotify.com/us/download/linux/)
   
-  * ***Change defaults to relevent programs***
+* ***Change defaults to relevent programs***
 
 ## Other stuff
 
@@ -115,13 +103,13 @@
 
 * add zsh-autosuggestions
 
-  1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+  - Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
 
       ```bash
       git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       ```
 
-  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+  - Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
       ```bash
       plugins=( 
@@ -130,17 +118,17 @@
       )
       ```
 
-  3. Start a new terminal session.
+  -Start a new terminal session.
 
 * add zsh-syntax-highlighting (optional)
 
-  1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+  - Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
       ```bash
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
       ```
 
-  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+  - Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
       ```bash
       plugins=( 
@@ -151,12 +139,12 @@
 
 * copy nvm setting from .bashrc file to .zshrc
 
-### Install visual studio code, spotify and brave browser with yay
+~~### Install visual studio code, spotify and brave browser with yay~~
 
   ```bash
   deb-get install code brave-browser
   ```
- 
+
 * Generate ssh key for github
 
   ```bash
@@ -174,7 +162,7 @@
 * Install python, sqlite
 
   ```bash
-  sudo pacman -S python3 python3-tk python3-pip sqlite3 -y
+  sudo apt install python3 python3-tk python3-pip sqlite3 -y
   ```
   
 * Install nvm(Node version manager)
@@ -183,19 +171,12 @@
   wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
   ```
 
-* Install nodemon for nodejs
+* Install nodemon and json-server for nodejs
 
   ```bash
-  npm install -g nodemon # or using yarn: yarn global add nodemon
+  npm install -g nodemon json-server
   ```
 
-* Install json server from nodejs
-
-  ```bash
-  npm install -g json-server
-  ```
-
-* ***Note***
 * Install Miniconda
 
   ```bash
@@ -207,27 +188,28 @@
   ```
   
   * Disable base automatic base activation
-    
+
     ```bash
     conda config --set auto_activate_base false
     ```
   
 * Optional
-  ```bash
-  bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-  ~/miniconda3/bin/conda init bash
-  ```
+
+    ```bash
+    bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+    ~/miniconda3/bin/conda init bash
+    ```
 
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
 
-* Install micromamba (optional)
+<!-- ~~* Install micromamba~~ -->
 
-  ```bash
-  "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
-  ```
+<!--   ```bash -->
+<!--   "${SHELL}" <(curl -L micro.mamba.pm/install.sh) -->
+<!--   ``` -->
 
-* **Respond to all the input prompts**
+<!-- * **Respond to all the input prompts** -->
 
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
@@ -238,7 +220,6 @@
 
   ```bash
   sudo cp -r .config/neovim/ ~/.config/
-  
   ```
 
 * Install pyright from npm
@@ -258,13 +239,14 @@
   ```bash
   sudo apt install ripgrep -y
   ```
+
 ### Emacs stuff
 
 * Install Python language server
 
-  	``` bash
-	sudo apt install python3-pylsp -y
-	```
+  ``` bash
+  sudo apt install python3-pylsp -y
+  ```
 
 * Install MongoDB
   
