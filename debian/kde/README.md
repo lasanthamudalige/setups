@@ -155,7 +155,7 @@
 
 * copy nvm setting from .bashrc file to .zshrc
 
-~~### Install visual studio code, spotify and brave browser with yay~~
+~~### Install visual studio code, spotify and brave browser with deb-get~~
 
   ```bash
   deb-get install code brave-browser
