@@ -23,7 +23,13 @@
 	    ```bash
 	    sudo apt install tlp tlp-rdw -y
 	    ```
-
+		
+		- For thinkpads
+		
+			```bash
+			sudo apt install tp-smapi-dkms acpi-call-dkms
+			```
+			
   * Enable tlp
 
     ```bash
