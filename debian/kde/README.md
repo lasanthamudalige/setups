@@ -27,7 +27,7 @@
 		- For thinkpads
 		
 			```bash
-			sudo apt install tp-smapi-dkms acpi-call-dkms
+			sudo apt install tp-smapi-dkms acpi-call-dkms -y
 			```
 			
   * Enable tlp
@@ -56,6 +56,16 @@
     ```bash
     sudo apt install fonts-jetbrains-mono fonts-firacode -y
     ```
+	
+	- Install ms fonts
+	
+		```bash
+		sudo apt-add-repository contrib non-free -y
+		```
+		
+		```bash
+		sudo apt install ttf-mscorefonts-installer
+		```
   
 - Refresh fonts using
 
@@ -74,7 +84,7 @@
     deb-get install onlyoffice-desktopeditors zoom deadbeef-static obsidian brave-browser codium
     ```
 
-  Install spotify-client using [this](https://www.spotify.com/us/download/linux/)
+- Install spotify-client using [this](https://www.spotify.com/us/download/linux/)
   
 * ***Change defaults to relevent programs***
 
