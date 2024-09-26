@@ -75,15 +75,15 @@
     fc-cache -fv
     ```
 
-5. Install basic set of applications like: ranger, kitty, neofetch, gimp, chromium, obs-studio, neovim, zsh, python tk and pip, sqlite3, emacs and dependancies, thunderbird, timeshift, ktorrent, solaar, vlc, htop, btop, onlyoffice, zoom, deadbeef music player, obsidian, brave browser, codium (FOSS version of vs code)
+5. Install basic set of applications like: ranger, kitty, neofetch, gimp, chromium, obs-studio, neovim, zsh, python tk and pip, sqlite3, emacs and dependancies, thunderbird, timeshift, gnome disk utility, ktorrent, solaar, vlc, htop, btop, onlyoffice, zoom, celmentine music player, obsidian, brave browser, codium (FOSS version of vs code)
 
     ```bash
-    sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep thunderbird timeshift ktorrent solaar vlc htop btop -y
+    sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep thunderbird timeshift gnome-disk-utility ktorrent solaar vlc clementine htop btop -y
     ```
 
     <!-- Install onlyoffice from deb-get -->
     ```bash
-    deb-get install onlyoffice-desktopeditors zoom deadbeef-static obsidian brave-browser codium
+    deb-get install onlyoffice-desktopeditors zoom obsidian brave-browser codium
     ```
 
 - Install spotify-client using [this](https://www.spotify.com/us/download/linux/)

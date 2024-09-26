@@ -1,3 +1,4 @@
+
 #+Title: Emacs config
 #+Author: Lasantha Mudalige
 #+Description: A starting point for Gnu Emacs with good defaults and packages that most people may want to use.
@@ -358,22 +359,27 @@ Or add the lua-language-server executable to your path.
 If you can use a package manager just install the lsp server and add a hook.
 Use visual block to uncomment easily in Org documents (C-v).
 #+begin_src emacs-lisp
-   ;;  (use-package eglot
-   ;;   :ensure nil ;; Don't install eglot because it's now built-in
-   ;;   :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
-   ;;                  python-mode
-   ;;                  lua-mode) ;; Lua-mode needs to be installed
-   ;;          . eglot-ensure)
-   ;;   :custom
-   ;;   ;; Good default
-   ;;   (eglot-events-buffer-size 0) ;; No event buffers (Lsp server logs)
-   ;;   (eglot-autoshutdown t);; Shutdown unused servers.
-   ;;   (eglot-report-progress nil) ;; Disable lsp server logs (Don't show lsp messages at the bottom, java)
-   ;;   ;; Manual lsp servers
-   ;;   :config
-   ;;   (add-to-list 'eglot-server-programs
-   ;;                `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
-   ;;   )
+    ;; (use-package eglot
+    ;;  :ensure nil ;; Don't install eglot because it's now built-in
+    ;;  :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
+    ;;                 python-mode
+    ;;                 typescript-mode
+    ;;                 html-mode
+    ;;                 css-mode
+    ;;                 eslint-mode
+    ;;                 markdown-mode
+    ;;                 lua-mode) ;; Lua-mode needs to be installed
+    ;;         . eglot-ensure)
+    ;;  :custom
+    ;;  ;; Good default
+    ;;  (eglot-events-buffer-size 0) ;; No event buffers (Lsp server logs)
+    ;;  (eglot-autoshutdown t);; Shutdown unused servers.
+    ;;  (eglot-report-progress nil) ;; Disable lsp server logs (Don't show lsp messages at the bottom, java)
+    ;;  ;; Manual lsp servers
+    ;;  :config
+    ;;  (add-to-list 'eglot-server-programs
+    ;;               `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
+    ;;  )
 #+end_src
 
 ** LSP mode
@@ -382,34 +388,25 @@ Client for Language Server Protocol. lsp-mode aims to provide IDE-like experienc
     (use-package lsp-mode
       :custom
       (lsp-completion-provider :none) ;; we use Corfu!
-      ;; Disable unneeded features
-      (lsp-lens-enable nil) ;; Disable references count
-      (lsp-headerline-breadcrumb-enable nil) ;; Disable Header line
-      (lsp-ui-sideline-show-code-actions nil) ;; Hide right side code actions
-      (lsp-ui-sideline-show-hover nil) ;; Hide right hover symbols
-      (lsp-modeline-code-actions-enable nil) ;; Disable modeline code actions
-      (lsp-eldoc-enable-hover nil) ;; Disable eldoc (echo area info)
-      (lsp-modeline-diagnostics-enable nil) ;; Disable Modeline diagnostic status
-      (lsp-signature-auto-activate nil) ;; Disable Signature help you could manually request them via `lsp-signature-activate`
-      (lsp-completion-show-detail nil) ;; Disable Completion item detail
       :init
-      ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-      ;; (lsp-keymap-prefix "C-c l")
       (defun my/lsp-mode-setup-completion ()
         (setf (alist-get 'styles (alist-get 'lsp-capf completion-category-defaults))
               '(flex))) ;; Configure flex (corfu)
-
+      ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+      (setq lsp-keymap-prefix "C-c l")
+      ;; To Disable features https://emacs-lsp.github.io/lsp-mode/tutorials/how-to-turn-off/
       :hook (;; Automatic Language Modes
              (prog-mode . lsp)
-             (lsp-completion-mode . my/lsp-mode-setup-completion) ;; corfu completion
-             ;; if you want which-key integration
-             (lsp-mode . lsp-enable-which-key-integration))
+             ;; Which-key integration
+             (lsp-mode . lsp-enable-which-key-integration)
+             ;; Corfu
+             (lsp-completion-mode . my/lsp-mode-setup-completion))
       :commands lsp)
     ;; optionally
-    (use-package lsp-ui
-      :commands lsp-ui-mode)
+    ;; (use-package lsp-ui
+    ;;   :commands lsp-ui-mode)
     ;; if you are ivy user
-    (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+    ;; (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 #+end_src
 
 *** Flycheck
@@ -448,15 +445,15 @@ Modern on-the-fly syntax checking extension. Recommended for lsp-mode.
 ** Company
 Company is a text completion framework for Emacs. The name stands for "complete anything". It uses pluggable back-ends and front-ends to retrieve and display completion candidates.
 #+begin_src emacs-lisp
-    (use-package company
-      :ensure t
-      :commands (global-company-mode)
-      :init
-      (global-company-mode)
-      :custom
-      (company-tooltip-align-annotations 't)
-      (company-minimum-prefix-length 1)
-      (company-idle-delay 0.1))
+  ;; (use-package company
+  ;;   :ensure t
+  ;;   :commands (global-company-mode)
+  ;;   :init
+  ;;   (global-company-mode)
+  ;;   :custom
+  ;;   (company-tooltip-align-annotations 't)
+  ;;   (company-minimum-prefix-length 1)
+  ;;   (company-idle-delay 0.1))
 #+end_src
 
 ** Markdown
