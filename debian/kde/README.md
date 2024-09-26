@@ -16,6 +16,8 @@
 
 2. Do essential things
 
+  * **Install debian backports if you need new programs.**
+
   * Install tlp and enable it
   
     - Install tlp
