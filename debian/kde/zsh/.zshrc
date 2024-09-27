@@ -107,7 +107,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Custom commands
 # command to wish facebook birthdays
-alias wish='micromamba run -n base ~/Development/shell-scripts/fb_birthday_wisher.sh'
+#alias wish='micromamba run -n base ~/Development/shell-scripts/fb_birthday_wisher.sh'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
