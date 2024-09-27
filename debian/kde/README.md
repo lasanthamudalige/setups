@@ -75,10 +75,10 @@
     fc-cache -fv
     ```
 
-5. Install basic set of applications like: ranger, kitty, neofetch, gimp, chromium, obs-studio, neovim, zsh, python tk and pip, sqlite3, emacs and dependancies, thunderbird, timeshift, gnome disk utility, ktorrent, solaar, vlc, htop, btop, onlyoffice, zoom, celmentine music player, obsidian, brave browser, codium (FOSS version of vs code)
+5. Install basic set of applications like: ranger, kitty, neofetch, gimp, chromium, obs-studio, neovim, zsh, python tk and pip, sqlite3, emacs and dependancies, thunderbird, timeshift, gnome disk utility, ktorrent, solaar, vlc, htop, btop, onlyoffice, zoom, celmentine music player, obsidian, brave browser, codium (FOSS version of vs code), yakuake terminal
 
     ```bash
-    sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool nodejs npm ripgrep thunderbird timeshift gnome-disk-utility ktorrent solaar vlc clementine htop btop -y
+    sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool nodejs npm ripgrep thunderbird timeshift gnome-disk-utility ktorrent solaar vlc clementine htop btop yakuake -y
     ```
 
     <!-- Install onlyoffice from deb-get -->
@@ -262,7 +262,7 @@
 
 ### Emacs stuff
 
-* **In order to make lsps which are installed through 'npm' work please install nodejs and npm packages thorugh 'apt' packge manager.**
+* **In order to make bash-ls, ts-ls, html-ls, css-ls work install nodejs and npm**
 	
 * Install Python language server
 
