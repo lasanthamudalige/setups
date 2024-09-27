@@ -262,7 +262,7 @@
 
 ### Emacs stuff
 
-**In order to make lsps which are installed through 'npm' work please install nodejs and npm packages thorugh 'apt' packge manager.**
+* **In order to make lsps which are installed through 'npm' work please install nodejs and npm packages thorugh 'apt' packge manager.**
 	
 * Install Python language server
 
