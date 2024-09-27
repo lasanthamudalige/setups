@@ -262,7 +262,7 @@
 
 ### Emacs stuff
 
-* **In order to make bash-ls, ts-ls, html-ls, css-ls work install nodejs and npm**
+* **In order to make bash-ls, ts-ls, html-ls, css-ls work install nodejs and npm system wide using 'apt'**
 	
 * Install Python language server
 
