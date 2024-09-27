@@ -16,7 +16,7 @@
 
 2. Do essential things
 
-  * **Install debian backports if you need new programs.**
+  * **Install debian [backports](https://www.cyberciti.biz/faq/install-enable-debian-linux-12-backports-repository/) if you need new programs.**
 
   * Install tlp and enable it
   
