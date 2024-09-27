@@ -78,7 +78,7 @@
 5. Install basic set of applications like: ranger, kitty, neofetch, gimp, chromium, obs-studio, neovim, zsh, python tk and pip, sqlite3, emacs and dependancies, thunderbird, timeshift, gnome disk utility, ktorrent, solaar, vlc, htop, btop, onlyoffice, zoom, celmentine music player, obsidian, brave browser, codium (FOSS version of vs code), yakuake terminal
 
     ```bash
-    sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool nodejs npm ripgrep thunderbird timeshift gnome-disk-utility ktorrent solaar vlc clementine htop btop yakuake -y
+    sudo apt install bash-completion ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool nodejs npm ripgrep thunderbird timeshift gnome-disk-utility ktorrent solaar vlc clementine htop btop yakuake -y
     ```
 
     <!-- Install onlyoffice from deb-get -->
