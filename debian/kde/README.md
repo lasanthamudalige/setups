@@ -35,7 +35,13 @@
   * Enable tlp
 
     ```bash
-    sudo systemctl enable tlp
+    sudo systemctl enable tlp.service
+    ```
+    
+* Start tlp
+
+    ```bash
+    sudo tlp start
     ```
 
   * Install [deb-get](https://github.com/wimpysworld/deb-get) program
