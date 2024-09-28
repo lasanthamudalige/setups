@@ -20,31 +20,31 @@
 
   * Install tlp and enable it
   
-    - Install tlp
+	- Install tlp
   
-	    ```bash
-	    sudo apt install tlp tlp-rdw -y
-	    ```
+	  ```bash
+	  sudo apt install tlp tlp-rdw -y
+	  ```
 		
 		- For thinkpads
-		
-			```bash
-			sudo apt install tp-smapi-dkms acpi-call-dkms -y
-			```
 			
-  * Enable tlp
+		  ```bash
+		  sudo apt install tp-smapi-dkms acpi-call-dkms -y
+		  ```
+			
+	- Enable tlp
+	
+	  ```bash
+	  sudo systemctl enable tlp.service
+	  ```
+	    
+	- Start tlp
+	
+	    ```bash
+	    sudo tlp start
+	    ```
 
-    ```bash
-    sudo systemctl enable tlp.service
-    ```
-    
-* Start tlp
-
-    ```bash
-    sudo tlp start
-    ```
-
-  * Install [deb-get](https://github.com/wimpysworld/deb-get) program
+* Install [deb-get](https://github.com/wimpysworld/deb-get) program
 
     ```bash
     sudo apt install curl lsb-release wget
