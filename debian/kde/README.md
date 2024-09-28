@@ -142,7 +142,7 @@
       )
       ```
 
-  -Start a new terminal session.
+  - Start a new terminal session.
 
 * add zsh-syntax-highlighting (optional)
 
