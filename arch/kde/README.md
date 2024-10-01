@@ -60,10 +60,10 @@
   	  sudo systemctl enable tlp.service
   	  ```
 
-  * start tlp
-  	```bash
-  	 sudo start tlp
-  	 ```
+  	* start tlp
+  	  ```bash
+  	  sudo start tlp
+  	  ```
      
   * Install yay aur helper
 
