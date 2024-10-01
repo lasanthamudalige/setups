@@ -41,11 +41,11 @@
     * Enable and start bluetooth
 
       ```bash
-      sudo systemctl start bluetooth.service
+      sudo systemctl enable bluetooth.service
       ```
       
       ```bash
-      sudo systemctl enable bluetooth.service
+      sudo systemctl start bluetooth.service
       ```
  
   * Install tlp and enable it
@@ -89,13 +89,13 @@
 
     * ***Save the file.***  
 
-    * Activate the paccache timer to clean package cache
+    * ~~Activate the paccache timer to clean package cache~~
 
       ```bash
       sudo systemctl enable paccache.timer
       ```
 
-    * Run xdg-user-dirs to create directories
+    * ~~Run xdg-user-dirs to create directories~~
 
       ```bash
       xdg-user-dirs-update
