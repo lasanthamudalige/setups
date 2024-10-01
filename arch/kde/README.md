@@ -225,10 +225,10 @@
 
 * copy nvm setting from .bashrc file to .zshrc
 
-### Install vscodium, postman and brave browser with yay
+### Install vscodium, postman frm AUR
 
   ```bash
-  yay -S vscodium-bin postman-bin brave-bin
+  yay -S vscodium-bin postman-bin
   ```
 
 ***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
