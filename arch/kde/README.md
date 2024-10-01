@@ -20,11 +20,10 @@
  
 ## Using dotfiles
 
-* ***Install firefox, kitty terminal and git if not installed***
+* ***Install firefox, vim and git if not installed***
   
 1. Clone the repo
 
-   <!-- This is how to properly declare code snippets  -->  
     ```bash
     git clone https://github.com/lasanthamudalige/setups
     ```
@@ -36,14 +35,16 @@
   * Install wifi and bluetooth
 
       ```bash
-      sudo pacman -S iwd bluez bluez-utils --needed
+      sudo pacman -S iwd bluez bluez-utils
       ```
 
     * Enable and start bluetooth
 
       ```bash
       sudo systemctl start bluetooth.service
-
+      ```
+      
+      ```bash
       sudo systemctl enable bluetooth.service
       ```
  
@@ -51,13 +52,19 @@
   
 	* Install tlp
   	  ```bash
-  	  sudo pacman -S tlp tlp-rdw --needed
+  	  sudo pacman -S tlp tlp-rdw
   	  ```
 
 	* Enable tlp
   	  ```bash
   	  sudo systemctl enable tlp.service
   	  ```
+
+  * start tlp
+  	```bash
+  	 sudo start tlp
+  	 ```
+     
   * Install yay aur helper
 
     ```bash
@@ -130,9 +137,9 @@
   
 4. Customizing setup
 
-  ```bash
+  <!--- ```bash
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code --needed
-  ```
+  ``` -->
   
   * Refresh fonts using
     
@@ -143,12 +150,12 @@
 5. Install basic set of applications
 
   ```bash
-  sudo pacman -S ufw bash-completion wl-clipboard packagekit-qt5 speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamera kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obsidian obs-studio libfdk-aac libva-intel-driver libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar emacs-nativecomp ripgrep fd cmake man-db man-pages ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug --needed
+  sudo pacman -S ufw bash-completion wl-clipboard packagekit-qt5 speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamera kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obsidian obs-studio libfdk-aac libva-intel-driver libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar emacs-nativecomp ripgrep fd cmake man-db man-pages ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug
  ```
 
   <!-- Install onlyoffice from AUR -->
   ```bash
-  yay -S onlyoffice-bin zoom visual-studio-code-bin brave-bin ttf-ms-fonts postman-bin
+  yay -S onlyoffice-bin zoom vscodium-bin brave-bin ttf-ms-fonts postman-bin teamviewer
   ```
 
 ## Other stuff
@@ -158,7 +165,7 @@
 * Install zsh shell
 
   ```bash
-    sudo pacman -S zsh zsh-completions --needed
+    sudo pacman -S zsh zsh-completions
   ```
 
 * List available shells
@@ -218,10 +225,10 @@
 
 * copy nvm setting from .bashrc file to .zshrc
 
-### Install visual studio code, postman and brave browser with yay
+### Install vscodium, postman and brave browser with yay
 
   ```bash
-  yay -S visual-studio-code-bin postman-bin brave-bin
+  yay -S vscodium-bin postman-bin brave-bin
   ```
 
 ***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
@@ -253,7 +260,7 @@
 * Install python, sqlite
 
   ```bash
-  sudo pacman -S python tk python-pip sqlite --needed
+  sudo pacman -S python tk python-pip sqlite
   ```
   
 * Install nvm(Node version manager)
@@ -262,16 +269,10 @@
   wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
   ```
 
-* Install nodemon for nodejs
+* Install nodemon and json-server for nodejs
 
   ```bash
-  npm install -g nodemon # or using yarn: yarn global add nodemon
-  ```
-
-* Install json server from nodejs
-
-  ```bash
-  npm install -g json-server
+  npm install -g nodemon json-server
   ```
 
 * ***Note***
@@ -302,9 +303,9 @@
 
 * Install micromamba (optional)
 
-  ```bash
+  <!-- ```bash
   "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
-  ```
+  ``` -->
 
 * **Respond to all the input prompts**
 
