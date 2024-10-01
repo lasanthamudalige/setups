@@ -336,7 +336,7 @@
 * ~~Install ripgrep~~
 
   ```bash
-  sudo pacman -S ripgrep --needed
+  sudo pacman -S ripgrep
   ```
 ### Emacs stuff
 
@@ -345,7 +345,7 @@
 	* Using pacman
 
 	    ```bash
-		sudo pacman -S python-lsp-server marksman --needed
+		sudo pacman -S python-lsp-server marksman
 		```
 
 ### MongoDB
