@@ -155,7 +155,7 @@
 
   	<!-- Install onlyoffice from AUR -->
   	```bash
-  	yay -S onlyoffice-bin zoom vscodium-bin brave-bin ttf-ms-fonts postman-bin teamviewer
+  	yay -S onlyoffice-bin zoom vscodium-bin ttf-ms-fonts
   	```
 
 ## Other stuff
