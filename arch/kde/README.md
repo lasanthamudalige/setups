@@ -60,7 +60,7 @@
   	  sudo systemctl enable tlp.service
   	  ```
 
-  	* start tlp
+  	* Start tlp
   	  ```bash
   	  sudo tlp start
   	  ```
