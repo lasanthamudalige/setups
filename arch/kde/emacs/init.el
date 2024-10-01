@@ -167,9 +167,9 @@
           nil nil t)
   )
 
-(use-package ample-zen-theme
+(use-package tangotango-theme
   :config
-  (load-theme 'ample-zen ))
+  (load-theme 'tangotango ))
 
 (set-face-attribute 'default nil
                     ;; :font "JetBrains Mono" ;; Set your favorite type of font or download JetBrains Mono
@@ -203,61 +203,102 @@
   :custom
   (projectile-run-use-comint-mode t) ;; Interactive run dialog when running projects inside emacs (like giving input)
   (projectile-switch-project-action #'projectile-dired) ;; Open dired when switching to a project
-  (projectile-project-search-path '("~/projects/" "~/work/" "~/Development/" ("~/github" . 1)))) ;; . 1 means only search the first subdirectory level for projects
+  (projectile-project-search-path '("~/projects/" "~/work/" "~/Development/" ))) ;; . 1 means only search the first subdirectory level for projects
 ;; Use Bookmarks for smaller, not standard projects
 
-;;  (use-package eglot
+;; (use-package eglot
 ;;   :ensure nil ;; Don't install eglot because it's now built-in
-;;   :hook ((c-mode c++-mode ;; Autostart lsp servers for a given mode
-;;                  python-mode
-;;                  lua-mode) ;; Lua-mode needs to be installed
-;;          . eglot-ensure)
+;;   :hook (prog-mode . eglot-ensure)  ;; Autostart lsp servers for a given mode
 ;;   :custom
 ;;   ;; Good default
 ;;   (eglot-events-buffer-size 0) ;; No event buffers (Lsp server logs)
 ;;   (eglot-autoshutdown t);; Shutdown unused servers.
 ;;   (eglot-report-progress nil) ;; Disable lsp server logs (Don't show lsp messages at the bottom, java)
-;;   ;; Manual lsp servers
 ;;   :config
 ;;   (add-to-list 'eglot-server-programs
-;;                `(lua-mode . ("PATH_TO_THE_LSP_FOLDER/bin/lua-language-server" "-lsp"))) ;; Adds our lua lsp server to eglot's server list
+;;                `(csharp-ts-mode . ("/usr/bin/OmniSharp" "-lsp")))
+;;   (add-to-list 'eglot-server-programs
+;;                `(java-ts-mode . ("~/.config/emacs/lsp-servers/jdt-language-server-1.31.0/bin/jdtls" "-lsp")))
+;;   (add-to-list 'eglot-server-programs
+;;                `(cmake-ts-mode . ("~/.local/bin/cmake-language-server"))) ;; Installed with pipx
+;;   ;; (add-to-list 'eglot-server-programs
+;;   ;;              `(php-mode . ("intelephense" "--stdio")))
+;;   ;; (add-to-list 'eglot-server-programs
+;;   ;;              `(glsl-mode . ("~/.config/emacs/lsp-servers/glsl_analyzer//glsl_analyzer")))
+;;   (add-to-list 'eglot-server-programs
+;;                `(bash-ls-mode . ("~/.nvm/versions/node/v20.17.0/lib/bash-language-server")))
+;;   (add-to-list 'eglot-server-programs
+;;                `(html-ls-mode . ("~/.nvm/versions/node/v20.17.0/lib/node_modules/vscode-langservers-extracted/lib/html-language-server")))
+;;   (add-to-list 'eglot-server-programs
+;;                `(css-ls-mode . ("~/.nvm/versions/node/v20.17.0/lib/node_modules/vscode-langservers-extracted/lib/css-language-server")))
+;;   (add-to-list 'eglot-server-programs
+;;                `(ts-ls-mode . ("~/.nvm/versions/node/v20.17.0/lib/node_modules/vscode-langservers-extracted/lib/typescript-language-server")))
 ;;   )
+
+(use-package corfu
+  :ensure t
+  ;; Optional customizations
+  :custom
+  (corfu-cycle t)                 ; Allows cycling through candidates
+  (corfu-auto t)                  ; Enable auto completion
+  (corfu-auto-prefix 2)           ; Minimum length of prefix for completion
+  (corfu-auto-delay 0)            ; No delay for completion
+  (corfu-popupinfo-delay '(0.5 . 0.2))  ; Automatically update info popup after that numver of seconds
+  (corfu-preview-current 'insert) ; insert previewed candidate
+  (corfu-preselect 'prompt)
+  (corfu-on-exact-match nil)      ; Don't auto expand tempel snippets
+  ;; Optionally use TAB for cycling, default is `corfu-complete'.
+  :bind (:map corfu-map
+              ("M-SPC"      . corfu-insert-separator)
+              ("TAB"        . corfu-next)
+              ([tab]        . corfu-next)
+              ("S-TAB"      . corfu-previous)
+              ([backtab]    . corfu-previous)
+              ("S-<return>" . corfu-insert)
+              ("RET"        . corfu-insert))
+
+  :init
+  (global-corfu-mode)
+  (corfu-history-mode)
+  (corfu-popupinfo-mode) ; Popup completion info
+  :config
+  (add-hook 'eshell-mode-hook
+            (lambda () (setq-local corfu-quit-at-boundary t
+                                   corfu-quit-no-match t
+                                   corfu-auto nil)
+              (corfu-mode))
+            nil
+            t))
 
 (use-package lsp-mode
   :custom
   (lsp-completion-provider :none) ;; we use Corfu!
-  ;; Disable unneeded features
-  (lsp-lens-enable nil) ;; Disable references count
-  (lsp-headerline-breadcrumb-enable nil) ;; Disable Header line
-  (lsp-ui-sideline-show-code-actions nil) ;; Hide right side code actions
-  (lsp-ui-sideline-show-hover nil) ;; Hide right hover symbols
-  (lsp-modeline-code-actions-enable nil) ;; Disable modeline code actions
-  (lsp-eldoc-enable-hover nil) ;; Disable eldoc (echo area info)
-  (lsp-modeline-diagnostics-enable nil) ;; Disable Modeline diagnostic status
-  (lsp-signature-auto-activate nil) ;; Disable Signature help you could manually request them via `lsp-signature-activate`
-  (lsp-completion-show-detail nil) ;; Disable Completion item detail
   :init
-  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-  ;; (lsp-keymap-prefix "C-c l")
   (defun my/lsp-mode-setup-completion ()
     (setf (alist-get 'styles (alist-get 'lsp-capf completion-category-defaults))
           '(flex))) ;; Configure flex (corfu)
-
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "C-c l")
+  ;; To Disable features https://emacs-lsp.github.io/lsp-mode/tutorials/how-to-turn-off/
   :hook (;; Automatic Language Modes
          (prog-mode . lsp)
-         (lsp-completion-mode . my/lsp-mode-setup-completion) ;; corfu completion
-         ;; if you want which-key integration
-         (lsp-mode . lsp-enable-which-key-integration))
+         ;; Which-key integration
+         (lsp-mode . lsp-enable-which-key-integration)
+         ;; Corfu
+         (lsp-completion-mode . my/lsp-mode-setup-completion))
   :commands lsp)
 ;; optionally
-(use-package lsp-ui
-  :commands lsp-ui-mode)
+ (use-package lsp-ui
+   :commands lsp-ui-mode)
 ;; if you are ivy user
-(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+ (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 
-(use-package flycheck
-  :diminish
-  :init (global-flycheck-mode))
+(use-package flymake
+  :hook (prog-mode . flymake-mode)
+  :bind (:map flymake-mode-map
+              ("C-c ! n" . flymake-goto-next-error)
+              ("C-c ! p" . flymake-goto-prev-error)
+              ("C-c ! l" . flymake-show-buffer-diagnostics)))
 
 (use-package ivy
   :bind
@@ -281,15 +322,15 @@
   :diminish
   :config (counsel-mode))
 
-(use-package company
-  :ensure t
-  :commands (global-company-mode)
-  :init
-  (global-company-mode)
-  :custom
-  (company-tooltip-align-annotations 't)
-  (company-minimum-prefix-length 1)
-  (company-idle-delay 0.1))
+;; (use-package company
+;;   :ensure t
+;;   :commands (global-company-mode)
+;;   :init
+;;   (global-company-mode)
+;;   :custom
+;;   (company-tooltip-align-annotations 't)
+;;   (company-minimum-prefix-length 1)
+;;   (company-idle-delay 0.1))
 
 (use-package markdown-mode
   :ensure t
@@ -312,22 +353,35 @@
   (treesit-auto-add-to-auto-mode-alist 'all)
   (global-treesit-auto-mode)
   (setq treesit-language-source-alist
-        '((bash "https://github.com/tree-sitter/tree-sitter-bash")
-          (cmake "https://github.com/uyha/tree-sitter-cmake")
-          (css "https://github.com/tree-sitter/tree-sitter-css")
-          (elisp "https://github.com/Wilfred/tree-sitter-elisp")
-          (go "https://github.com/tree-sitter/tree-sitter-go")
-          (html "https://github.com/tree-sitter/tree-sitter-html")
+        '((bash       "https://github.com/tree-sitter/tree-sitter-bash")
+          (c          "https://github.com/tree-sitter/tree-sitter-c/" "master" "src")
+          (clojure    "https://github.com/sogaiu/tree-sitter-clojure" "master" "src")
+          (cpp        "https://github.com/tree-sitter/tree-sitter-cpp/" "master" "src")
+          (cmake      "https://github.com/uyha/tree-sitter-cmake")
+          (css        "https://github.com/tree-sitter/tree-sitter-css")
+          (dockerfile "file:///opt/src/github/tree-sitter-dockerfile" "main" "src")
+          (elisp      "https://github.com/Wilfred/tree-sitter-elisp")
+          (elixir     "https://github.com/elixir-lang/tree-sitter-elixir" "main" "src")
+          (erlang     "https://github.com/WhatsApp/tree-sitter-erlang" "main" "src")
+          (go         "https://github.com/tree-sitter/tree-sitter-go")
+          (haskell    "https://github.com/tree-sitter/tree-sitter-haskell" "master" "src")
+          (html       "https://github.com/tree-sitter/tree-sitter-html")
+          (java       "https://github.com/tree-sitter/tree-sitter-java" "master" "src")
           (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
-          (json "https://github.com/tree-sitter/tree-sitter-json")
-          (make "https://github.com/alemuller/tree-sitter-make")
-          (markdown "https://github.com/ikatyang/tree-sitter-markdown")
-          (python "https://github.com/tree-sitter/tree-sitter-python")
-          (toml "https://github.com/tree-sitter/tree-sitter-toml")
-          (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
+          (json       "https://github.com/tree-sitter/tree-sitter-json")
+          (julia      "https://github.com/tree-sitter/tree-sitter-julia" "master" "src")
+          (lua        "https://github.com/MunifTanjim/tree-sitter-lua" "main" "src")
+          (make       "https://github.com/alemuller/tree-sitter-make")
+          (markdown   "https://github.com/ikatyang/tree-sitter-markdown")
+          (meson      "https://github.com/Decodetalkers/tree-sitter-meson" "master" "src")
+          (perl       "file:///opt/src/github/tree-sitter-perl" "master" "src")
+          (python     "https://github.com/tree-sitter/tree-sitter-python")
+          (ruby       "https://github.com/tree-sitter/tree-sitter-ruby" "master" "src")
+          (rust       "https://github.com/tree-sitter/tree-sitter-rust" "master" "src")
+          (toml       "https://github.com/tree-sitter/tree-sitter-toml")
+          (tsx        "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
           (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
-          (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
-  )
+          (yaml       "https://github.com/ikatyang/tree-sitter-yaml"))))
 
 (use-package cmake-ts-mode
   :ensure nil
