@@ -30,9 +30,9 @@
 
 2. Do essential things
 
-* Setup wifi and bluetooth
+* Setup bluetooth
 
-  * Install wifi and bluetooth
+  * Install bluetooth
 
       ```bash
       sudo pacman -S iwd bluez bluez-utils
