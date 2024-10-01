@@ -35,7 +35,7 @@
   * Install bluetooth
 
       ```bash
-      sudo pacman -S iwd bluez bluez-utils
+      sudo pacman -S bluez bluez-utils
       ```
 
     * Enable and start bluetooth
