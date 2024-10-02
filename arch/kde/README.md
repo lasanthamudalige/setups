@@ -312,6 +312,8 @@
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
 
+* **Make sure to install nodejs and npm as a system package for neovim and emacs**
+
 ### Neovim stuff
 
 * Move neovim config file to $HOME/.config/
@@ -319,18 +321,6 @@
   ```bash
   sudo cp -r .config/neovim/ ~/.config/
   
-  ```
-
-* Install pyright from npm
-
-  ```bash
-  npm i -g pyright
-  ```
-
-* Install tree-sitte-cli
-
-  ```bash
-  npm i -g tree-sitter-cli
   ```
 
 * ~~Install ripgrep~~
