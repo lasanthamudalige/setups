@@ -298,10 +298,7 @@
   ~/miniconda3/bin/conda init bash
   ```
 
-* Install the Latest selenium webdriver to Miniconda base environment
-* Download the gecko driver and move it to /usr/local/bin
-
-* Install micromamba (optional)
+* ~~Install micromamba (optional)~~
 
   <!-- ```bash
   "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
@@ -310,7 +307,8 @@
 * **Respond to all the input prompts**
 
 * Install the Latest selenium webdriver to Miniconda base environment
-* Download the gecko driver and move it to /usr/local/bin
+  
+* Download the gecko driver or chrome driver and move it to /usr/local/bin
 
 * **Make sure to install nodejs and npm as a system package for neovim and emacs**
 
