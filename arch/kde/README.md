@@ -14,7 +14,7 @@
 * profile - kde-plasma desktop with login with sddm
 * Sound - Pipewire
 * kernel - mainline, lts
-* Additional packages - 'firefox git kitty'
+* Additional packages - 'firefox git vim'
 * Network configuration - NetworkManager
 * Other settings are stock settings
  
@@ -138,7 +138,7 @@
 4. Customizing setup
 
   <!--- ```bash
-  sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code --needed
+  sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ``` -->
   
   * Refresh fonts using
@@ -150,7 +150,7 @@
 5. Install basic set of applications
 
 	```bash
-  	sudo pacman -S ufw bash-completion wl-clipboard speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamera kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obsidian obs-studio libfdk-aac libva-intel-driver libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar emacs-nativecomp ripgrep fd cmake man-db man-pages ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake
+  	sudo pacman -S ufw bash-completion wl-clipboard speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamera kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obsidian obs-studio libfdk-aac libva-intel-driver libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar emacs-nativecomp ripgrep fd cmake man-db man-pages ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake
   	```
 
   	<!-- Install onlyoffice from AUR -->
