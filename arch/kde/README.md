@@ -330,7 +330,7 @@
 
 * Customize emacs
 
-  - Change hl-mode background color
+  - Change hl-mode background color (if defaults doesn't change the color)
     ```
  	M-x customize-face RET hl-lie RET
     ```
