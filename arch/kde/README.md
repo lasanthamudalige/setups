@@ -14,7 +14,7 @@
 * profile - kde-plasma desktop with login with sddm
 * Sound - Pipewire
 * kernel - mainline, lts
-* Additional packages - 'firefox git kitty'
+* Additional packages - 'firefox git vim'
 * Network configuration - NetworkManager
 * Other settings are stock settings
  
@@ -138,7 +138,7 @@
 4. Customizing setup
 
   <!--- ```bash
-  sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code --needed
+  sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ``` -->
   
   * Refresh fonts using
@@ -150,7 +150,7 @@
 5. Install basic set of applications
 
 	```bash
-  	sudo pacman -S ufw bash-completion wl-clipboard speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamera kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obsidian obs-studio libfdk-aac libva-intel-driver libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar emacs-nativecomp ripgrep fd cmake man-db man-pages ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake
+  	sudo pacman -S ufw bash-completion wl-clipboard speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamera kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obsidian obs-studio libfdk-aac libva-intel-driver libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar emacs-nativecomp ripgrep fd cmake man-db man-pages ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake
   	```
 
   	<!-- Install onlyoffice from AUR -->
@@ -298,10 +298,7 @@
   ~/miniconda3/bin/conda init bash
   ```
 
-* Install the Latest selenium webdriver to Miniconda base environment
-* Download the gecko driver and move it to /usr/local/bin
-
-* Install micromamba (optional)
+* ~~Install micromamba (optional)~~
 
   <!-- ```bash
   "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
@@ -310,7 +307,8 @@
 * **Respond to all the input prompts**
 
 * Install the Latest selenium webdriver to Miniconda base environment
-* Download the gecko driver and move it to /usr/local/bin
+  
+* Download the gecko driver or chrome driver and move it to /usr/local/bin
 
 * **Make sure to install nodejs and npm as a system package for neovim and emacs**
 
@@ -329,6 +327,24 @@
   sudo pacman -S ripgrep
   ```
 ### Emacs stuff
+
+* Customize emacs
+
+  - Change hl-mode background color (if defaults doesn't change the color)
+    ```
+ 	M-x customize-face RET hl-lie RET
+    ```
+    
+	- Click on the link:
+    
+    	<img src="https://github.com/user-attachments/assets/15b5a65e-42fb-42b6-affb-aaac8876f448" width="75%"/>
+
+  	- Change background value to "#3e4446" and click Apply and Save:
+     
+    	<img src="https://github.com/user-attachments/assets/84aca960-4972-4df5-9610-3b8373742b8b" width="75%"/>
+
+ 	- Press "q" twice to close both this and previous window to quit.
+	
 
 * Install language servers
 
