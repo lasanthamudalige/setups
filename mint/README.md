@@ -9,7 +9,7 @@
 
 1. Clone the repo
 
-   <!-- This is how to properly declare code snippets  -->  
+   <!-- This is how to properly declare code snippets  -->
     ```bash
     git clone https://github.com/lasanthamudalige/setups
     ```
@@ -28,9 +28,14 @@
   	  sudo systemctl enable tlp.service
   	  ```
 
+    * Start tlp
+  	  ```bash
+  	  sudo tlp start
+  	  ```
+
   * Install deb-get program
 	```bash
-	sudo apt install curl lsb-release wget
+	sudo apt install curl lsb-release wget -y
 	curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
 	```
 
@@ -58,26 +63,25 @@
 
 * Ranger (Cli file manager)
 * Kitty (Terminal emulator)
-* neofetch (CLI system information tool)
-* gimp (Image manipulation tool)
-* chromium (Browser)
-* obs-studio (Bcreen-recoder)
-* neovim (Terminal based test editor)
-* zsh (A advanced shell with more features)
+* Neofetch (CLI system information tool)
+* Fimp (Image manipulation tool)
+* Chromium (Browser)
+* Obs-studio (Bcreen-recoder)
+* Neovim (Terminal based test editor)
+* Zsh (A advanced shell with more features)
 * Obsidian (Note taking application)
 * Solaar (Linux device manager for a wide range of Logitech devices)
 * VLC (Media player)
-* Deadbeef (Music player)
+* Audacious (Music player)
 * Emacs 
-* Spotify client
 
   ```bash
-  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep  obsidian solaar vlc spotify-client ubuntu-restricted-extras htop btop -y
+  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep obsidian solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm -y
   ```
 
   <!-- Install onlyoffice from deb-get -->
   ```bash
-  deb-get install onlyoffice-desktopeditors zoom deadbeef-static
+  deb-get install onlyoffice-desktopeditors zoom
   ```
   
   * ***Change defaults to relevent programs***
@@ -152,7 +156,7 @@
 ### Install visual studio code, spotify and brave browser with yay
 
   ```bash
-  deb-get install code brave-browser
+  deb-get install codium brave-browser
   ```
  
 * Generate ssh key for github
@@ -178,19 +182,13 @@
 * Install nvm(Node version manager)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
+  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
   ```
 
-* Install nodemon for nodejs
+* Install nodemon and json-server using nodejs
 
   ```bash
-  npm install -g nodemon # or using yarn: yarn global add nodemon
-  ```
-
-* Install json server from nodejs
-
-  ```bash
-  npm install -g json-server
+  npm install -g nodemon json-server # or using yarn: yarn global add nodemon
   ```
 
 * ***Note***
@@ -236,19 +234,6 @@
 
   ```bash
   sudo cp -r .config/neovim/ ~/.config/
-  
-  ```
-
-* Install pyright from npm
-
-  ```bash
-  npm i -g pyright
-  ```
-
-* Install tree-sitte-cli
-
-  ```bash
-  npm i -g tree-sitter-cli
   ```
 
 * ~~Install ripgrep~~
@@ -256,6 +241,7 @@
   ```bash
   sudo apt install ripgrep -y
   ```
+
 ### Emacs stuff
 
 * Install Python language server
