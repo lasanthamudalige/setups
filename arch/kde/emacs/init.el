@@ -145,7 +145,8 @@
   (scroll-conservatively 10) ;; Smooth scrolling
   (scroll-margin 8) ;; Gap between the top or bottom row with the cursor
 
-  (tab-width 4)
+  (tab-width 4) ;; Tab with = 4 spaces
+  (global-hl-line-mode t) ;; Enable highlight to current line
 
   (make-backup-files nil) ;; Stop creating ~ backup files
   (auto-save-default nil) ;; Stop creating # auto save files
