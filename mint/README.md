@@ -16,21 +16,11 @@
 
 2. Do essential things
 
-  * Install tlp and enable it
+  * Install tlp
   
 	* Install tlp
   	  ```bash
   	  sudo apt install tlp tlp-rdw -y
-  	  ```
-
-	* Enable tlp
-  	  ```bash
-  	  sudo systemctl enable tlp.service
-  	  ```
-
-    * Start tlp
-  	  ```bash
-  	  sudo tlp start
   	  ```
 
   * Install deb-get program
@@ -74,9 +64,10 @@
 * VLC (Media player)
 * Audacious (Music player)
 * Emacs 
+* Preload (Reduce app startup time) 
 
   ```bash
-  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep obsidian solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm -y
+  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep obsidian solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm preload  zsh -y
   ```
 
   <!-- Install onlyoffice from deb-get -->
@@ -176,7 +167,7 @@
 * Install python, sqlite
 
   ```bash
-  sudo pacman -S python3 python3-tk python3-pip sqlite3 -y
+  sudo apt install python3 python3-tk python3-pip sqlite3 -y
   ```
   
 * Install nvm(Node version manager)
@@ -249,6 +240,24 @@
   	``` bash
 	sudo apt install python3-pylsp -y
 	```
+
+* Customize emacs
+
+  - Change hl-mode background color (if defaults doesn't change the color)
+    ```
+ 	M-x customize-face RET hl-lie RET
+    ```
+    
+	- Click on the link:
+    
+    	<img src="https://github.com/user-attachments/assets/15b5a65e-42fb-42b6-affb-aaac8876f448" width="75%"/>
+
+  	- Change background value to "#3e4446" and click Apply and Save:
+     
+    	<img src="https://github.com/user-attachments/assets/84aca960-4972-4df5-9610-3b8373742b8b" width="75%"/>
+
+ 	- Press "q" twice to close both this and previous window to quit.
+	
 
 * Install MongoDB
   
