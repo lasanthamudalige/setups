@@ -67,7 +67,7 @@
 * Preload (Reduce app startup time) 
 
   ```bash
-  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep obsidian solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm preload  zsh -y
+  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep obsidian solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm preload zsh readshift -y
   ```
 
   <!-- Install onlyoffice from deb-get -->
