@@ -259,6 +259,11 @@
  	- Press "q" twice to close both this and previous window to quit.
 	
 
+### Redshift stuff
+
+Day temperature - 6500k
+Night temperature - 5500k
+
 * Install MongoDB
   
   * [Visit the website for instructions](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
