@@ -13,8 +13,8 @@
 * Disk partition - ext4 with 1 partition with encryption
 * profile - kde-plasma desktop with login with sddm
 * Sound - Pipewire
-* kernel - mainline, lts
-* Additional packages - 'firefox git vim'
+* kernel - mainline or lts
+* Additional packages - firefox git vim
 * Network configuration - NetworkManager
 * Other settings are stock settings
  
@@ -150,7 +150,7 @@
 5. Install basic set of applications
 
 	```bash
-  	sudo pacman -S ufw bash-completion wl-clipboard speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamera kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obsidian obs-studio libfdk-aac libva-intel-driver libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar emacs-nativecomp ripgrep fd cmake man-db man-pages ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake
+  	sudo pacman -S ufw bash-completion wl-clipboard speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamera kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle chromium kcron kclock libreoffice-fresh neofetch gimp obsidian obs-studio libfdk-aac libva-intel-driver libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar emacs-nativecomp ripgrep fd cmake man-db man-pages ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake --needed
   	```
 
   	<!-- Install onlyoffice from AUR -->
@@ -165,7 +165,7 @@
 * Install zsh shell
 
   ```bash
-    sudo pacman -S zsh zsh-completions
+    sudo pacman -S zsh zsh-completions --needed
   ```
 
 * List available shells
@@ -260,7 +260,7 @@
 * Install python, sqlite
 
   ```bash
-  sudo pacman -S python tk python-pip sqlite
+  sudo pacman -S python tk python-pip sqlite --needed
   ```
   
 * Install nvm(Node version manager)
@@ -324,7 +324,7 @@
 * ~~Install ripgrep~~
 
   ```bash
-  sudo pacman -S ripgrep
+  sudo pacman -S ripgrep --needed
   ```
 ### Emacs stuff
 
@@ -351,7 +351,7 @@
 	* Using pacman
 
 	    ```bash
-		sudo pacman -S python-lsp-server marksman
+		sudo pacman -S python-lsp-server marksman --needed
 		```
 
 ### MongoDB
