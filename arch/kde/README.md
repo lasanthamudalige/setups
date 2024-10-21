@@ -165,7 +165,7 @@
 * Install zsh shell
 
   ```bash
-    sudo pacman -S zsh zsh-completions --needed
+  sudo pacman -S zsh zsh-completions --needed
   ```
 
 * List available shells
