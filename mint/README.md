@@ -64,15 +64,14 @@
 * VLC (Media player)
 * Audacious (Music player)
 * Emacs 
-* Preload (Reduce app startup time) 
 
   ```bash
-  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep obsidian solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm preload zsh readshift -y
+  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm -y
   ```
 
   <!-- Install onlyoffice from deb-get -->
   ```bash
-  deb-get install onlyoffice-desktopeditors zoom
+  deb-get install onlyoffice-desktopeditors zoom obsidian
   ```
   
   * ***Change defaults to relevent programs***
@@ -263,6 +262,10 @@
 
 Day temperature - 6500k
 Night temperature - 5500k
+
+### TLP stuff
+
+ - Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
 
 * Install MongoDB
   
