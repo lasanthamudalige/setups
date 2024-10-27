@@ -155,7 +155,7 @@
 
   	<!-- Install onlyoffice from AUR -->
   	```bash
-  	yay -S onlyoffice-bin zoom vscodium-bin ttf-ms-fonts
+  	yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts
   	```
 
 ## Other stuff
