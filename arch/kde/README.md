@@ -318,7 +318,6 @@
 
   ```bash
   sudo cp -r .config/neovim/ ~/.config/
-  
   ```
 
 * ~~Install ripgrep~~
@@ -326,6 +325,7 @@
   ```bash
   sudo pacman -S ripgrep --needed
   ```
+
 ### Emacs stuff
 
 * Customize emacs
