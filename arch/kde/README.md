@@ -382,6 +382,10 @@
     mongod --version
     ```
 
+### TLP stuff
+
+ - Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
+
 * Other programs
 
   ```bash
