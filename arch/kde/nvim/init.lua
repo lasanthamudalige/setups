@@ -208,6 +208,7 @@ require('lazy').setup({
   },
 
   {
+
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
@@ -231,6 +232,9 @@ require('lazy').setup({
   { import = 'custom.plugins' },
   
   { "nvim-neotest/nvim-nio" },
+
+  -- Use treesitter to autoclose and autorename html tag
+  -- { "windwp/nvim-ts-autotag" },
 
 }, {})
 
@@ -408,7 +412,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash' },
+    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'java', 'markdown' },
 
      -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
@@ -651,5 +655,23 @@ cmp.setup {
   },
 }
 
+-- [[ Configure nvim-ts-autotag]]
+-- Use treesitter to autoclose and autorename html tags
+-- require('nvim-ts-autotag').setup({
+--   opts = {
+--     -- Defaults
+--     enable_close = true, -- Auto close tags
+--     enable_rename = true, -- Auto rename pairs of tags
+--     enable_close_on_slash = false -- Auto close on trailing </
+--   },
+--   -- Also override individual filetype configs, these take priority.
+--   -- Empty by default, useful if one of the "opts" global settings
+--   -- doesn't work well in a specific filetype
+--   per_filetype = {
+--     ["html"] = {
+--       enable_close = false
+--     }
+--   }
+-- })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
