@@ -71,7 +71,7 @@
 
   <!-- Install onlyoffice from deb-get -->
   ```bash
-  deb-get install onlyoffice-desktopeditors zoom obsidian
+  deb-get install onlyoffice-desktopeditors zoom obsidian localsend
   ```
   
   * ***Change defaults to relevent programs***
