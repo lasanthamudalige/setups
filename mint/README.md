@@ -54,7 +54,7 @@
 * Ranger (Cli file manager)
 * Kitty (Terminal emulator)
 * Neofetch (CLI system information tool)
-* Fimp (Image manipulation tool)
+* Gimp (Image manipulation tool)
 * Chromium (Browser)
 * Obs-studio (Bcreen-recoder)
 * Neovim (Terminal based test editor)
