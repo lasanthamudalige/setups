@@ -155,7 +155,7 @@
 
   	<!-- Install packages from AUR -->
   	```bash
-  	yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts brave-bin localsend
+  	yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts brave-bin localsend-bin
   	```
 
 ## Other stuff
