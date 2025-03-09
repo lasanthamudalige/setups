@@ -12,12 +12,7 @@
 #cp tlp/00-template.conf /etc/tlp.d/
 
 # Install yay AUR helper
-sudo pacman -S --needed base-devel git
-mkdir Programs
-cd Programs
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 # Setup firewall
 sudo pacman -S ufw

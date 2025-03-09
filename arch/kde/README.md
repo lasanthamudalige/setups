@@ -68,12 +68,7 @@
   * Install yay aur helper
 
     ```bash
-    sudo pacman -S --needed base-devel git
-    mkdir Programs
-    cd Programs
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
-    makepkg -si
+    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
     ```
 
 * Change pacman configuration
