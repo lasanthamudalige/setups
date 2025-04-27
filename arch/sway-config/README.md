@@ -36,7 +36,7 @@
   * Install wifi and bluetooth
 
       ```bash
-      sudo pacman -S bluez bluez-utils --needed
+      sudo pacman -S bluez bluez-utils blueman --needed
       ```
     * Enable and start the network manager
       ```
@@ -53,7 +53,7 @@
       sudo systemctl enable bluetooth.service
       ```
 
-      * Use ***nmtui*** and ***bluetoothctl*** commands to access wifi and bluetooth
+      * Use ***nmtui*** and ***bluetooth manager*** commands to access wifi and bluetooth
   
   * Install tlp and enable it
   
