@@ -147,7 +147,7 @@
 5. Install basic set of applications
 
 	```bash
-  	sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils p7zip zip unzip unrar zsh zsh-completions python go tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc audacious libreoffice-fresh neofetch gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager --needed
+  	sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils p7zip zip unzip unrar zsh zsh-completions python go tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc audacious transmission-gtk libreoffice-fresh neofetch gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager --needed
   	```
 
   	<!-- Install packages from AUR -->
