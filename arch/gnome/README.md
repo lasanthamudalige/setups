@@ -11,7 +11,7 @@
 ***I installed it using archinstall***
 
 * Disk partition - ext4 with 1 partition with encryption
-* profile - kde-plasma desktop with login with sddm
+* profile - gnome desktop with login with gdm
 * Sound - Pipewire
 * kernel - mainline or lts
 * Additional packages - firefox git vim
@@ -64,6 +64,8 @@
   	  ```bash
   	  sudo tlp start
   	  ```
+     
+     * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
      
   * Install yay aur helper
 
@@ -145,7 +147,7 @@
 5. Install basic set of applications
 
 	```bash
-  	sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python go tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc audacious thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamoso kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh neofetch gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-intel-driver libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar emacs-nativecomp ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager --needed
+  	sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils p7zip zip unzip unrar zsh zsh-completions python go tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc audacious libreoffice-fresh neofetch gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager --needed
   	```
 
   	<!-- Install packages from AUR -->
@@ -376,10 +378,6 @@
     ```bash
     mongod --version
     ```
-
-### TLP stuff
-
- - Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
 
 * Other programs
 
