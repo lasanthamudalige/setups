@@ -36,7 +36,13 @@
   * Install wifi and bluetooth
 
       ```bash
-      sudo pacman -S iwd bluez bluez-utils --needed
+      sudo pacman -S bluez bluez-utils --needed
+      ```
+    * Enable and start the network manager
+      ```
+      sudo systemctl start NetworkManager.service
+      
+      sudo systemctl enable NetworkManager.service
       ```
 
     * Enable and start bluetooth
@@ -73,7 +79,7 @@
 	* mako (notification deamon for wayland)
 
     ```bash
-    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi i3status mako
+    sudo pacman -S pacman-contrib xdg-user-dirs ufw bash-completion wofi waybar otf-font-awesome ttf-font-awesome mako
     ```
 
   * Install yay aur helper
@@ -198,7 +204,7 @@
 * Kde patition manager
 
   ```bash
-  sudo pacman -S pcmanfm thunar thunar-archive-plugin thunar-volman tumbler gvfs xarchiver arj binutils bzip2 cpio gzip iha lrzip lz4 lzip lzop tar unarj xdg-utils xz zstd ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift ripgrep fd obsidian man-db man-pages solaar nodejs npm htop btop gnome-disk-utility partitionmanager --needed
+  sudo pacman -S pcmanfm thunar thunar-archive-plugin thunar-volman tumbler gvfs xarchiver arj binutils bzip2 cpio gzip lhasa lrzip lz4 lzip lzop tar unarj xdg-utils xz zstd ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift ripgrep fd obsidian man-db man-pages solaar nodejs npm htop btop gnome-disk-utility partitionmanager --needed
   ```
 
   <!-- Install onlyoffice from AUR -->
