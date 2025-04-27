@@ -203,7 +203,7 @@
 
   <!-- Install onlyoffice from AUR -->
   ```bash
-  yay -S onlyoffice-bin zoom
+  yay -S onlyoffice-bin ttf-ms-fonts brave-bin localsend-bin
   ```
 
 ## Other stuff
