@@ -96,7 +96,7 @@
   * Install all essential AUR packages using:
 
     ```bash
-    yay -S wob wlsunet #progressbar and day/night gamma adjustment program
+    yay -S wlsunet #day/night gamma adjustment program
     ```
 
     * Setup ***wob*** using this [link](https://github.com/francma/wob/blob/master/contrib/README.md) (If not working out of the box)
@@ -204,7 +204,7 @@
 * Kde patition manager
 
   ```bash
-  sudo pacman -S pcmanfm thunar thunar-archive-plugin thunar-volman tumbler gvfs xarchiver arj binutils bzip2 cpio gzip lhasa lrzip lz4 lzip lzop tar unarj xdg-utils xz zstd ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift ripgrep fd obsidian man-db man-pages solaar nodejs npm htop btop gnome-disk-utility partitionmanager --needed
+  sudo pacman -S thunar thunar-archive-plugin thunar-volman tumbler gvfs xarchiver arj binutils bzip2 cpio gzip lhasa lrzip lz4 lzip lzop tar unarj xdg-utils xz zstd ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift ripgrep fd obsidian man-db man-pages solaar nodejs npm htop btop gnome-disk-utility partitionmanager --needed
   ```
 
   <!-- Install onlyoffice from AUR -->
