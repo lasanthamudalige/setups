@@ -192,7 +192,7 @@
 * Solaar (Linux device manager for a wide range of Logitech devices)
 
   ```bash
-  sudo pacman -S pcmanfm gvfs xarchiver arj binutils bzip2 cpio gzip iha lrzip lz4 lzip lzop tar unarj xdg-utils xz zstd ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift emacs-nativecomp ripgrep fd thunderbird obsidian man-db man-pages solaar
+  sudo pacman -S pcmanfm thunar thunar-archive-plugin thunar-volman tumbler gvfs xarchiver arj binutils bzip2 cpio gzip iha lrzip lz4 lzip lzop tar unarj xdg-utils xz zstd ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug  p7zip zip unzip unrar noto-fonts-emoji mpv zathura zathura-cb zathura-djvu zathura-pdf-mupdf zathura-ps ristretto imv mousepad gspell libxfce4ui libreoffice-fresh neofetch gimp chromium obs-studio neovim zsh zsh-completions wl-clipboard ripgrep fwupd dosfstools ntfs-3g exfat-utils python tk python-pip sqlite flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift ripgrep fd obsidian man-db man-pages solaar nodejs npm htop btop gnome-disk-utility partitionmanager --needed
   ```
 
   <!-- Install onlyoffice from AUR -->
@@ -267,21 +267,12 @@
 
 * copy nvm setting from .bashrc file to .zshrc
 
-### Install visual studio code, spotify, postman and brave browser with yay
-
+### Install vscodium, postman frm AUR
   ```bash
-  yay -S visual-studio-code-bin spotify postman-bin brave-bin
+  yay -S vscodium-bin postman-bin
   ```
 
 ***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
-
-<!-- * ***To fix visual code code not saving login info install*** -->
-
-<!--   ```bash -->
-<!--   sudo pacman -S gnome-keyring -->
-<!--   ``` -->
-
-<!--   * add a new password for the keyring -->
 
 <!-- ### Setting programming stuff -->
   
