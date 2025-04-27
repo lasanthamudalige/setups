@@ -36,7 +36,7 @@
   * Install wifi and bluetooth
 
       ```bash
-      sudo pacman -S iwd bluez bluez-utils
+      sudo pacman -S iwd bluez bluez-utils --needed
       ```
 
     * Enable and start bluetooth
@@ -51,15 +51,17 @@
   
   * Install tlp and enable it
   
-	  Install tlp
+	* Install tlp
 	  ```bash
 	  sudo pacman -S tlp tlp-rdw
 	  ```
 
-	  Enable tlp
-	  ```
+	* Enable tlp
+	  ```bash
 	  sudo systemctl enable tlp.service
 	  ```
+
+	* Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
 
   * Install all essential Arch packages using:
 
