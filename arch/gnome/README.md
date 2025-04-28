@@ -41,13 +41,9 @@
     * Enable and start bluetooth
 
       ```bash
-      sudo systemctl enable bluetooth.service
+      sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service
       ```
-      
-      ```bash
-      sudo systemctl start bluetooth.service
-      ```
- 
+
   * Install tlp and enable it
   
 	* Install tlp
@@ -55,16 +51,11 @@
   	  sudo pacman -S tlp tlp-rdw
   	  ```
 
-	* Enable tlp
+	* Enable and start tlp
   	  ```bash
-  	  sudo systemctl enable tlp.service
+  	  sudo systemctl enable tlp.service && sudo tlp start
   	  ```
-
-  	* Start tlp
-  	  ```bash
-  	  sudo tlp start
-  	  ```
-     
+    
      * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
      
   * Install yay aur helper
