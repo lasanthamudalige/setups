@@ -138,12 +138,12 @@
 5. Install basic set of applications
 
 	```bash
-  	sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python go tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc audacious thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamoso kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh neofetch gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager --needed
+  	sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python go tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc audacious thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamoso kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh neofetch gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms solaar ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager chromium --needed
   	```
 
   	<!-- Install packages from AUR -->
   	```bash
-  	yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts brave-bin localsend-bin
+  	yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts localsend-bin
   	```
 
 ## Other stuff
