@@ -151,7 +151,7 @@
 
 4. Customizing sway setup
 
-* ~~Install Ly login manager~~ (Can now do in the arch install)
+* ~~Install Ly login manager~~ (Can do in the arch install)
 
     ```bash
     sudo pacman -S ly
