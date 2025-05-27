@@ -141,10 +141,6 @@
 3. Move config files
 
 * Move config folders to "~/.config" folder.
-
-  ```bash
-  cp -r emacs/ i3status/ kitty/ nvim/ ranger/ i3/ ~/.config/
-  ```
   
 * Move "90-toucpad.conf" file to "xorg.conf.d" folder to eneble touchpad tap functions
 
