@@ -22,6 +22,8 @@
   	  ```bash
   	  sudo apt install tlp tlp-rdw -y
   	  ```
+     	 
+       	- Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
 
   * Install deb-get program
 	```bash
@@ -31,11 +33,7 @@
 
 3. Move config files
 
-* Move config folders to "~/.config" folder.
-
-  ```bash
-  cp -r emacs/ nvim/ ranger/ kitty/ ~/.config/
-  ```
+- Move config folders to "~/.config" folder.
 
 4. Customizing the setup
 
@@ -143,10 +141,10 @@
 
 * copy nvm setting from .bashrc file to .zshrc
 
-### Install visual studio code, spotify and brave browser with yay
+### Install visual studio code, spotify and brave browser with deb-get
 
   ```bash
-  deb-get install codium brave-browser
+  deb-get install codium
   ```
  
 * Generate ssh key for github
@@ -263,9 +261,6 @@
 Day temperature - 6500k
 Night temperature - 5500k
 
-### TLP stuff
-
- - Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
 
 * Install MongoDB
   
