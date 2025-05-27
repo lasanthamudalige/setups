@@ -149,10 +149,6 @@
 
 * Move config folders to "~/.config" folder.
 
-  ```bash
-  cp -r emacs/ i3status/ kitty/ nvim/ ranger/ sway/ ~/.config/
-  ```
-
 4. Customizing sway setup
 
 * ~~Install Ly login manager~~ (Can now do in the arch install)
