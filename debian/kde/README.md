@@ -55,10 +55,6 @@
 
 - Move config folders to "~/.config" folder.
 
-  ```bash
-  cp -r emacs/ nvim/ ranger/ kitty/ ~/.config/
-  ```
-
 4. Customizing the setup
 
     ```bash
@@ -89,7 +85,7 @@
 
     <!-- Install onlyoffice from deb-get -->
     ```bash
-    deb-get install onlyoffice-desktopeditors zoom obsidian brave-browser codium
+    deb-get install onlyoffice-desktopeditors zoom obsidian codium
     ```
 
 - Install spotify-client using [this](https://www.spotify.com/us/download/linux/)
@@ -166,7 +162,7 @@
 ~~### Install visual studio code, spotify and brave browser with deb-get~~
 
   ```bash
-  deb-get install code brave-browser
+  deb-get install code
   ```
 
 * Generate ssh key for github
