@@ -54,7 +54,7 @@
 * Neofetch (CLI system information tool)
 * Gimp (Image manipulation tool)
 * Chromium (Browser)
-* Obs-studio (Bcreen-recoder)
+* Obs-studio (Screen-recoder)
 * Neovim (Terminal based test editor)
 * Zsh (A advanced shell with more features)
 * Obsidian (Note taking application)
