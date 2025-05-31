@@ -61,7 +61,6 @@
 * Solaar (Linux device manager for a wide range of Logitech devices)
 * VLC (Media player)
 * Audacious (Music player)
-* Emacs 
 
   ```bash
   sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool ripgrep solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm -y
