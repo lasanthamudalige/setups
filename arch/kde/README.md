@@ -77,7 +77,7 @@
 
     * ***Save the file.***  
 
-  * Show password feedback in asterisks in terminal
+  * Show password feedback in terminal (in asterisks)
 
       * Add this line to /etc/sudoers
         
@@ -86,19 +86,19 @@
         Defaults        pwfeedback
         ```
 
-    * ~~Activate the paccache timer to clean package cache~~
+  * ~~Activate the paccache timer to clean package cache~~
 
       ```bash
       sudo systemctl enable paccache.timer
       ```
 
-    * ~~Run xdg-user-dirs to create directories~~
+  * ~~Run xdg-user-dirs to create directories~~
 
       ```bash
       xdg-user-dirs-update
       ```
 
-    * Setup firewall
+  * Setup firewall
 
       * Install UFW
 
