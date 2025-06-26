@@ -77,6 +77,15 @@
 
     * ***Save the file.***  
 
+    * Show password feedback in asterisks in terminal
+
+      * Add this line to /etc/sudoers
+        
+        ```bash
+        Defaults        env_reset
+        Defaults        pwfeedback
+        ```
+
     * ~~Activate the paccache timer to clean package cache~~
 
       ```bash
