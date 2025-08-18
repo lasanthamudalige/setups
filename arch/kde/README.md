@@ -382,8 +382,8 @@
 ### LocalSend setup
 
 1. Add a new rule to the firewall
-2. Direction incoming
-3. Destination : Any ip, port: 53317
+2. Direction: incoming
+3. Destination: Any ip, port: 53317
 4. Press create
     
 * Other programs
