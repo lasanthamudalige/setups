@@ -152,7 +152,7 @@
 
   	<!-- Install packages from AUR -->
   	```bash
-  	yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts localsend-bin
+  	yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts localsend-bin zoom
   	```
 
 ## Other stuff
