@@ -17,7 +17,7 @@
 * Additional packages - firefox git vim
 * Network configuration - NetworkManager
 * Other settings are stock settings
- 
+
 ## Using dotfiles
 
 * ***Install firefox, vim and git if not installed***
@@ -43,21 +43,23 @@
       ```bash
       sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service
       ```
- 
+
   * Install tlp and enable it
   
-	* Install tlp
-  	  ```bash
-  	  sudo pacman -S tlp tlp-rdw
-  	  ```
+    * Install tlp
 
-	* Enable and start tlp
-  	  ```bash
-  	  sudo systemctl enable tlp.service && sudo tlp starte
-  	  ```
+     ```bash
+     sudo pacman -S tlp tlp-rdw
+     ```
 
-     * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
-     
+    * Enable and start tlp
+
+     ```bash
+     sudo systemctl enable tlp.service && sudo tlp starte
+     ```
+
+    * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
+
   * Install yay aur helper
 
     ```bash
@@ -79,8 +81,8 @@
 
   * ~~Show password feedback in terminal (in asterisks)~~
 
-      * Add this line to /etc/sudoers
-        
+    * Add this line to /etc/sudoers
+
         ```bash
         Defaults        env_reset
         Defaults        pwfeedback
@@ -100,31 +102,31 @@
 
   * Setup firewall
 
-      * Install UFW
+    * Install UFW
 
          ```bash
          sudo pacman -S ufw
          ```
 
-      * Enable UFW
+    * Enable UFW
 
          ```bash
         sudo ufw enable
         ```
 
-      * To check status
+    * To check status
 
         ```bash
         sudo ufw status verbose
         ```
 
-      * To auto start with the system
+    * To auto start with the system
 
         ```bash
         sudo systemctl enable ufw.service
         ```
 
-3. Move config files
+3.Move config files
 
 * Move config folders to "~/.config" folder.
 
@@ -132,28 +134,28 @@
   cp -r emacs/ kitty/ nvim/ ranger/ ~/.config/
   ```
   
-4. Customizing setup
+4.Customizing setup
 
   <!--- ```bash
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ``` -->
   
-  * Refresh fonts using
-    
+* Refresh fonts using
+
     ```bash
     fc-cache -fv
     ```
 
-5. Install basic set of applications
+5.Install basic set of applications
 
-	```bash
-  	sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python go tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska audacious thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamoso kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh neofetch gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils solaar ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake htop btop gnome-disk-utility partitionmanager chromium awesome-terminal-fonts ttf-font-awesome francis --needed 
-  	```
+ ```bash
+   sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python go tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska audacious thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamoso kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh neofetch gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils solaar ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake htop btop gnome-disk-utility partitionmanager chromium awesome-terminal-fonts ttf-font-awesome francis --needed 
+   ```
 
-  	<!-- Install packages from AUR -->
-  	```bash
-  	yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts localsend-bin zoom
-  	```
+   <!-- Install packages from AUR -->
+   ```bash
+   yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts localsend-bin zoom
+   ```
 
 ## Other stuff
 
@@ -284,12 +286,13 @@
   ```
   
   * Disable base automatic base activation
-    
+
     ```bash
     conda config --set auto_activate_base false
     ```
   
 * Optional
+
   ```bash
   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
   ~/miniconda3/bin/conda init bash
@@ -327,29 +330,29 @@
 
 * Customize emacs
 
-  - Change hl-mode background color (if defaults doesn't change the color)
-    ```
- 	M-x customize-face RET hl-lie RET
-    ```
-    
-	- Click on the link:
-    
-    	<img src="https://github.com/user-attachments/assets/15b5a65e-42fb-42b6-affb-aaac8876f448" width="75%"/>
+  * Change hl-mode background color (if defaults doesn't change the color)
 
-  	- Change background value to "#3e4446" and click Apply and Save:
-     
-    	<img src="https://github.com/user-attachments/assets/84aca960-4972-4df5-9610-3b8373742b8b" width="75%"/>
+    ```bash
+    M-x customize-face RET hl-lie RET
+    ```
 
- 	- Press "q" twice to close both this and previous window to quit.
-	
+    * Click on the link:
+
+     <img src="https://github.com/user-attachments/assets/15b5a65e-42fb-42b6-affb-aaac8876f448" width="75%"/>
+
+    * Change background value to "#3e4446" and click Apply and Save:
+
+     <img src="https://github.com/user-attachments/assets/84aca960-4972-4df5-9610-3b8373742b8b" width="75%"/>
+
+    * Press "q" twice to close both this and previous window to quit.
 
 * Install language servers
 
-	* Using pacman
+  * Using pacman
 
-	    ```bash
+     ```bash
             sudo pacman -S python-lsp-server --needed
-	    ```
+     ```
 
 ### MongoDB
 
@@ -385,7 +388,7 @@
 2. Direction: incoming
 3. Destination: Any ip, port: 53317
 4. Press create
-    
+
 * Other programs
 
   ```bash
