@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo apt install vim -y
+
 # Install tlp
 #sudo apt install tlp tlp-rdw -y
 
