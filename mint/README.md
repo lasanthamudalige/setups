@@ -246,7 +246,7 @@
      <img src="https://github.com/user-attachments/assets/84aca960-4972-4df5-9610-3b8373742b8b" width="75%"/>
 
     * Press "q" twice to close both this and previous window to quit.
- 
+
 ### Redshift stuff
 
 Day temperature - 6500k
