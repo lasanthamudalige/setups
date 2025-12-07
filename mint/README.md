@@ -16,45 +16,47 @@
 
 2. Do essential things
 
-  * Install tlp
+* Install tlp
   
-	* Install tlp
-  	  ```bash
-  	  sudo apt install tlp tlp-rdw -y
-  	  ```
-     	 
-       	- Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
+  * Install tlp
+
+     ```bash
+     sudo apt install tlp tlp-rdw -y
+     ```
+
+    * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
 
   * Install deb-get program
-	```bash
-	sudo apt install curl lsb-release wget -y
-	curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
-	```
 
-3. Move config files
+ ```bash
+ sudo apt install curl lsb-release wget -y
+ curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+ ```
 
-- Move config folders to "~/.config" folder.
+3.Move config files
 
-4. Customizing the setup
+* Move config folders to "~/.config" folder.
+
+4.Customizing the setup
 
   ```bash
   sudo apt install fonts-jetbrains-mono fonts-firacode -y
   ```
   
-  * Refresh fonts using
-    
+* Refresh fonts using
+
     ```bash
     fc-cache -fv
     ```
 
-5. Install basic set of applications
+5.Install basic set of applications
 
 * Ranger (Cli file manager)
 * Kitty (Terminal emulator)
 * Neofetch (CLI system information tool)
 * Gimp (Image manipulation tool)
 * Chromium (Browser)
-* Obs-studio (Screen-recoder)
+* Obs-studio (Screen-recorder)
 * Neovim (Terminal based test editor)
 * Zsh (A advanced shell with more features)
 * Obsidian (Note taking application)
@@ -66,12 +68,12 @@
   sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm -y
   ```
 
-  <!-- Install onlyoffice from deb-get -->
+  <!-- Install only office from deb-get -->
   ```bash
   deb-get install onlyoffice-desktopeditors zoom obsidian localsend
   ```
   
-  * ***Change defaults to relevent programs***
+  * ***Change defaults to relevant programs***
 
 ## Other stuff
 
@@ -140,12 +142,12 @@
 
 * copy nvm setting from .bashrc file to .zshrc
 
-### Install visual studio code, spotify and brave browser with deb-get
+### Install vscodium code with deb-get
 
   ```bash
   deb-get install codium
   ```
- 
+
 * Generate ssh key for github
 
   ```bash
@@ -190,12 +192,13 @@
   ```
   
   * Disable base automatic base activation
-    
+
     ```bash
     conda config --set auto_activate_base false
     ```
   
 * Optional
+
   ```bash
   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
   ~/miniconda3/bin/conda init bash
@@ -233,33 +236,32 @@
 
 * Install Python language server
 
-  	``` bash
-	sudo apt install python3-pylsp -y
-	```
+   ``` bash
+    sudo apt install python3-pylsp -y
+    ```
 
 * Customize emacs
 
-  - Change hl-mode background color (if defaults doesn't change the color)
+  * Change hl-mode background color (if defaults doesn't change the color)
+
+    ```bash
+    M-x customize-face RET hl-lie RET
     ```
- 	M-x customize-face RET hl-lie RET
-    ```
-    
-	- Click on the link:
-    
-    	<img src="https://github.com/user-attachments/assets/15b5a65e-42fb-42b6-affb-aaac8876f448" width="75%"/>
 
-  	- Change background value to "#3e4446" and click Apply and Save:
-     
-    	<img src="https://github.com/user-attachments/assets/84aca960-4972-4df5-9610-3b8373742b8b" width="75%"/>
+    * Click on the link:
 
- 	- Press "q" twice to close both this and previous window to quit.
-	
+     <img src="https://github.com/user-attachments/assets/15b5a65e-42fb-42b6-affb-aaac8876f448" width="75%"/>
 
+    * Change background value to "#3e4446" and click Apply and Save:
+
+     <img src="https://github.com/user-attachments/assets/84aca960-4972-4df5-9610-3b8373742b8b" width="75%"/>
+
+    * Press "q" twice to close both this and previous window to quit.
+ 
 ### Redshift stuff
 
 Day temperature - 6500k
 Night temperature - 5500k
-
 
 * Install MongoDB
   
