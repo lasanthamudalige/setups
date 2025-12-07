@@ -16,7 +16,15 @@
 
 2. Do essential things
 
-* Install tlp
+* Change charge threshold to 80%(optional)
+
+  ```bash
+  vim /sys/class/power_supply/BAT0/
+  ```
+
+  * Select charge_stop_threshold change it to 80
+
+* Install tlp(optional)
   
   * Install tlp
 
