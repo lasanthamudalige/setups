@@ -59,29 +59,16 @@
 
 5.Install basic set of applications
 
-* Ranger (Cli file manager)
-* Kitty (Terminal emulator)
-* Neofetch (CLI system information tool)
-* Gimp (Image manipulation tool)
-* Chromium (Browser)
-* Obs-studio (Screen-recorder)
-* Neovim (Terminal based test editor)
-* Zsh (A advanced shell with more features)
-* Obsidian (Note taking application)
-* Solaar (Linux device manager for a wide range of Logitech devices)
-* VLC (Media player)
-* Audacious (Music player)
-
-  ```bash
+ ```bash
   sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep solaar vlc audacious ubuntu-restricted-extras htop btop nodejs npm -y
   ```
 
-  <!-- Install only office from deb-get -->
+  <!-- Install programs from deb-get -->
   ```bash
-  deb-get install onlyoffice-desktopeditors zoom obsidian localsend
+  deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
   ```
   
-  * ***Change defaults to relevant programs***
+* ***Change defaults to relevant programs***
 
 ## Other stuff
 
@@ -149,12 +136,6 @@
       ```
 
 * copy nvm setting from .bashrc file to .zshrc
-
-### Install vscodium code with deb-get
-
-  ```bash
-  deb-get install codium
-  ```
 
 * Generate ssh key for github
 
