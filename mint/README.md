@@ -65,7 +65,7 @@
 5.Install basic set of applications
 
  ```bash
-  sudo apt install ranger kitty neofetch gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc ubuntu-restricted-extras htop btop nodejs npm -y
+  sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc audacious ubuntu-restricted-extras htop btop nodejs npm -y
   ```
 
   <!-- Install programs from deb-get -->
