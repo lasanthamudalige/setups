@@ -16,6 +16,12 @@
 
 2. Do essential things
 
+* Install basic programs
+  
+  ```bash
+  sudo apt install curl lsb-release wget vim -y
+  ```
+
 * Change charge threshold to 80%(optional)
 
   ```bash
@@ -36,10 +42,9 @@
 
   * Install deb-get program
 
- ```bash
- sudo apt install curl lsb-release wget -y
- curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
- ```
+    ```bash
+    curl -sL <https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get> | sudo -E bash -s install deb-get
+    ```
 
 3.Move config files
 
