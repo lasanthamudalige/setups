@@ -53,7 +53,7 @@
 4.Customizing the setup
 
   ```bash
-  sudo apt install fonts-jetbrains-mono fonts-firacode -y
+  sudo apt install fonts-jetbrains-mono -y
   ```
   
 * Refresh fonts using
