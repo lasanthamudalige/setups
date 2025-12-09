@@ -70,7 +70,7 @@
 
   <!-- Install programs from deb-get -->
   ```bash
-  deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
+  deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium copyq
   ```
   
 * ***Change defaults to relevant programs***
