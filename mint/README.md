@@ -226,37 +226,10 @@
   sudo apt install ripgrep -y
   ```
 
-### Emacs stuff
+### Custom tweaks
 
-* Install Python language server
+* Remap printscreen key to launch screenshot gui by adding the command "gnome-screenshot --interactive" to custom keyboard shortcuts.
 
-   ``` bash
-    sudo apt install python3-pylsp -y
-    ```
-
-* Customize emacs
-
-  * Change hl-mode background color (if defaults doesn't change the color)
-
-    ```bash
-    M-x customize-face RET hl-lie RET
-    ```
-
-    * Click on the link:
-
-     <img src="https://github.com/user-attachments/assets/15b5a65e-42fb-42b6-affb-aaac8876f448" width="75%"/>
-
-    * Change background value to "#3e4446" and click Apply and Save:
-
-     <img src="https://github.com/user-attachments/assets/84aca960-4972-4df5-9610-3b8373742b8b" width="75%"/>
-
-    * Press "q" twice to close both this and previous window to quit.
-
-### Redshift stuff
-
-Day temperature - 6500k
-Night temperature - 5500k
-
-* Install MongoDB
+### Install MongoDB
   
-  * [Visit the website for instructions](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
+* [Visit the website for instructions](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
