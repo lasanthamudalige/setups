@@ -220,13 +220,13 @@
   sudo cp -r .config/neovim/ ~/.config/
   ```
 
-* ~~Install ripgrep~~
+### Custom tweaks
+
+* Install previous mint-backgrounds
 
   ```bash
-  sudo apt install ripgrep -y
+  sudo apt install mint-backgrounds-*
   ```
-
-### Custom tweaks
 
 * Remap printscreen key to launch screenshot gui by adding the command "gnome-screenshot --interactive" to custom keyboard shortcuts.
 
