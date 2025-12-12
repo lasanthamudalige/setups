@@ -9,10 +9,11 @@
 
 1. Clone the repo
 
-<!-- This is how to properly declare code snippets  -->
-    ```bash
-    git clone https://github.com/lasanthamudalige/setups
-    ```
+	<!-- This is how to properly declare code snippets  -->
+
+	```bash
+	git clone https://github.com/lasanthamudalige/setups
+	```
 
 2. Do essential things
 
@@ -52,28 +53,28 @@
 
 4.Customizing the setup
 
-  ```bash
-  sudo apt install fonts-jetbrains-mono -y
-  ```
+```bash
+sudo apt install fonts-jetbrains-mono -y
+```
   
   * Refresh fonts using
 
-```bash
+	```bash
     fc-cache -fv
     ```
 
-5.Install basic set of applications
+Install basic set of applications
 
  ```bash
-  sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc ubuntu-restricted-extras htop btop nodejs npm diodon -y
-  ```
+ sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc ubuntu-restricted-extras htop btop nodejs npm diodon -y
+ ```
 
 <!-- Install programs from deb-get -->
-  ```bash
-  deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
-  ```
+```bash
+deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
+```
   
-  * ***Change defaults to relevant programs***
+* ***Change defaults to relevant programs***
 
 ## Other stuff
 
@@ -144,17 +145,17 @@
 
 * Generate ssh key for github
 
-```bash
-# Generate a new ssh key
-  ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
-
-  # Add ssh key to ssh-agent
-  eval "$(ssh-agent -s)"
-  ssh-add ~/.ssh/id_ed25519
-
-  # Print ssh public key to clipboard
-  cat ~/.ssh/id_ed25519.pub
-  ```
+	```bash
+	# Generate a new ssh key
+	  ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
+	
+	  # Add ssh key to ssh-agent
+	  eval "$(ssh-agent -s)"
+	  ssh-add ~/.ssh/id_ed25519
+	
+	  # Print ssh public key to clipboard
+	  cat ~/.ssh/id_ed25519.pub
+	  ```
 
 * Install python, sqlite
 
@@ -164,9 +165,9 @@
   
   * Install nvm(Node version manager)
 
-```bash
-  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-  ```
+	```bash
+	  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+	  ```
 
 * Install nodemon and json-server using nodejs
 
@@ -193,10 +194,10 @@
 	
 	* Optional
 
-```bash
-  bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-  ~/miniconda3/bin/conda init bash
-  ```
+		```bash
+		  bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+		  ~/miniconda3/bin/conda init bash
+		  ```
 
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
