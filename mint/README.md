@@ -220,6 +220,26 @@
   sudo cp -r .config/neovim/ ~/.config/
   ```
 
+### Emacs
+
+* Install emacs
+
+  ```bash
+  sudo apt install emacs
+  ```
+
+  * Install python-lsp
+
+  	```bash
+	sudo apt install python3-pylsp
+	```
+
+  * Install clangd
+
+	```bash
+	sudo apt install clangd
+	```
+
 ### Custom tweaks
 
 * Install previous mint-backgrounds
