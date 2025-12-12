@@ -9,7 +9,7 @@
 
 1. Clone the repo
 
-   <!-- This is how to properly declare code snippets  -->
+<!-- This is how to properly declare code snippets  -->
     ```bash
     git clone https://github.com/lasanthamudalige/setups
     ```
@@ -17,7 +17,7 @@
 2. Do essential things
 
 * Install basic programs
-  
+
   ```bash
   sudo apt install curl lsb-release wget vim -y
   ```
@@ -28,19 +28,19 @@
   vim /sys/class/power_supply/BAT0/
   ```
 
-  * Select charge_stop_threshold change it to 80
+* Select charge_stop_threshold change it to 80
 
 * Install tlp(optional)
-  
-  * Install tlp
+
+* Install tlp
 
      ```bash
      sudo apt install tlp tlp-rdw -y
      ```
 
-    * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
+* Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
 
-  * Install deb-get program
+* Install deb-get program
 
     ```bash
     curl -sL <https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get> | sudo -E bash -s install deb-get
@@ -56,9 +56,9 @@
   sudo apt install fonts-jetbrains-mono -y
   ```
   
-* Refresh fonts using
+  * Refresh fonts using
 
-    ```bash
+```bash
     fc-cache -fv
     ```
 
@@ -68,12 +68,12 @@
   sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc ubuntu-restricted-extras htop btop nodejs npm diodon -y
   ```
 
-  <!-- Install programs from deb-get -->
+<!-- Install programs from deb-get -->
   ```bash
   deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
   ```
   
-* ***Change defaults to relevant programs***
+  * ***Change defaults to relevant programs***
 
 ## Other stuff
 
@@ -106,13 +106,13 @@
 
 * add zsh-autosuggestions
 
-  1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
 
       ```bash
       git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       ```
 
-  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
       ```bash
       plugins=( 
@@ -121,17 +121,17 @@
       )
       ```
 
-  3. Start a new terminal session.
+3. Start a new terminal session.
 
 * add zsh-syntax-highlighting (optional)
 
-  1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
       ```bash
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
       ```
 
-  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
       ```bash
       plugins=( 
@@ -144,8 +144,8 @@
 
 * Generate ssh key for github
 
-  ```bash
-  # Generate a new ssh key
+```bash
+# Generate a new ssh key
   ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
 
   # Add ssh key to ssh-agent
@@ -162,9 +162,9 @@
   sudo apt install python3 python3-tk python3-pip sqlite3 -y
   ```
   
-* Install nvm(Node version manager)
+  * Install nvm(Node version manager)
 
-  ```bash
+```bash
   wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
   ```
 
@@ -190,24 +190,13 @@
     ```bash
     conda config --set auto_activate_base false
     ```
-  
-* Optional
+	
+	* Optional
 
-  ```bash
+```bash
   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
   ~/miniconda3/bin/conda init bash
   ```
-
-* Install the Latest selenium webdriver to Miniconda base environment
-* Download the gecko driver and move it to /usr/local/bin
-
-* Install micromamba (optional)
-
-  ```bash
-  "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
-  ```
-
-* **Respond to all the input prompts**
 
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
@@ -216,11 +205,9 @@
 
 * Move neovim config file to $HOME/.config/
 
-  ```bash
-  sudo cp -r .config/neovim/ ~/.config/
-  ```
-
 ### Emacs
+
+* Move Emacs config file to $HOME/.config/
 
 * Install emacs
 
@@ -228,13 +215,13 @@
   sudo apt install emacs
   ```
 
-  * Install python-lsp
+* Install python-lsp
 
   	```bash
 	sudo apt install python3-pylsp
 	```
 
-  * Install clangd
+* Install clangd
 
 	```bash
 	sudo apt install clangd
@@ -251,5 +238,5 @@
 * Remap printscreen key to launch screenshot gui by adding the command "gnome-screenshot --interactive" to custom keyboard shortcuts.
 
 ### Install MongoDB
-  
+
 * [Visit the website for instructions](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
