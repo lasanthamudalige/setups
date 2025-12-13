@@ -162,6 +162,9 @@
   (evil-mode 1) ;; Enable evil-mode on startup
 )
 
+(use-package nerd-icons
+  :ensure t)
+
 (use-package doom-themes
   :ensure t
   :config
