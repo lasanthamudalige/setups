@@ -20,7 +20,7 @@
 * Install basic programs
 
   ```bash
-  sudo apt install curl lsb-release wget vim -y
+  sudo apt install vim -y
   ```
 
 * Change charge threshold to 80%(optional)
