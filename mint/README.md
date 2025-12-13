@@ -44,7 +44,8 @@
 * Install deb-get program
 
     ```bash
-    curl -sL <https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get> | sudo -E bash -s install deb-get
+    sudo apt install curl lsb-release wget
+	curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
     ```
 
 3.Move config files
@@ -214,6 +215,11 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
   ```bash
   sudo apt install emacs
+  ```
+
+* Install nerd-icons with following command M-x (alt-x) C-y to paste
+  ```bash
+  nerd-icons-install-fonts
   ```
 
 * Install python-lsp
